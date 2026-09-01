@@ -13,8 +13,8 @@ export const SITE_DESCRIPTION =
 
 /** Contact + ownership. Single source of truth for legal/company pages. */
 export const SITE_OPERATOR = "AI Assets Directory";
-export const SITE_EMAIL = "hello@aiassetsdirectory.com";
-export const SITE_GITHUB = "https://github.com/ai-assets-directory";
+export const SITE_EMAIL = "contact@aiassetsdirectory.com";
+export const SITE_GITHUB = "https://github.com/lorenzomeolav32-png/AI_asset_hub";
 
 /** Human-readable date the legal pages were last reviewed. */
 export const LEGAL_LAST_UPDATED = "September 1, 2026";
