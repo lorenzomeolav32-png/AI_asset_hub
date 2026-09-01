@@ -7,31 +7,30 @@ summary: >-
   Generate distinctive, production-grade UI that avoids generic "AI slop" — bold
   typography, cohesive color, and meticulous motion, implemented as real code.
 tags: [ui, design, frontend, react]
-tools: [claude, claude-code, cursor]
-license: MIT
-author: aiassethub
-source: https://github.com/aiassethub/frontend-design
-stars: 1240
+tools: [claude, claude-code]
+license: Apache-2.0
+author: Anthropic
+source: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+stars: 172900
+starsNote: whole anthropics/skills repo
 verified: true
 install: |
-  # Clone into your Claude skills folder
-  git clone https://github.com/aiassethub/frontend-design \
-    ~/.claude/skills/frontend-design
+  # Install via the Claude Code plugin marketplace
+  /plugin marketplace add anthropics/skills
+  /plugin install example-skills@anthropic-agent-skills
+
+  # Or copy the skill folder into your skills directory
+  git clone https://github.com/anthropics/skills
+  cp -r skills/skills/frontend-design ~/.claude/skills/frontend-design
 installLang: bash
-testimonials:
-  - author: Dana R.
-    role: Frontend engineer
-    quote: >-
-      The first skill that produces UI I don't have to redesign. It actually
-      commits to an aesthetic instead of the usual purple-gradient mush.
 ---
 
 ## Overview
 
-**Frontend Design** turns Claude into an opinionated product designer. Instead of
-generic component dumps, it commits to a **bold, cohesive aesthetic direction** and
-implements it as working code (HTML/CSS/JS, React, Vue) with real attention to
-typography, color, motion and spatial composition.
+**Frontend Design** is an official Anthropic skill that turns Claude into an
+opinionated product designer. Instead of generic component dumps, it commits to a
+**bold, cohesive aesthetic direction** and implements it as working code (HTML/CSS/JS,
+React, Vue) with real attention to typography, color, motion and spatial composition.
 
 ## How it works
 

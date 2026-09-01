@@ -31,6 +31,7 @@ const assets = defineCollection({
       author: s.string(),
       source: s.string().optional(),
       stars: s.number().optional(),
+      starsNote: s.string().optional(),
       verified: s.boolean().default(false),
       video: s.string().optional(),
       install: s.string().optional(),

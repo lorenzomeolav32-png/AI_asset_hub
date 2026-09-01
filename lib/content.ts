@@ -32,6 +32,7 @@ export type CardAsset = {
   tools: string[];
   license: string;
   stars?: number;
+  starsNote?: string;
   verified: boolean;
 };
 
@@ -48,6 +49,7 @@ function toCard(a: Asset): CardAsset {
     tools: a.tools,
     license: a.license,
     stars: a.stars,
+    starsNote: a.starsNote,
     verified: a.verified,
   };
 }

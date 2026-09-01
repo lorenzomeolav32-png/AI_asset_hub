@@ -9,14 +9,13 @@ summary: >-
 tags: [meta, claude-code, devx]
 tools: [claude-code]
 license: MIT
-author: aiassethub
-source: https://github.com/aiassethub/create-skill
-stars: 540
-verified: false
+author: AI Assets Directory
+source: https://github.com/lorenzomeolav32-png/ai-assets-directory-skills/tree/main/skills/create-skill
+verified: true
 install: |
-  # Clone into your Claude skills folder
-  git clone https://github.com/aiassethub/create-skill \
-    ~/.claude/skills/create-skill
+  # Clone the skills monorepo and copy this skill into your skills folder
+  git clone https://github.com/lorenzomeolav32-png/ai-assets-directory-skills
+  cp -r ai-assets-directory-skills/skills/create-skill ~/.claude/skills/create-skill
 installLang: bash
 ---
 

@@ -7,16 +7,15 @@ summary: >-
   Write short, punchy job-application messages for portals and forms — grounded
   only in your real CV, never invented.
 tags: [career, writing, jobs]
-tools: [claude, chatgpt]
+tools: [claude, claude-code, chatgpt]
 license: MIT
-author: aiassethub
-source: https://github.com/aiassethub/job-message
-stars: 320
-verified: false
+author: AI Assets Directory
+source: https://github.com/lorenzomeolav32-png/ai-assets-directory-skills/tree/main/skills/job-message
+verified: true
 install: |
-  # Clone into your Claude skills folder
-  git clone https://github.com/aiassethub/job-message \
-    ~/.claude/skills/job-message
+  # Clone the skills monorepo and copy this skill into your skills folder
+  git clone https://github.com/lorenzomeolav32-png/ai-assets-directory-skills
+  cp -r ai-assets-directory-skills/skills/job-message ~/.claude/skills/job-message
 installLang: bash
 ---
 
