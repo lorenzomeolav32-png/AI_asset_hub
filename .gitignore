@@ -43,3 +43,8 @@ next-env.d.ts
 # velite (generated content) + generated static assets
 /.velite
 /public/static
+
+# internal strategy docs (kept local, NOT for the public repo)
+/PRODUCT_PLAN.md
+/TECH_DESIGN.md
+/SEGUIMIENTO.md
