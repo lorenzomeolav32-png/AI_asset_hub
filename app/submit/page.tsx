@@ -61,7 +61,7 @@ export default function SubmitPage() {
               Open a GitHub issue
             </span>
             <span className="block text-sm text-muted">
-              Preferred — public and trackable.
+              Preferred: public and trackable.
             </span>
           </span>
         </a>

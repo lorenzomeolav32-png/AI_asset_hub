@@ -116,7 +116,7 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
         </div>
       ) : (
         <p className="mt-4 rounded-xl border border-dashed border-line p-10 text-center font-mono text-sm text-muted">
-          no assets match — try a different search or filter.
+          no assets match. Try a different search or filter.
         </p>
       )}
     </div>

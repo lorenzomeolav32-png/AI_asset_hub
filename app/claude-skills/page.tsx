@@ -9,7 +9,7 @@ import { breadcrumbSchema, itemListSchema, pageMeta } from "@/lib/seo";
 const SEGMENT = "claude-skills";
 
 export const metadata: Metadata = pageMeta({
-  title: "Claude Skills — curated & tested",
+  title: "Claude Skills: curated & tested",
   description:
     "Hand-picked, open-source Claude Skills (SKILL.md packages) that turn Claude into a specialist. Copy, install, ship.",
   path: `/${SEGMENT}`,

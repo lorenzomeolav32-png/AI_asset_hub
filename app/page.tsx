@@ -16,7 +16,7 @@ import { pageMeta } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_GITHUB } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "AI Assets Directory — verified AI assets & guides for developers",
+  title: "AI Assets Directory: verified AI assets & guides for developers",
   description: SITE_DESCRIPTION,
   path: "/",
   absoluteTitle: true,
@@ -45,7 +45,7 @@ export default function Home() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
             Hand-picked, tested Claude Skills, MCP servers, Copilot agents,
             Cursor rules and AI workflows for developers. Skip the noisy
-            crawlers — copy, install, ship.
+            crawlers: copy, install, ship.
           </p>
 
           {/* terminal search bar */}
@@ -184,7 +184,7 @@ export default function Home() {
             {
               icon: ShieldCheck,
               title: "Curated & tested",
-              body: "Every listing is reviewed by a human, with a last-verified date and a works-with matrix — not a 100k-item crawl.",
+              body: "Every listing is reviewed by a human, with a last-verified date and a works-with matrix, not a 100k-item crawl.",
             },
             {
               icon: Boxes,
@@ -194,7 +194,7 @@ export default function Home() {
             {
               icon: Terminal,
               title: "Copy & ship",
-              body: "One-click copy of the exact SKILL.md, mcp.json or rule file — with install steps that actually work.",
+              body: "One-click copy of the exact SKILL.md, mcp.json or rule file, with install steps that actually work.",
             },
           ].map((f) => (
             <div key={f.title} className="rounded-xl card-surface p-6">

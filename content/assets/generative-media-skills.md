@@ -28,8 +28,8 @@ installLang: bash
 ## Overview
 
 **Generative Media Skills** is a Core/Library collection of 41 expert-authored
-`SKILL.md` recipes — cinematic video direction, branding/logo generation, product
-photography, UGC ad videos, YouTube thumbnails and more — that let Claude Code,
+`SKILL.md` recipes: cinematic video direction, branding/logo generation, product
+photography, UGC ad videos, YouTube thumbnails and more, that let Claude Code,
 Cursor, Gemini CLI or OpenCode drive 100+ image/video/audio models (Midjourney,
 Flux, Kling, Veo3, Seedance, Suno...) through a single CLI, with a matching MCP
 server exposing 19 typed tools.
@@ -42,11 +42,11 @@ server exposing 19 typed tools.
    translates a creative brief (e.g. "cinematic 10s product ad") into the right
    model, parameters and multi-step pipeline.
 3. **MCP server** (`muapi mcp serve`) exposes the same 19 tools directly to
-   Claude Desktop, Cursor or any MCP-compatible client — no shell scripts needed.
+   Claude Desktop, Cursor or any MCP-compatible client, no shell scripts needed.
 
-## Cost note — requires a paid API key
+## Cost note: requires a paid API key
 
-⚠️ The skills themselves are free and MIT-licensed, but every recipe calls the
+The skills themselves are free and MIT-licensed, but every recipe calls the
 **MuAPI** service (muapi.ai), which requires a paid API key and consumes credits
 per generation. Reading, adapting or redistributing the skill files costs
 nothing; actually generating media does. Budget for MuAPI usage separately

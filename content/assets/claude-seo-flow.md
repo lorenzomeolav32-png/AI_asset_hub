@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash
@@ -30,8 +30,8 @@ suite: 41 evidence-led prompts sourced from the author's separate
 
 ## Licensing note
 
-⚠️ Unlike the rest of Claude SEO (MIT), the FLOW prompt content itself is
-licensed under **CC BY 4.0** — you may reuse and adapt it with attribution,
+Unlike the rest of Claude SEO (MIT), the FLOW prompt content itself is
+licensed under **CC BY 4.0**, so you may reuse and adapt it with attribution,
 but it is not the same permissive terms as the plugin's code. Attribute to
 Agrici Daniel / the FLOW project if you redistribute the prompts themselves.
 

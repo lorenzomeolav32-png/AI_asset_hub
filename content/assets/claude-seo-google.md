@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
   /seo google setup
@@ -34,7 +34,7 @@ WeasyPrint + matplotlib.
 ## Cost note
 
 All 4 tiers use **free** Google API credentials (your own account, normal
-quota limits) — no paid third-party service required, unlike some other
+quota limits), no paid third-party service required, unlike some other
 extensions in this plugin.
 
 ## Part of Claude SEO

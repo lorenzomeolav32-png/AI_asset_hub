@@ -4,7 +4,7 @@ type: claude-skill
 title: Search Experience Optimization (SXO)
 fileName: seo-sxo.skill
 summary: >-
-  Search Experience Optimization audit — page-type detection, user stories
+  Search Experience Optimization audit covering page-type detection, user stories
   and persona alignment.
 category: marketing
 tags: [claude-seo, sxo, ux]
@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash

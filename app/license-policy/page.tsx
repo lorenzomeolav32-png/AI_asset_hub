@@ -25,7 +25,7 @@ export default function LicensePolicyPage() {
       <h2>What we list</h2>
       <p>
         Every asset in the directory is open-source with a public repository and
-        a permissive license. We do not host or redistribute the code itself — we
+        a permissive license. We do not host or redistribute the code itself: we
         describe each asset and link back to its original source.
       </p>
 
@@ -46,7 +46,7 @@ export default function LicensePolicyPage() {
       <h2>Attribution</h2>
       <p>
         Each listing credits the original author and links to the source
-        repository and its license. The asset stays under its own license — we do
+        repository and its license. The asset stays under its own license: we do
         not relicense anything. If you reuse an asset, follow the terms in its
         repository, not this directory.
       </p>

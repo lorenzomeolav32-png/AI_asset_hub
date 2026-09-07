@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash
@@ -25,7 +25,7 @@ installLang: bash
 ## Overview
 
 **XML Sitemap Analyzer & Generator** runs `/seo sitemap <url | generate>` in
-the [Claude SEO](/claude-skills/claude-seo) suite — audit an existing sitemap
+the [Claude SEO](/claude-skills/claude-seo) suite: audit an existing sitemap
 for coverage/staleness issues, or generate a new one from an industry
 template.
 

@@ -15,7 +15,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash

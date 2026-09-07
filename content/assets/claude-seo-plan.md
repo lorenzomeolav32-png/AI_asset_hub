@@ -4,7 +4,7 @@ type: claude-skill
 title: Strategic SEO Plan Builder
 fileName: seo-plan.skill
 summary: >-
-  Strategic SEO planning tailored to business type — SaaS, local,
+  Strategic SEO planning tailored to business type: SaaS, local,
   e-commerce, publisher or agency.
 category: marketing
 tags: [claude-seo, strategy, planning]
@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash

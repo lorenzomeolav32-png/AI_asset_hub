@@ -9,7 +9,7 @@ import { SITE_EMAIL, SITE_GITHUB } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Contact",
   description:
-    "Get in touch with AI Assets Directory — suggest an asset, correct a listing, request removal, or talk about sponsorship.",
+    "Get in touch with AI Assets Directory: suggest an asset, correct a listing, request removal, or talk about sponsorship.",
   path: "/contact",
   eyebrow: "say hello",
 });
@@ -71,23 +71,23 @@ export default function ContactPage() {
         <h2>What to reach out about</h2>
         <ul>
           <li>
-            <strong>Submit an asset</strong> — use the{" "}
+            <strong>Submit an asset</strong>: use the{" "}
             <Link href="/submit">submit page</Link> for the fastest route.
           </li>
           <li>
-            <strong>Fix or update a listing</strong> — tell us what is wrong and
+            <strong>Fix or update a listing</strong>: tell us what is wrong and
             link the source.
           </li>
           <li>
-            <strong>Removal requests</strong> — if you own an asset and want it
+            <strong>Removal requests</strong>: if you own an asset and want it
             delisted, email us and we will remove it promptly.
           </li>
           <li>
-            <strong>Sponsorship</strong> — see{" "}
+            <strong>Sponsorship</strong>: see{" "}
             <Link href="/advertise">advertising options</Link>.
           </li>
           <li>
-            <strong>Privacy</strong> — data requests are covered in the{" "}
+            <strong>Privacy</strong>: data requests are covered in the{" "}
             <Link href="/privacy">privacy policy</Link>.
           </li>
         </ul>

@@ -4,7 +4,7 @@ type: claude-skill
 title: SEO Image Optimization
 fileName: seo-images.skill
 summary: >-
-  Image optimization analysis — alt text, compression, lazy-loading and
+  Image optimization analysis covering alt text, compression, lazy-loading and
   format recommendations.
 category: marketing
 tags: [claude-seo, images, performance]
@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash

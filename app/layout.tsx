@@ -12,7 +12,7 @@ import { organizationSchema, websiteSchema } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const DEFAULT_TITLE =
-  "AI Assets Directory — verified AI assets & guides for developers";
+  "AI Assets Directory: verified AI assets & guides for developers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

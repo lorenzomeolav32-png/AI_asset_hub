@@ -4,7 +4,7 @@ type: claude-skill
 title: SEO Drift Monitor
 fileName: seo-drift.skill
 summary: >-
-  Tracks SEO drift over time with local SQLite snapshots — baseline,
+  Tracks SEO drift over time with local SQLite snapshots: baseline,
   compare and history modes.
 category: marketing
 tags: [claude-seo, monitoring, drift, regression]
@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash
@@ -33,4 +33,4 @@ Dan Colta.
 ## Part of Claude SEO
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin. All snapshots stay
-local — nothing is uploaded to a third party.
+local; nothing is uploaded to a third party.

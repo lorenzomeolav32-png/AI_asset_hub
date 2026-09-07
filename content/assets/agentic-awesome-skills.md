@@ -17,7 +17,7 @@ stars: 46059
 verified: true
 install: |
   # Ask Codex/Claude (with the AAS MCP configured) to search the catalog and
-  # pick exact skill IDs, then preview a dry run of just those - never --all:
+  # pick exact skill IDs, then preview a dry run of just those (never --all):
   npx agentic-awesome-skills audit --skills <skill-id-1>,<skill-id-2>
   npx agentic-awesome-skills --skills <skill-id-1>,<skill-id-2> --dry-run
 installLang: bash
@@ -41,15 +41,15 @@ skill IDs, and validate that selection into a reviewable, versioned
 2. **Agent-owned selection.** The agent (not AAS) picks the exact skill IDs
    relevant to your project's surface (architecture, security, testing, etc.).
 3. **Validate, then plan.** `aas stack validate` and `aas stack plan` check the
-   proposal and produce an immutable install plan — still no changes applied.
+   proposal and produce an immutable install plan, without applying any changes.
 4. **Install narrowly.** Run the direct installer with `--skills id1,id2` (or a
    specialized plugin/bundle) for a scoped, reviewable install; avoid `--all`.
 
 ## Licensing note
 
 The AAS Core tooling itself is **MIT**. The individual skills inside `skills/`
-are contributed from hundreds of separate upstream repos, each under its **own**
-license (MIT, Apache-2.0, AGPL-3.0, CC-BY-4.0 and others) — check the source
+are contributed from hundreds of separate upstream repos, each under its own
+license (MIT, Apache-2.0, AGPL-3.0, CC-BY-4.0 and others). Check the source
 repo's own attribution ledger before reusing a specific skill's content, rather
 than assuming the root MIT license applies to everything.
 

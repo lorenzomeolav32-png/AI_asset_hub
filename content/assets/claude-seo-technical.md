@@ -4,7 +4,7 @@ type: claude-skill
 title: SEO Technical Audit
 fileName: seo-technical.skill
 summary: >-
-  Technical SEO audit across 9 categories — crawlability, indexation, Core
+  Technical SEO audit across 9 categories: crawlability, indexation, Core
   Web Vitals, structured data and more.
 category: marketing
 tags: [claude-seo, technical-seo, core-web-vitals]
@@ -16,7 +16,7 @@ stars: 16500
 starsNote: whole AgriciDaniel/claude-seo repo
 verified: false
 install: |
-  # Ships inside the Claude SEO plugin — installs together
+  # Ships inside the Claude SEO plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-seo
   /plugin install claude-seo@agricidaniel-claude-seo
 installLang: bash

@@ -33,8 +33,8 @@ on-page, business listings, AI visibility, LLM mention tracking).
 
 ## Cost note
 
-⚠️ The skill wrapper is free (MIT), but it requires **your own paid
-DataForSEO account** to return real data. Opt-in only — Claude SEO's core 25
+The skill wrapper is free (MIT), but it requires **your own paid
+DataForSEO account** to return real data. Opt-in only. Claude SEO's core 25
 skills work without it.
 
 ## Part of Claude SEO

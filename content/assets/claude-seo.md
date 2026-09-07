@@ -4,7 +4,7 @@ type: claude-skill
 title: Claude SEO
 fileName: claude-seo.skill
 summary: >-
-  Open-source SEO plugin for Claude Code — 25 sub-skills + 18 specialist
+  Open-source SEO plugin for Claude Code: 25 sub-skills + 18 specialist
   subagents running technical SEO, E-E-A-T, Schema.org, GEO/AEO, local and
   international SEO audits in parallel, producing a falsifiable action plan.
 category: marketing
@@ -34,13 +34,13 @@ this failed?" check and a leading indicator.
 
 ## How it works
 
-1. **Orchestrate** — `skills/seo/SKILL.md` detects the industry (SaaS, local,
+1. **Orchestrate:** `skills/seo/SKILL.md` detects the industry (SaaS, local,
    e-commerce, publisher, agency) and dispatches up to 15 subagents in parallel.
-2. **Audit** — each subagent scores its domain (technical, content, schema,
+2. **Audit:** each subagent scores its domain (technical, content, schema,
    GEO, local, backlinks...) against primary-source Google guidance.
-3. **Synthesize** — findings converge through a 10-principle methodology
+3. **Synthesize:** findings converge through a 10-principle methodology
    (PERCEIVE → ANALYZE → VALIDATE → ACT) into one prioritized plan.
-4. **Report** — Markdown, HTML and a production PDF (WeasyPrint + matplotlib).
+4. **Report:** Markdown, HTML and a production PDF (WeasyPrint + matplotlib).
 
 ## Examples
 
@@ -53,7 +53,7 @@ this failed?" check and a leading indicator.
 ## Individual skills
 
 Claude SEO ships as one plugin, but internally it is composed of 25 focused
-skill files under `skills/` — the orchestrator plus 24 specialist skills
+skill files under `skills/`: the orchestrator plus 24 specialist skills
 covering technical audits, content/E-E-A-T, schema, AI search (GEO), local and
 maps, international SEO, e-commerce, and two optional paid-extension bridges
 (DataForSEO, AI image generation). Each of the 24 specialist skills is listed
@@ -65,7 +65,7 @@ browse what each capability does on its own.
 The orchestrator also dispatches **18 internal specialist subagents**
 (`agents/seo-*.md`, e.g. `seo-visual`, `seo-performance`) to do the actual
 parallel audit work. These are Claude Code subagents in the `agents/` folder,
-not GitHub Copilot agents, and they aren't separately installable — the
+not GitHub Copilot agents, and they aren't separately installable. The
 orchestrator dispatches them internally, so they aren't listed as their own
 entries here.
 
@@ -73,4 +73,4 @@ entries here.
 
 One skill, `seo-flow`, ships evidence-led prompts licensed separately under
 **CC BY 4.0** (sourced from the author's companion FLOW project) rather than
-the repo's default MIT — see its own entry for detail.
+the repo's default MIT. See its own entry for detail.

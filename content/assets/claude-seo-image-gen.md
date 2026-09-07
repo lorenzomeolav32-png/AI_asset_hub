@@ -34,9 +34,9 @@ Director pipeline (Gemini image models).
 
 ## Cost note
 
-⚠️ The skill wrapper is free (MIT), but Gemini image generation through
+The skill wrapper is free (MIT), but Gemini image generation through
 Claude Banana may incur its own API costs depending on your Gemini plan.
-Opt-in only — Claude SEO's core 25 skills work without it.
+Opt-in only; Claude SEO's core 25 skills work without it.
 
 ## Part of Claude SEO
 

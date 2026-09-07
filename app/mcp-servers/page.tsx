@@ -9,7 +9,7 @@ import { breadcrumbSchema, itemListSchema, pageMeta } from "@/lib/seo";
 const SEGMENT = "mcp-servers";
 
 export const metadata: Metadata = pageMeta({
-  title: "MCP Servers — curated & tested",
+  title: "MCP Servers: curated & tested",
   description:
     "Open-source MCP servers to connect your AI agent to databases, APIs and tools. Copy the config, install, ship.",
   path: `/${SEGMENT}`,
