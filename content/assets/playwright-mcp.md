@@ -4,9 +4,10 @@ type: mcp-server
 title: Playwright MCP
 fileName: playwright-mcp.mcp
 summary: >-
-  Microsoft's official MCP server for browser automation — drives Playwright
+  Microsoft's official MCP server for browser automation, driving Playwright
   through structured accessibility snapshots instead of screenshots, so any MCP
   client can browse, click and fill forms without a vision model.
+category: testing-qa
 tags: [browser-automation, testing, playwright, web]
 tools: [claude, claude-code, cursor, vscode, copilot]
 license: Apache-2.0
@@ -30,14 +31,14 @@ installLang: json
 
 **Playwright MCP** exposes browser automation capabilities through the Model Context
 Protocol, built on top of Playwright. Instead of feeding screenshots to a vision
-model, it hands the agent a structured **accessibility snapshot** of the page — fast,
-deterministic and LLM-friendly.
+model, it hands the agent a structured **accessibility snapshot** of the page.
 
 ## How it works
 
-- **Fast and lightweight** — uses Playwright's accessibility tree, not pixel input.
-- **LLM-friendly** — no vision model required, works purely on structured data.
-- **Deterministic** — avoids the ambiguity common with screenshot-based approaches.
+It's fast and lightweight, using Playwright's accessibility tree instead of pixel
+input; LLM-friendly, since it works purely on structured data with no vision model
+required; and deterministic, avoiding the ambiguity common with screenshot-based
+approaches.
 
 It supports a **persistent profile** (keeps you logged in across sessions, like a
 regular browser) or an **isolated profile** per session (nothing persists after the

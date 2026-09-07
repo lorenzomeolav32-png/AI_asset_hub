@@ -6,6 +6,7 @@ fileName: frontend-design.skill
 summary: >-
   Generate distinctive, production-grade UI that avoids generic "AI slop" — bold
   typography, cohesive color, and meticulous motion, implemented as real code.
+category: web-design
 tags: [ui, design, frontend, react]
 tools: [claude, claude-code]
 license: Apache-2.0

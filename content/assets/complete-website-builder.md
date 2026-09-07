@@ -7,6 +7,7 @@ summary: >-
   Build a production-grade, agency-quality marketing website in one
   self-contained HTML file — real researched photos, GSAP animations,
   glassmorphism, and a persona library for any business type.
+category: web-design
 tags: [web, landing-page, gsap, html]
 tools: [claude, claude-code]
 license: MIT

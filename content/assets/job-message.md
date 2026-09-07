@@ -6,6 +6,7 @@ fileName: job-message.skill
 summary: >-
   Write short, punchy job-application messages for portals and forms — grounded
   only in your real CV, never invented.
+category: career
 tags: [career, writing, jobs]
 tools: [claude, claude-code, chatgpt]
 license: MIT

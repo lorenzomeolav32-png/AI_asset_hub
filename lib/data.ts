@@ -14,9 +14,50 @@ export type ToolId =
   | "chatgpt"
   | "deepseek"
   | "grok"
-  | "n8n";
+  | "n8n"
+  | "codex"
+  | "gemini"
+  | "windsurf"
+  | "goose";
 
 export type License = "MIT" | "Apache-2.0" | "CC-BY-4.0" | "BSD" | "Public";
+
+export type AssetCategory =
+  | "marketing"
+  | "dev-tools"
+  | "web-design"
+  | "testing-qa"
+  | "devops"
+  | "security"
+  | "writing"
+  | "career"
+  | "productivity"
+  | "data-ai"
+  | "research"
+  | "finance"
+  | "customer-support"
+  | "other";
+
+export const categoryLabels: Record<AssetCategory, string> = {
+  marketing: "Marketing & Ads",
+  "dev-tools": "Developer Tools",
+  "web-design": "Web & Design",
+  "testing-qa": "Testing & QA",
+  devops: "DevOps & CI/CD",
+  security: "Security",
+  writing: "Writing & Content",
+  career: "Career",
+  productivity: "Productivity",
+  "data-ai": "Data & AI",
+  research: "Research & Analysis",
+  finance: "Finance & Business Ops",
+  "customer-support": "Customer Support",
+  other: "Other",
+};
+
+export function categoryLabel(id: string): string {
+  return categoryLabels[id as AssetCategory] ?? id;
+}
 
 export type Asset = {
   slug: string;
@@ -59,6 +100,10 @@ export const toolLabels: Record<ToolId, string> = {
   deepseek: "DeepSeek",
   grok: "Grok",
   n8n: "n8n",
+  codex: "Codex",
+  gemini: "Gemini",
+  windsurf: "Windsurf",
+  goose: "Goose",
 };
 
 export function toolLabel(id: string): string {

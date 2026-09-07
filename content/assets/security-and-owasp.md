@@ -4,9 +4,10 @@ type: copilot
 title: Security & OWASP Top 10 Instructions
 fileName: security-and-owasp.instructions.md
 summary: >-
-  Comprehensive secure-coding standard for Copilot — 55+ anti-patterns mapped to
+  Comprehensive secure-coding standard for Copilot: 55+ anti-patterns mapped to
   OWASP Top 10 2025, with detection regex and framework-specific fixes for
   Next.js, Angular, Express and Go, plus AI/LLM security guidance.
+category: security
 tags: [security, owasp, code-review, best-practices]
 tools: [copilot, vscode]
 license: MIT
@@ -32,8 +33,8 @@ reviewing code.
 
 ## How it works
 
-The file organizes **55+ anti-patterns** by category — Injection, Authentication,
-Authorization, Secrets, Headers, Frontend, Dependencies, API, AI/LLM and
+The file organizes **55+ anti-patterns** by category: Injection, Authentication,
+Authorization, Secrets, Headers, Frontend, Dependencies, API, AI/LLM, and
 framework-specific sections for React/Next.js, Angular, Express and Go. Each entry
 has:
 
@@ -52,15 +53,15 @@ logging.
 A few of the anti-patterns it flags, straight from the file:
 
 ```typescript
-// BAD — SQL injection via string concatenation (OWASP A05)
+// BAD: SQL injection via string concatenation (OWASP A05)
 const unsafeResult = await db.query(`SELECT * FROM users WHERE id = ${userId}`);
 
-// GOOD — parameterized query
+// GOOD: parameterized query
 const safeResult = await db.query('SELECT * FROM users WHERE id = $1', [userId]);
 ```
 
 ```typescript
-// BAD — CORS wildcard with credentials (OWASP A02)
+// BAD: CORS wildcard with credentials (OWASP A02)
 app.use(cors({ origin: '*', credentials: true }));
 
 // GOOD

@@ -3,12 +3,17 @@
 import { useMemo, useState } from "react";
 import { AssetCard } from "@/components/asset-card";
 import type { CardAsset } from "@/lib/content";
-import { toolLabel } from "@/lib/data";
+import { categoryLabel, toolLabel } from "@/lib/data";
 
 export function AssetBrowser({ assets }: { assets: CardAsset[] }) {
+  const [category, setCategory] = useState<string | null>(null);
   const [tool, setTool] = useState<string | null>(null);
   const [tag, setTag] = useState<string | null>(null);
 
+  const categories = useMemo(
+    () => Array.from(new Set(assets.map((a) => a.category))).sort(),
+    [assets],
+  );
   const tools = useMemo(
     () => Array.from(new Set(assets.flatMap((a) => a.tools))).sort(),
     [assets],
@@ -20,12 +25,33 @@ export function AssetBrowser({ assets }: { assets: CardAsset[] }) {
 
   const filtered = assets.filter(
     (a) =>
-      (!tool || a.tools.includes(tool)) && (!tag || a.tags.includes(tag)),
+      (!category || a.category === category) &&
+      (!tool || a.tools.includes(tool)) &&
+      (!tag || a.tags.includes(tag)),
   );
 
   return (
     <div>
       <div className="mb-6 flex flex-col gap-3">
+        {categories.length > 1 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
+              category:
+            </span>
+            <Chip active={category === null} onClick={() => setCategory(null)}>
+              all
+            </Chip>
+            {categories.map((c) => (
+              <Chip
+                key={c}
+                active={category === c}
+                onClick={() => setCategory(c)}
+              >
+                {categoryLabel(c)}
+              </Chip>
+            ))}
+          </div>
+        )}
         <div className="flex flex-wrap items-center gap-2">
           <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
             tool:

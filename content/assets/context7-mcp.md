@@ -7,6 +7,7 @@ summary: >-
   Pulls up-to-date, version-specific documentation and code examples straight
   from the source into your prompt, so agents stop citing outdated APIs or
   hallucinating ones that don't exist.
+category: dev-tools
 tags: [documentation, developer-tools, rag]
 tools: [claude, claude-code, cursor, vscode]
 license: MIT
@@ -34,13 +35,12 @@ examples and drops them straight into the model's context before it answers.
 
 ## How it works
 
-Context7 works in two modes:
-
-- **CLI + Skills** — installs a skill that guides the agent to fetch docs with the
-  `ctx7` CLI (`ctx7 library <name> <query>`, `ctx7 docs <libraryId> <query>`). No MCP
-  required, and it's more token-efficient since it avoids loading large tool schemas.
-- **MCP** — registers an MCP server with two tools, `resolve-library-id` (turns a
-  library name into a Context7 ID) and `query-docs` (fetches docs for that ID).
+Context7 works in two modes. In **CLI + Skills** mode, it installs a skill that
+guides the agent to fetch docs with the `ctx7` CLI (`ctx7 library <name> <query>`,
+`ctx7 docs <libraryId> <query>`); no MCP required, and it's more token-efficient
+since it skips loading large tool schemas. In **MCP** mode, it registers a server
+with two tools: `resolve-library-id` (turns a library name into a Context7 ID) and
+`query-docs` (fetches docs for that ID).
 
 Add a rule like *"Always use Context7 when I need library/API documentation, code
 generation, setup or configuration steps"* to your agent's system prompt/`CLAUDE.md`
@@ -57,5 +57,5 @@ API and docs.
 ```
 
 If you already know the exact library, adding its Context7 ID (`/org/repo` syntax)
-skips the matching step and goes straight to fetching docs — handy when there are
-several libraries with similar names.
+skips the matching step and goes straight to fetching docs, which helps when several
+libraries share a similar name.

@@ -6,6 +6,7 @@ fileName: create-skill.skill
 summary: >-
   Scaffold high-quality Claude Code skills and slash commands with correct
   frontmatter, conventions and worked examples.
+category: dev-tools
 tags: [meta, claude-code, devx]
 tools: [claude-code]
 license: MIT

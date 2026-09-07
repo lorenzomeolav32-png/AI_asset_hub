@@ -6,6 +6,7 @@ fileName: humanizer.skill
 summary: >-
   Rewrite AI-sounding text so it reads like a person wrote it — strips filler,
   inflated claims, em-dashes and chatbot artifacts without changing the meaning.
+category: writing
 tags: [writing, editing, content, ai-writing]
 tools: [claude, claude-code, cursor, codex]
 license: MIT

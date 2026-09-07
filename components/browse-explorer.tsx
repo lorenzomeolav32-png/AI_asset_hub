@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { AssetCard } from "@/components/asset-card";
 import type { CardAsset } from "@/lib/content";
-import { toolLabel, typeLabels } from "@/lib/data";
+import { categoryLabel, toolLabel, typeLabels } from "@/lib/data";
 import type { AssetType } from "@/lib/data";
 
 const TYPES: AssetType[] = [
@@ -18,8 +18,13 @@ const TYPES: AssetType[] = [
 export function BrowseExplorer({ items }: { items: CardAsset[] }) {
   const [q, setQ] = useState("");
   const [type, setType] = useState<AssetType | null>(null);
+  const [category, setCategory] = useState<string | null>(null);
   const [tool, setTool] = useState<string | null>(null);
 
+  const categories = useMemo(
+    () => Array.from(new Set(items.map((a) => a.category))).sort(),
+    [items],
+  );
   const tools = useMemo(
     () => Array.from(new Set(items.flatMap((a) => a.tools))).sort(),
     [items],
@@ -28,6 +33,7 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
   const query = q.trim().toLowerCase();
   const filtered = items.filter((a) => {
     if (type && a.type !== type) return false;
+    if (category && a.category !== category) return false;
     if (tool && !a.tools.includes(tool)) return false;
     if (!query) return true;
     const hay = `${a.title} ${a.summary} ${a.fileName} ${a.tags.join(" ")} ${a.tools.join(" ")}`.toLowerCase();
@@ -69,6 +75,23 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
           {TYPES.map((t) => (
             <Chip key={t} active={type === t} onClick={() => setType(t)}>
               {typeLabels[t]}
+            </Chip>
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
+            category:
+          </span>
+          <Chip active={category === null} onClick={() => setCategory(null)}>
+            all
+          </Chip>
+          {categories.map((c) => (
+            <Chip
+              key={c}
+              active={category === c}
+              onClick={() => setCategory(c)}
+            >
+              {categoryLabel(c)}
             </Chip>
           ))}
         </div>

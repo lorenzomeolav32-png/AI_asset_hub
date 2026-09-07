@@ -28,6 +28,7 @@ export type CardAsset = {
   title: string;
   fileName: string;
   summary: string;
+  category: string;
   tags: string[];
   tools: string[];
   license: string;
@@ -45,6 +46,7 @@ function toCard(a: Asset): CardAsset {
     title: a.title,
     fileName: a.fileName,
     summary: a.summary,
+    category: a.category,
     tags: a.tags,
     tools: a.tools,
     license: a.license,
