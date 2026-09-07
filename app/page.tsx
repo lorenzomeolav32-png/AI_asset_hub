@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 import { categories, toolLabel, worksWith } from "@/lib/data";
 import { allAssets, featuredCards } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
-import { SITE_DESCRIPTION } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_GITHUB } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "AI Assets Directory — verified AI assets & guides for developers",
@@ -240,7 +240,7 @@ export default function Home() {
               Browse assets <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://github.com"
+              href={SITE_GITHUB}
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-11 items-center gap-2 rounded-lg border border-line bg-bg px-5 font-medium text-fg transition-colors hover:border-line-strong"
