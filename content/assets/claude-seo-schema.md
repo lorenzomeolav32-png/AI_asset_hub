@@ -1,0 +1,37 @@
+---
+slug: claude-seo-schema
+type: claude-skill
+title: Schema.org Markup Audit
+fileName: seo-schema.skill
+summary: >-
+  Detects, validates and generates Schema.org / JSON-LD markup, and flags
+  deprecated schema types.
+category: marketing
+tags: [claude-seo, schema-org, json-ld, structured-data]
+tools: [claude, claude-code]
+license: MIT
+author: agricidaniel
+source: https://github.com/AgriciDaniel/claude-seo/tree/main/skills/seo-schema
+stars: 16500
+starsNote: whole AgriciDaniel/claude-seo repo
+verified: false
+install: |
+  # Ships inside the Claude SEO plugin — installs together
+  /plugin marketplace add AgriciDaniel/claude-seo
+  /plugin install claude-seo@agricidaniel-claude-seo
+installLang: bash
+---
+
+## Overview
+
+**Schema.org Markup Audit** runs `/seo schema <url>` in the
+[Claude SEO](/claude-skills/claude-seo) suite. It detects, validates (dual
+validator: Rich Results Test + Schema Markup Validator) and generates JSON-LD,
+and flags retired types (HowTo, FAQPage rich results, SpecialAnnouncement,
+ClaimReview and others) with replacement guidance.
+
+## Part of Claude SEO
+
+Part of the [Claude SEO](/claude-skills/claude-seo) plugin; covers
+organization, article, product, local, event, job, course and e-commerce
+schema (`hasMerchantReturnPolicy`, `MemberProgram`, EU `energyEfficiencyClass`).

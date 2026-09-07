@@ -33,13 +33,14 @@ export type AssetCategory =
   | "career"
   | "productivity"
   | "data-ai"
+  | "media-generation"
   | "research"
   | "finance"
   | "customer-support"
   | "other";
 
 export const categoryLabels: Record<AssetCategory, string> = {
-  marketing: "Marketing & Ads",
+  marketing: "Marketing & Growth",
   "dev-tools": "Developer Tools",
   "web-design": "Web & Design",
   "testing-qa": "Testing & QA",
@@ -49,6 +50,7 @@ export const categoryLabels: Record<AssetCategory, string> = {
   career: "Career",
   productivity: "Productivity",
   "data-ai": "Data & AI",
+  "media-generation": "Media & Creative",
   research: "Research & Analysis",
   finance: "Finance & Business Ops",
   "customer-support": "Customer Support",

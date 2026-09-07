@@ -36,6 +36,7 @@ const assets = defineCollection({
         "career",
         "productivity",
         "data-ai",
+        "media-generation",
         "research",
         "finance",
         "customer-support",
