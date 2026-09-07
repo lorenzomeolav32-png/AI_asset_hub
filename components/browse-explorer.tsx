@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { AssetCard } from "@/components/asset-card";
+import { FilterMenu } from "@/components/filter-menu";
 import type { CardAsset } from "@/lib/content";
 import { categoryLabel, toolLabel, typeLabels } from "@/lib/data";
 import type { AssetType } from "@/lib/data";
@@ -40,6 +41,8 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
     return hay.includes(query);
   });
 
+  const activeCount = [type, category, tool].filter(Boolean).length;
+
   return (
     <div>
       {/* search */}
@@ -64,50 +67,41 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
       </div>
 
       {/* filters */}
-      <div className="mt-5 flex flex-col gap-3">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-            type:
-          </span>
-          <Chip active={type === null} onClick={() => setType(null)}>
-            all
-          </Chip>
-          {TYPES.map((t) => (
-            <Chip key={t} active={type === t} onClick={() => setType(t)}>
-              {typeLabels[t]}
-            </Chip>
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-            category:
-          </span>
-          <Chip active={category === null} onClick={() => setCategory(null)}>
-            all
-          </Chip>
-          {categories.map((c) => (
-            <Chip
-              key={c}
-              active={category === c}
-              onClick={() => setCategory(c)}
-            >
-              {categoryLabel(c)}
-            </Chip>
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-            tool:
-          </span>
-          <Chip active={tool === null} onClick={() => setTool(null)}>
-            all
-          </Chip>
-          {tools.map((t) => (
-            <Chip key={t} active={tool === t} onClick={() => setTool(t)}>
-              {toolLabel(t)}
-            </Chip>
-          ))}
-        </div>
+      <div className="mt-4 flex flex-wrap items-center gap-2.5">
+        <FilterMenu
+          label="Type"
+          value={type}
+          onChange={(v) => setType(v as AssetType | null)}
+          options={TYPES.map((t) => ({ value: t, label: typeLabels[t] }))}
+        />
+        <FilterMenu
+          label="Category"
+          value={category}
+          onChange={setCategory}
+          options={categories.map((c) => ({
+            value: c,
+            label: categoryLabel(c),
+          }))}
+        />
+        <FilterMenu
+          label="Tool"
+          value={tool}
+          onChange={setTool}
+          options={tools.map((t) => ({ value: t, label: toolLabel(t) }))}
+        />
+        {activeCount > 0 && (
+          <button
+            type="button"
+            onClick={() => {
+              setType(null);
+              setCategory(null);
+              setTool(null);
+            }}
+            className="font-mono text-[11px] text-muted underline-offset-4 hover:text-fg hover:underline"
+          >
+            clear filters
+          </button>
+        )}
       </div>
 
       <p className="mt-6 font-mono text-xs text-muted">
@@ -126,30 +120,5 @@ export function BrowseExplorer({ items }: { items: CardAsset[] }) {
         </p>
       )}
     </div>
-  );
-}
-
-function Chip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={
-        "rounded-full border px-3 py-1 font-mono text-xs transition-colors " +
-        (active
-          ? "border-transparent bg-accent text-accent-ink"
-          : "border-line bg-surface text-muted hover:border-line-strong hover:text-fg")
-      }
-    >
-      {children}
-    </button>
   );
 }

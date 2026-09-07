@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AssetCard } from "@/components/asset-card";
+import { FilterMenu } from "@/components/filter-menu";
 import type { CardAsset } from "@/lib/content";
 import { categoryLabel, toolLabel } from "@/lib/data";
 
@@ -30,55 +31,49 @@ export function AssetBrowser({ assets }: { assets: CardAsset[] }) {
       (!tag || a.tags.includes(tag)),
   );
 
+  const activeCount = [category, tool, tag].filter(Boolean).length;
+
   return (
     <div>
-      <div className="mb-6 flex flex-col gap-3">
+      <div className="mb-8 flex flex-wrap items-center gap-2.5">
         {categories.length > 1 && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-              category:
-            </span>
-            <Chip active={category === null} onClick={() => setCategory(null)}>
-              all
-            </Chip>
-            {categories.map((c) => (
-              <Chip
-                key={c}
-                active={category === c}
-                onClick={() => setCategory(c)}
-              >
-                {categoryLabel(c)}
-              </Chip>
-            ))}
-          </div>
+          <FilterMenu
+            label="Category"
+            value={category}
+            onChange={setCategory}
+            options={categories.map((c) => ({
+              value: c,
+              label: categoryLabel(c),
+            }))}
+          />
         )}
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-            tool:
-          </span>
-          <Chip active={tool === null} onClick={() => setTool(null)}>
-            all
-          </Chip>
-          {tools.map((t) => (
-            <Chip key={t} active={tool === t} onClick={() => setTool(t)}>
-              {toolLabel(t)}
-            </Chip>
-          ))}
-        </div>
+        <FilterMenu
+          label="Tool"
+          value={tool}
+          onChange={setTool}
+          options={tools.map((t) => ({ value: t, label: toolLabel(t) }))}
+        />
         {tags.length > 0 && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-              tag:
-            </span>
-            <Chip active={tag === null} onClick={() => setTag(null)}>
-              all
-            </Chip>
-            {tags.map((t) => (
-              <Chip key={t} active={tag === t} onClick={() => setTag(t)}>
-                #{t}
-              </Chip>
-            ))}
-          </div>
+          <FilterMenu
+            label="Tag"
+            value={tag}
+            onChange={setTag}
+            options={tags.map((t) => ({ value: t, label: `#${t}` }))}
+            searchPlaceholder="Search tags…"
+          />
+        )}
+        {activeCount > 0 && (
+          <button
+            type="button"
+            onClick={() => {
+              setCategory(null);
+              setTool(null);
+              setTag(null);
+            }}
+            className="font-mono text-[11px] text-muted underline-offset-4 hover:text-fg hover:underline"
+          >
+            clear filters
+          </button>
         )}
       </div>
 
@@ -94,30 +89,5 @@ export function AssetBrowser({ assets }: { assets: CardAsset[] }) {
         </p>
       )}
     </div>
-  );
-}
-
-function Chip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={
-        "rounded-full border px-3 py-1 font-mono text-xs transition-colors " +
-        (active
-          ? "border-transparent bg-accent text-accent-ink"
-          : "border-line bg-surface text-muted hover:border-line-strong hover:text-fg")
-      }
-    >
-      {children}
-    </button>
   );
 }
