@@ -25,22 +25,20 @@ installLang: bash
 and deploying long-running, stateful agents, used in production by
 companies like Klarna, Replit and Elastic. Unlike opinionated agent
 frameworks, it gives you graph primitives (nodes, edges, state) and lets you
-build your own abstraction on top — it can be used standalone, without
+build your own abstraction on top. It can be used standalone, without
 LangChain.
 
 ## How it works
 
-- **Durable execution**: agents persist through failures and resume exactly
-  where they left off on long-running tasks.
-- **Human-in-the-loop**: inspect and modify agent state at any point during
-  execution before it continues.
-- **Comprehensive memory**: short-term working memory for a single run plus
-  long-term memory that persists across sessions.
-- Debug with **LangSmith**: trace execution paths, capture state
-  transitions and get runtime metrics for complex agent behavior.
-- Pairs with **Deep Agents** (a higher-level package built on LangGraph) if
-  you want planning/subagents/file-system access without building the graph
-  primitives yourself.
+Agents get durable execution: they persist through failures and resume
+exactly where they left off on long-running tasks. You can also inspect or
+modify agent state at any point during execution before it continues
+(human-in-the-loop), and memory covers both short-term working state for a
+single run and long-term memory that persists across sessions. For
+debugging, LangSmith traces execution paths, captures state transitions and
+reports runtime metrics. If you want planning, subagents or file-system
+access without building the graph primitives yourself, pair LangGraph with
+Deep Agents, a higher-level package built on top of it.
 
 ## Examples
 

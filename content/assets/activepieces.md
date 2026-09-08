@@ -38,10 +38,10 @@ trigger; you can mix no-code steps with a code piece (JavaScript/TypeScript
 with npm) whenever the built-in pieces aren't enough. Because pieces are
 regular npm packages, local development supports hot reloading.
 
-The distinctive feature for this directory: **all 280+ pieces are also
-published as MCP tools**, so the same integrations you use to build a flow
+The distinctive feature for this directory: all 280+ pieces are also
+published as MCP tools, so the same integrations you use to build a flow
 can be handed directly to an LLM agent running in Claude Desktop, Cursor or
-Windsurf, without rebuilding the integration layer twice.
+Windsurf without rebuilding the integration layer twice.
 
 1. Self-host with Docker Compose (Postgres + Redis + app + worker containers).
 2. Build a flow visually, or expose selected pieces as an MCP server for an
@@ -53,7 +53,7 @@ Windsurf, without rebuilding the integration layer twice.
 
 The Community Edition is **MIT**. Content under `packages/ee/` (enterprise
 features) is licensed separately under Activepieces' own **Commercial
-License** — it is not part of the MIT-licensed core, so don't assume the
+License**. That part isn't covered by the MIT core, so don't assume the
 whole repository is permissive.
 
 ## Examples

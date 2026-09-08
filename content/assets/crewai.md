@@ -27,7 +27,7 @@ installLang: bash
 ## Overview
 
 **CrewAI** is a lean, code-first Python framework for orchestrating
-autonomous AI agents — no visual canvas, no dependency on LangChain. It
+autonomous AI agents, with no visual canvas and no dependency on LangChain. It
 gives developers two complementary primitives: **Crews**, role-based teams
 of agents that collaborate autonomously, and **Flows**, event-driven
 workflows with explicit state and branching for precise control.

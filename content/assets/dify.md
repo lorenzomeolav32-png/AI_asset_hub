@@ -25,11 +25,11 @@ installLang: bash
 
 ## Overview
 
-**Dify** is an open-source platform for building LLM applications: it
-combines a visual **AI workflow** canvas, a **RAG pipeline**, **agent**
-capabilities (function calling or ReAct, with 50+ built-in tools), a **Prompt
-IDE**, model management across hundreds of providers, and **LLMOps**
-observability (via Opik, Langfuse or Arize Phoenix) in one workspace.
+**Dify** is an open-source platform for building LLM applications. It
+combines a visual AI workflow canvas, a RAG pipeline, agent capabilities
+(function calling or ReAct, with 50+ built-in tools), a Prompt IDE, model
+management across hundreds of providers, and LLMOps observability (via
+Opik, Langfuse or Arize Phoenix) in one workspace.
 
 ## How it works
 
@@ -47,13 +47,13 @@ observability (via Opik, Langfuse or Arize Phoenix) in one workspace.
 
 ## Licensing note
 
-Dify is **not plain Apache-2.0** — it ships under the **Dify Open Source
-License**, an Apache-2.0 base with two extra conditions: (1) you may **not
-operate a multi-tenant SaaS** using the source code without a commercial
-license from LangGenius (one tenant = one workspace), and (2) you may not
-remove or modify the LOGO/copyright notices in the frontend (`web/`).
+Dify is not plain Apache-2.0: it ships under the **Dify Open Source
+License**, an Apache-2.0 base with two extra conditions. First, you may not
+operate a multi-tenant SaaS using the source code without a commercial
+license from LangGenius (one tenant equals one workspace). Second, you may
+not remove or modify the LOGO or copyright notices in the frontend (`web/`).
 Self-hosting Dify for your own business, including commercial use, is
-explicitly allowed. Enterprise features have their own separate commercial
+explicitly allowed; enterprise features have their own separate commercial
 license.
 
 ## Examples
