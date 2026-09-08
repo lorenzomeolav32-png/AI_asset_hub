@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { CommandMenuProvider } from "@/components/command-menu-context";
 import { Backdrop } from "@/components/backdrop";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -74,12 +75,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Backdrop />
-          <JsonLd data={[organizationSchema(), websiteSchema()]} />
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-          <CookieNotice />
+          <CommandMenuProvider>
+            <Backdrop />
+            <JsonLd data={[organizationSchema(), websiteSchema()]} />
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+            <CookieNotice />
+          </CommandMenuProvider>
         </ThemeProvider>
         <Analytics />
       </body>

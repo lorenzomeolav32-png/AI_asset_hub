@@ -1,13 +1,8 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Boxes,
-  Command,
-  ShieldCheck,
-  Terminal,
-} from "lucide-react";
+import { ArrowRight, Boxes, ShieldCheck, Terminal } from "lucide-react";
 import { AssetCard } from "@/components/asset-card";
 import { CategoryTile } from "@/components/category-tile";
+import { HeroSearchBar } from "@/components/hero-search-bar";
 import { GithubIcon } from "@/components/icons";
 import type { Metadata } from "next";
 import { categories, toolLabel, worksWith } from "@/lib/data";
@@ -50,17 +45,7 @@ export default function Home() {
 
           {/* terminal search bar */}
           <div className="mt-9 max-w-2xl">
-            <div className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 shadow-[0_0_40px_-12px_var(--accent-glow)] transition-colors hover:border-line-strong">
-              <Terminal className="h-4 w-4 shrink-0 text-accent" />
-              <span className="font-mono text-sm text-muted">$ search</span>
-              <span className="font-mono text-sm text-fg/80">
-                mcp server for postgres
-              </span>
-              <span className="caret" />
-              <kbd className="ml-auto hidden shrink-0 items-center gap-1 rounded border border-line bg-bg px-2 py-1 font-mono text-[11px] text-muted sm:inline-flex">
-                <Command className="h-3 w-3" />K
-              </kbd>
-            </div>
+            <HeroSearchBar />
 
             <div className="mt-4 flex flex-wrap gap-2">
               {categories.map((c) => (
