@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import { categories, toolLabel, worksWith } from "@/lib/data";
 import { allAssets, featuredCards } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
-import { SITE_DESCRIPTION, SITE_GITHUB } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_GITHUB, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "AI Assets Directory: verified AI assets & guides for developers",
@@ -38,9 +38,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Hand-picked, tested Claude Skills, MCP servers, Copilot agents,
-            Cursor rules and AI workflows for developers. Skip the noisy
-            crawlers: copy, install, ship.
+            {SITE_TAGLINE}
           </p>
 
           {/* terminal search bar */}
