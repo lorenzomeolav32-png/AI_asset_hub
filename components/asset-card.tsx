@@ -42,7 +42,10 @@ export function AssetCard({ asset }: { asset: CardAsset }) {
         </span>
         <div className="flex items-center gap-3">
           {typeof asset.stars === "number" && (
-            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-muted">
+            <span
+              className="inline-flex items-center gap-1 font-mono text-[11px] text-muted"
+              title={asset.starsNote ? `Stars for the ${asset.starsNote}` : undefined}
+            >
               <Star className="h-3.5 w-3.5" />
               {asset.stars >= 1000
                 ? `${(asset.stars / 1000).toFixed(1)}k`

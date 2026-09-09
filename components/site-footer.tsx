@@ -95,7 +95,7 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-line pt-6 sm:flex-row sm:items-center">
           <p className="font-mono text-xs text-muted">
-            © {new Date().getFullYear()} AI Assets Directory — independent &amp; not
+            © {new Date().getFullYear()} AI Assets Directory, independent &amp; not
             affiliated with Anthropic, GitHub or OpenAI.
           </p>
           <div className="flex items-center gap-4 text-muted">

@@ -7,7 +7,7 @@ import { SITE_EMAIL } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "About",
   description:
-    "AI Assets Directory is a curated, tested and well-explained directory of open-source AI assets for developers — Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules.",
+    "AI Assets Directory is a curated, tested and well-explained directory of open-source AI assets for developers: Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules.",
   path: "/about",
   eyebrow: "who we are",
 });
@@ -38,19 +38,19 @@ export default function AboutPage() {
       <h2>What we cover</h2>
       <ul>
         <li>
-          <strong>Claude Skills</strong> — reusable capabilities for Claude.
+          <strong>Claude Skills:</strong> reusable capabilities for Claude.
         </li>
         <li>
-          <strong>MCP Servers</strong> — Model Context Protocol integrations.
+          <strong>MCP Servers:</strong> Model Context Protocol integrations.
         </li>
         <li>
-          <strong>Copilot Agents</strong> — custom agents and instructions.
+          <strong>Copilot Agents:</strong> custom agents and instructions.
         </li>
         <li>
-          <strong>AI Workflows</strong> — end-to-end automations.
+          <strong>AI Workflows:</strong> end-to-end automations.
         </li>
         <li>
-          <strong>Cursor Rules</strong> — editor rules and configs.
+          <strong>Cursor Rules:</strong> editor rules and configs.
         </li>
       </ul>
       <p>

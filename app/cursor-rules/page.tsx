@@ -9,7 +9,7 @@ import { breadcrumbSchema, itemListSchema, pageMeta } from "@/lib/seo";
 const SEGMENT = "cursor-rules";
 
 export const metadata: Metadata = pageMeta({
-  title: "Cursor Rules — curated & tested",
+  title: "Cursor Rules: curated & tested",
   description:
     "Opinionated .mdc rules that keep Cursor on-style for your stack. Hand-picked and open-source.",
   path: `/${SEGMENT}`,

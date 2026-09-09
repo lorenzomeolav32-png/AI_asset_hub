@@ -9,7 +9,7 @@ import { breadcrumbSchema, itemListSchema, pageMeta } from "@/lib/seo";
 const SEGMENT = "copilot-agents";
 
 export const metadata: Metadata = pageMeta({
-  title: "Copilot Agents — curated & tested",
+  title: "Copilot Agents: curated & tested",
   description:
     "Chat modes, instructions and prompt files for GitHub Copilot. Hand-picked, open-source, ready to drop in.",
   path: `/${SEGMENT}`,

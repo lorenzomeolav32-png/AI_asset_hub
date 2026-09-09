@@ -33,7 +33,7 @@ export default function DisclosurePage() {
       <h2>Sponsored placements</h2>
       <p>
         We keep the lights on partly through sponsorships. When a placement is
-        paid — a directory slot, a newsletter mention, or a featured write-up —
+        paid (a directory slot, a newsletter mention, or a featured write-up),
         it is clearly labelled <strong>Sponsored</strong>. If you cannot see that
         label, it is not paid.
       </p>
@@ -41,7 +41,7 @@ export default function DisclosurePage() {
       <h2>Affiliate links</h2>
       <p>
         Some outbound links may be affiliate links, meaning we could earn a small
-        commission if you sign up or buy — at no extra cost to you. This never
+        commission if you sign up or buy, at no extra cost to you. This never
         changes our opinion of a tool or its place in the directory. Where a link
         is affiliate or sponsored, it carries the appropriate{" "}
         <code>rel</code> attribute.

@@ -7,7 +7,7 @@ import { SITE_EMAIL, LEGAL_LAST_UPDATED } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Cookie Policy",
   description:
-    "AI Assets Directory uses only essential and functional storage — no advertising or cross-site tracking cookies. Here is exactly what we store and why.",
+    "AI Assets Directory uses only essential and functional storage: no advertising or cross-site tracking cookies. Here is exactly what we store and why.",
   path: "/cookies",
   eyebrow: "cookies & storage",
 });

@@ -9,7 +9,7 @@ import { breadcrumbSchema, itemListSchema, pageMeta } from "@/lib/seo";
 const SEGMENT = "ai-workflows";
 
 export const metadata: Metadata = pageMeta({
-  title: "AI Workflows — curated & tested",
+  title: "AI Workflows: curated & tested",
   description:
     "Importable n8n and Make automations wired to LLMs. Hand-picked, open-source, ready to run.",
   path: `/${SEGMENT}`,

@@ -17,6 +17,7 @@ import {
 import type { CardAsset } from "@/lib/content";
 import { typeLabels } from "@/lib/data";
 import type { AssetType } from "@/lib/data";
+import { useCommandMenu } from "@/components/command-menu-context";
 
 const typeIcon: Record<AssetType, React.ComponentType<{ className?: string }>> = {
   "claude-skill": Sparkles,
@@ -39,7 +40,7 @@ const quickLinks = [
 
 export function CommandMenu({ items }: { items: CardAsset[] }) {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useCommandMenu();
   const [mounted, setMounted] = useState(false);
   const [isMac, setIsMac] = useState(false);
 
@@ -52,12 +53,12 @@ export function CommandMenu({ items }: { items: CardAsset[] }) {
     function onKey(e: KeyboardEvent) {
       if (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((o) => !o);
+        setOpen(!open);
       }
     }
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, []);
+  }, [open, setOpen]);
 
   function go(href: string) {
     setOpen(false);

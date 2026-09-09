@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Terminal } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandMenu } from "@/components/command-menu";
+import { MobileNav } from "@/components/mobile-nav";
 import { GithubIcon } from "@/components/icons";
 import { cards } from "@/lib/content";
 import { SITE_GITHUB } from "@/lib/site";
@@ -45,6 +46,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
+          <MobileNav />
           <CommandMenu items={cards} />
 
           <a

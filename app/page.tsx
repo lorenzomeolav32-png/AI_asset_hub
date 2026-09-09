@@ -1,22 +1,17 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Boxes,
-  Command,
-  ShieldCheck,
-  Terminal,
-} from "lucide-react";
+import { ArrowRight, Boxes, ShieldCheck, Terminal } from "lucide-react";
 import { AssetCard } from "@/components/asset-card";
 import { CategoryTile } from "@/components/category-tile";
+import { HeroSearchBar } from "@/components/hero-search-bar";
 import { GithubIcon } from "@/components/icons";
 import type { Metadata } from "next";
 import { categories, toolLabel, worksWith } from "@/lib/data";
 import { allAssets, featuredCards } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
-import { SITE_DESCRIPTION } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_GITHUB, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "AI Assets Directory — verified AI assets & guides for developers",
+  title: "AI Assets Directory: verified AI assets & guides for developers",
   description: SITE_DESCRIPTION,
   path: "/",
   absoluteTitle: true,
@@ -43,24 +38,12 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Hand-picked, tested Claude Skills, MCP servers, Copilot agents,
-            Cursor rules and AI workflows for developers. Skip the noisy
-            crawlers — copy, install, ship.
+            {SITE_TAGLINE}
           </p>
 
           {/* terminal search bar */}
           <div className="mt-9 max-w-2xl">
-            <div className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 shadow-[0_0_40px_-12px_var(--accent-glow)] transition-colors hover:border-line-strong">
-              <Terminal className="h-4 w-4 shrink-0 text-accent" />
-              <span className="font-mono text-sm text-muted">$ search</span>
-              <span className="font-mono text-sm text-fg/80">
-                mcp server for postgres
-              </span>
-              <span className="caret" />
-              <kbd className="ml-auto hidden shrink-0 items-center gap-1 rounded border border-line bg-bg px-2 py-1 font-mono text-[11px] text-muted sm:inline-flex">
-                <Command className="h-3 w-3" />K
-              </kbd>
-            </div>
+            <HeroSearchBar />
 
             <div className="mt-4 flex flex-wrap gap-2">
               {categories.map((c) => (
@@ -184,7 +167,7 @@ export default function Home() {
             {
               icon: ShieldCheck,
               title: "Curated & tested",
-              body: "Every listing is reviewed by a human, with a last-verified date and a works-with matrix — not a 100k-item crawl.",
+              body: "Every listing is reviewed by a human, with a last-verified date and a works-with matrix, not a 100k-item crawl.",
             },
             {
               icon: Boxes,
@@ -194,7 +177,7 @@ export default function Home() {
             {
               icon: Terminal,
               title: "Copy & ship",
-              body: "One-click copy of the exact SKILL.md, mcp.json or rule file — with install steps that actually work.",
+              body: "One-click copy of the exact SKILL.md, mcp.json or rule file, with install steps that actually work.",
             },
           ].map((f) => (
             <div key={f.title} className="rounded-xl card-surface p-6">
@@ -240,7 +223,7 @@ export default function Home() {
               Browse assets <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://github.com"
+              href={SITE_GITHUB}
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-11 items-center gap-2 rounded-lg border border-line bg-bg px-5 font-medium text-fg transition-colors hover:border-line-strong"

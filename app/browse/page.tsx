@@ -8,7 +8,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Browse all AI assets",
   description:
-    "Search and filter every curated AI asset — Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules.",
+    "Search and filter every curated AI asset: Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules.",
   path: "/browse",
   eyebrow: "search & filter",
 });

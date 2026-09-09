@@ -71,11 +71,11 @@ export default function PrivacyPage() {
       <h2>Why we use it (legal bases)</h2>
       <ul>
         <li>
-          <strong>Consent</strong> — sending you the newsletter. You can
+          <strong>Consent</strong>: sending you the newsletter. You can
           withdraw at any time (see below).
         </li>
         <li>
-          <strong>Legitimate interests</strong> — keeping the site secure,
+          <strong>Legitimate interests</strong>: keeping the site secure,
           preventing abuse, and replying to messages you send us.
         </li>
       </ul>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
       </p>
       <ul>
         <li>
-          <strong>Vercel</strong> — hosting, content delivery and our key-value
+          <strong>Vercel</strong>: hosting, content delivery and our key-value
           store (used to hold newsletter emails). Vercel processes request logs
           as part of serving the site.
         </li>
@@ -108,15 +108,15 @@ export default function PrivacyPage() {
       <h2>How long we keep it</h2>
       <ul>
         <li>
-          <strong>Newsletter email</strong> — until you unsubscribe or ask us to
+          <strong>Newsletter email</strong>: until you unsubscribe or ask us to
           delete it.
         </li>
         <li>
-          <strong>Messages</strong> — for as long as needed to handle your
+          <strong>Messages</strong>: for as long as needed to handle your
           request, then archived or deleted.
         </li>
         <li>
-          <strong>Technical logs</strong> — for a short period for security and
+          <strong>Technical logs</strong>: for a short period for security and
           diagnostics, per our provider&rsquo;s defaults.
         </li>
       </ul>
@@ -128,7 +128,7 @@ export default function PrivacyPage() {
         withdraw consent. If you are in the EU/EEA or UK, these rights come from
         the GDPR. If you are in California, the CCPA/CPRA gives you the right to
         know, delete, correct and opt out of &ldquo;sale&rdquo; or
-        &ldquo;sharing&rdquo; — we do neither.
+        &ldquo;sharing&rdquo;. We do neither.
       </p>
       <p>
         To exercise any right, email{" "}

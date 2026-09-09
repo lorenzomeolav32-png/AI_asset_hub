@@ -75,6 +75,7 @@ export function AssetDetail({ asset }: { asset: Asset }) {
           {typeof asset.stars === "number" && (
             <span className="inline-flex items-center gap-1 font-mono text-[11px] text-muted">
               <Star className="h-4 w-4" /> {formatStars(asset.stars)} stars
+              {asset.starsNote ? ` · ${asset.starsNote}` : ""}
             </span>
           )}
         </div>
@@ -166,6 +167,11 @@ export function AssetDetail({ asset }: { asset: Asset }) {
               {typeof asset.stars === "number" && (
                 <Row icon={Star} label="GitHub stars">
                   {formatStars(asset.stars)}
+                  {asset.starsNote ? (
+                    <span className="block text-[11px] text-muted">
+                      {asset.starsNote}
+                    </span>
+                  ) : null}
                 </Row>
               )}
             </dl>
