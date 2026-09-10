@@ -61,3 +61,22 @@ Typical use cases straight from the project's own docs:
 
 Great for repo management, issue/PR automation, CI/CD intelligence and code/security
 analysis, anywhere an agent needs real GitHub context to act on rather than a guess.
+
+## Installation
+
+For the remote server you need nothing local beyond an MCP client that
+supports HTTP servers. For the local server you need Docker.
+
+1. Easiest option: add the remote server URL
+   (`https://api.githubcopilot.com/mcp/`) to your MCP client's config and
+   sign in with OAuth or a personal access token when prompted.
+2. Or run it locally with Docker instead:
+   ```bash
+   docker run -i --rm -p 127.0.0.1:8085:8085 -e GITHUB_OAUTH_CALLBACK_PORT \
+     ghcr.io/github/github-mcp-server
+   ```
+   and point your client at that process.
+3. Restart your client, then narrow the toolsets you actually need (for
+   example `--toolsets repos,issues`) instead of enabling all of them.
+4. For sensitive repos, add `--read-only` or `--lockdown-mode` to limit
+   what the agent can do.

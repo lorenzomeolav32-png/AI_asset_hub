@@ -49,3 +49,18 @@ Four patterns, SOLID, DRY, YAGNI and KISS pragmatically rather than by rote.
 "Review this PR for architectural soundness and open issues for
 any technical debt you find."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/principal-software-engineer.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/principal-software-engineer.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and point it at a
+   PR to confirm it reviews it and offers to open issues for debt found.

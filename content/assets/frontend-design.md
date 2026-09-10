@@ -55,3 +55,22 @@ a single emerald accent, staggered reveal on load — and ships the React + CSS.
 
 Great for landing pages, dashboards, marketing sites and design systems where
 "looks generic" is not acceptable.
+
+## Installation
+
+You need Claude Code.
+
+1. Easiest path, install via the plugin marketplace from inside Claude
+   Code:
+   ```
+   /plugin marketplace add anthropics/skills
+   /plugin install example-skills@anthropic-agent-skills
+   ```
+2. Or clone and copy the skill manually:
+   ```bash
+   git clone https://github.com/anthropics/skills
+   cp -r skills/skills/frontend-design ~/.claude/skills/frontend-design
+   ```
+3. Restart Claude Code.
+4. Ask it to build a UI component to confirm the skill activates: it
+   should commit to a specific aesthetic direction before writing any code.

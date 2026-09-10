@@ -52,3 +52,14 @@ changes and manage branches without shelling out to raw `git` commands.
   }
 }
 ```
+
+## Installation
+
+You need `uv` (recommended) or Python with `pip`, and a local Git
+repository to point it at.
+
+1. Add the server to your MCP client's config, passing `--repository
+   path/to/git/repo` (see the sidebar).
+2. Restart your client.
+3. Ask the agent to check the git status or show a diff to confirm it can
+   see your repository.

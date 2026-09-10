@@ -39,3 +39,18 @@ JSON bundle, never from ad-hoc prose.
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads report`
 requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+
+## Installation
+
+This worker skill installs automatically as part of the **Claude Ads** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-ads
+   /plugin install claude-ads@ai-marketing-hub-claude-ads
+   ```
+2. This skill runs on its own whenever the `/ads` conductor needs it; you
+   don't call it directly.
+3. See the [Claude Ads](/claude-skills/claude-ads) entry for the full setup
+   and platform list.

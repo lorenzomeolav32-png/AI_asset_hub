@@ -74,3 +74,27 @@ setup, planning, creative, budgeting, launching, monitoring, optimizing, testing
 reporting and validation. Each is listed as its own entry in this directory under the
 `marketing` category so you can browse what each capability does on its own.
 
+## Installation
+
+You need Claude Code. Git is only required if you install from a local clone
+instead of the plugin marketplace.
+
+1. Fastest path, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-ads
+   /plugin install claude-ads@ai-marketing-hub-claude-ads
+   ```
+2. Or install from a local clone:
+   ```bash
+   git clone https://github.com/AgriciDaniel/claude-ads.git
+   cd claude-ads
+   bash install.sh --source=local
+   ```
+3. Run `/ads setup` once inside your project to record the client, brand,
+   accounts and mutation guardrails that every other skill reads from.
+4. Try `/ads audit google` (or any of the 12 platforms) to confirm it
+   returns a source-grounded audit instead of erroring.
+
+Claude Ads stays read-only by default. Any account change needs an explicit
+approval gate, so the first run is safe to try against a real account.
+

@@ -74,3 +74,20 @@ entries here.
 One skill, `seo-flow`, ships evidence-led prompts licensed separately under
 **CC BY 4.0** (sourced from the author's companion FLOW project) rather than
 the repo's default MIT. See its own entry for detail.
+
+## Installation
+
+You need Claude Code.
+
+1. Install the plugin from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo setup` once so it can detect your site's industry (SaaS,
+   local, e-commerce, publisher, agency) and prioritize the right
+   sub-skills.
+3. Try `/seo audit https://example.com` with your own domain to confirm it
+   dispatches subagents and returns a report.
+4. The DataForSEO and AI image-generation bridges need their own API keys;
+   set those up only if you plan to use those specific sub-skills.

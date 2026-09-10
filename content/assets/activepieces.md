@@ -64,3 +64,30 @@ whole repository is permissive.
   Claude Desktop or Cursor agent can call it directly.
 - Long-running approval workflows using the "Chat Interface" or "Form
   Interface" human-input triggers.
+
+## Installation
+
+You need Docker (with the Compose plugin) and Git. Nothing else runs locally:
+Postgres, Redis, the app and the worker all come up inside containers.
+
+1. Install Docker Desktop (or Docker Engine plus the Compose plugin) if you
+   don't have it, and make sure it's running.
+2. Clone the repo and move into it:
+   ```bash
+   git clone https://github.com/activepieces/activepieces
+   cd activepieces
+   ```
+3. Start the stack:
+   ```bash
+   docker compose up
+   ```
+   Add `-d` to run it in the background. The first run pulls every image, so
+   it can take a few minutes.
+4. Once the containers are healthy, open the app in your browser and create
+   the first admin account.
+5. To hand a piece to an agent instead of building a flow by hand, open that
+   piece's MCP settings inside Activepieces and paste the generated MCP URL
+   into Claude Desktop, Cursor or Windsurf's MCP configuration.
+
+For reverse proxies, managed databases or Kubernetes, follow the full install
+guide linked in the setup command in the sidebar.

@@ -49,3 +49,21 @@ quality to the refactor phase.
 "Make the failing email-validation test pass with the simplest
 implementation you can."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension. Consider installing
+[TDD Red](/copilot-agents/tdd-red-phase) and
+[TDD Refactor](/copilot-agents/tdd-refactor-phase) alongside it, they're
+meant to be used together.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/tdd-green.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/tdd-green.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat once you have a
+   failing test, and confirm it writes only enough code to pass it.

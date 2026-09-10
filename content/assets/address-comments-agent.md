@@ -57,3 +57,18 @@ to say no when it disagrees.
 The agent reads each comment, fixes the ones it agrees with (with tests
 and a commit per fix), and replies to the one comment it thinks is
 mistaken, explaining its reasoning instead of silently applying it.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/address-comments.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/address-comments.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and point it at an
+   open PR to confirm it responds in character.

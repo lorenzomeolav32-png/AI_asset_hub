@@ -62,3 +62,19 @@ and propose an exact stack for me to review before installing anything."
 
 Best used for **targeted discovery** (finding one good skill for a specific gap
 in your project) rather than as a one-shot full-catalog install.
+
+## Installation
+
+You need Node.js and a coding agent that supports MCP (Claude Code, Cursor,
+Codex CLI, Gemini CLI).
+
+1. Configure the AAS MCP server in your agent so it can search the catalog
+   (see the project's README for the exact MCP config block).
+2. Ask your agent to search the catalog for what you need. It returns
+   specific skill IDs instead of the whole 2,100+ entry list.
+3. Preview a dry run of just those IDs:
+   ```bash
+   npx agentic-awesome-skills --skills <skill-id-1>,<skill-id-2> --dry-run
+   ```
+4. Once you're happy with the plan, run the same command without
+   `--dry-run` to install only those skills. Avoid `--all`.

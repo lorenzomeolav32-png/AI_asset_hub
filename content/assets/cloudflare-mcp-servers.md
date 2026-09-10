@@ -60,3 +60,18 @@ needs instead of one server that tries to cover everything.
 "Connect to the Cloudflare Observability MCP server and show me error
 rate trends for the api-gateway Worker over the last 24 hours."
 ```
+
+## Installation
+
+Nothing runs locally, these are remote servers hosted by Cloudflare. You
+just need an MCP client that supports remote HTTP servers and a Cloudflare
+account.
+
+1. Pick the subdomain for the product area you need, for example
+   `bindings.mcp.cloudflare.com` for Workers or
+   `observability.mcp.cloudflare.com` for logs and analytics.
+2. Add it as a remote HTTP server in your MCP client's config, using the
+   block in the sidebar.
+3. Reload the client. It opens a browser window for an OAuth login scoped
+   to your Cloudflare account.
+4. Approve the login, then confirm the new tools show up in your client.

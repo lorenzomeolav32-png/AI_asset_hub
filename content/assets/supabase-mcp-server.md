@@ -65,3 +65,17 @@ record."
 Supabase's own security guidance recommends reading their MCP security best
 practices before connecting an agent to a real project, since the server
 can read and modify live data depending on the scopes you grant it.
+
+## Installation
+
+Nothing runs locally, this is a remote, Supabase-hosted server. You just
+need an MCP client that supports HTTP servers and a Supabase account.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar.
+2. Restart your client. It opens a browser window for OAuth login.
+3. Pick which Supabase organization and project the client should access.
+4. Optional: add a `project_ref` and `read_only=true` to the URL to scope
+   the connection to one project or block writes.
+5. Read Supabase's own MCP security guidance before connecting it to a
+   project with real data.

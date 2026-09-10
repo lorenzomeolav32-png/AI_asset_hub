@@ -63,3 +63,23 @@ The repo itself (README, structure) is **CC0-1.0** (public domain). Individual
 `.mdc` rule files are contributed by different authors under the same
 CC0 waiver per the repo's contribution guidelines, so reuse and redistribution
 carry no obligations, though crediting the source is courteous.
+
+## Installation
+
+You need the Cursor editor. No other runtime is required.
+
+1. Browse the README by category to find a rule matching your stack.
+2. Create the rules folder in your project if it doesn't exist yet:
+   ```bash
+   mkdir -p .cursor/rules
+   ```
+3. Download the chosen file into it:
+   ```bash
+   curl -o .cursor/rules/<name>.mdc \
+     https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/<name>.mdc
+   ```
+4. Reopen the project in Cursor. It reads `.cursor/rules/` automatically
+   and auto-attaches each rule to matching files based on its `globs`
+   frontmatter.
+5. Repeat for any other stack-specific rule you want; each file is
+   independent.

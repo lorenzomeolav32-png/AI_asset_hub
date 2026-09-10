@@ -46,3 +46,20 @@ One closing line — availability / happy to share more.
 ```
 
 Great for LinkedIn, company career pages and any form with a tiny message box.
+
+## Installation
+
+You need Claude Code and Git.
+
+1. Clone the skills monorepo:
+   ```bash
+   git clone https://github.com/lorenzomeolav32-png/ai-assets-directory-skills
+   ```
+2. Copy the skill folder into your global skills directory:
+   ```bash
+   cp -r ai-assets-directory-skills/skills/job-message ~/.claude/skills/job-message
+   ```
+3. Restart Claude Code, or reload the project, so it picks up the new
+   skill.
+4. Paste a job posting and your CV to confirm it drafts a short message
+   grounded in your real experience.

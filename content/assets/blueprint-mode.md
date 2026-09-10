@@ -60,3 +60,18 @@ output against a fixed rubric before calling anything finished.
 The agent classifies this as Main workflow, analyzes the existing
 middleware pattern, designs the rate limiter, implements it, then verifies
 and self-scores the result before reporting back.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/blueprint-mode.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/blueprint-mode.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and give it a task
+   to confirm it classifies it into one of the four workflows.

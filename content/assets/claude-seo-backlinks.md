@@ -33,3 +33,17 @@ and Common Crawl data for a free baseline link-profile view.
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin. For deeper link
 intelligence, pair it with the optional Ahrefs MCP extension (paid, official
 `@ahrefs/mcp` server, bring your own account).
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo backlinks <url>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

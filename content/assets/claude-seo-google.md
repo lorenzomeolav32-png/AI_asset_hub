@@ -41,3 +41,20 @@ extensions in this plugin.
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; credentials are
 stored locally under `~/.config/claude-seo/` with `0o600` permissions.
+
+## Installation
+
+This sub-skill installs with the Claude SEO plugin, but needs at least one
+Google API credential tier to return real data instead of estimates.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo google setup` and follow its prompts. It walks you through 4
+   credential tiers: PageSpeed Insights and CrUX need no key, while Search
+   Console, GA4 and Keyword Planner need your own Google account.
+3. Run `/seo google <command>` to confirm it returns data for your tier.
+4. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

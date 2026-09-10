@@ -48,3 +48,23 @@ Deep Agents, a higher-level package built on top of it.
   high-stakes action runs.
 - Building a custom multi-agent architecture from scratch when CrewAI's
   higher-level `Crew`/`Flow` abstraction is too opinionated for the use case.
+
+## Installation
+
+You need Python 3.9+ and an API key for whichever LLM provider you plan to
+use. LangGraph itself doesn't ship a model.
+
+1. Install the package, ideally inside a virtual environment:
+   ```bash
+   pip install -U langgraph
+   ```
+2. Install the LangChain integration for your model provider, for example:
+   ```bash
+   pip install langchain-openai
+   ```
+3. Set your provider's API key as an environment variable, for example
+   `OPENAI_API_KEY`.
+4. Define your graph in Python (nodes, edges and state) and run it as a
+   script.
+5. Optional: set `LANGCHAIN_TRACING_V2=true` and `LANGCHAIN_API_KEY` to
+   inspect execution traces in LangSmith.

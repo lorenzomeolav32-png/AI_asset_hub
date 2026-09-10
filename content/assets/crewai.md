@@ -57,3 +57,34 @@ workflows with explicit state and branching for precise control.
   `crewAI-examples` repo.
 - Installing the CrewAI skill pack so Claude Code or Cursor scaffolds a new
   Crew/Flow project following CrewAI's own conventions.
+
+## Installation
+
+You need Python 3.10 or newer. The commands below use uv, a fast Python
+package and tool manager; install it first if you don't already have it
+(`pip install uv`, or the standalone installer from Astral's docs).
+
+1. Install CrewAI as a global tool:
+   ```bash
+   uv tool install crewai
+   ```
+2. Scaffold a new project:
+   ```bash
+   crewai create crew <project_name>
+   cd <project_name>
+   ```
+3. Install the project's own dependencies:
+   ```bash
+   crewai install
+   ```
+4. Open the generated `.env` file and add the API key for whichever LLM
+   you're using (OpenAI, Anthropic, or another provider).
+5. Run the crew:
+   ```bash
+   crewai run
+   ```
+
+If you're adding CrewAI to an existing coding agent instead of running it
+standalone, install the official skill pack for Claude Code, Cursor, Codex or
+Windsurf from the `crewAIInc/skills` repo so the agent follows CrewAI's own
+project conventions.

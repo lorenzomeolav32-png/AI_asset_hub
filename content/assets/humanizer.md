@@ -78,3 +78,22 @@ Humanize the prose in docs/launch-post.md
 
 Use it for blog posts, docs, landing copy and emails that need to stop sounding
 machine-written.
+
+## Installation
+
+You need Node.js for the CLI path, or Claude Code 2.1.142+ for the plugin
+path.
+
+1. Quickest option, install with the Skills CLI:
+   ```bash
+   npx skills add blader/humanizer --global
+   ```
+   Drop `--global` to install it into just the current project instead.
+2. Or, on Claude Code 2.1.142+, install it as a plugin:
+   ```
+   /plugin marketplace add blader/humanizer
+   /plugin install humanizer@humanizer
+   ```
+3. Restart your agent.
+4. Run `/humanizer` with a paste of AI-sounding text to confirm it
+   rewrites without changing the meaning.

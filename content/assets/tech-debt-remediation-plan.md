@@ -57,3 +57,19 @@ codebase. Write a remediation plan for consolidating them."
 The agent returns a summary table (ease: 2, impact: 3, risk: 🟡) plus a
 detailed plan with the consolidation steps and how to verify nothing
 breaks, without touching any files.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/tech-debt-remediation-plan.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/tech-debt-remediation-plan.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe a
+   piece of debt to confirm it returns a scored plan instead of editing
+   files.

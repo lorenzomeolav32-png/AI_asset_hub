@@ -61,3 +61,18 @@ considered staying on RabbitMQ and also looked at NATS."
 The agent produces `/docs/adr/adr-0007-event-bus-kafka-migration.md` with
 both rejected alternatives documented and their rejection reasons spelled
 out.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/adr-generator.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/adr-generator.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe a
+   decision to confirm it writes a numbered ADR file.

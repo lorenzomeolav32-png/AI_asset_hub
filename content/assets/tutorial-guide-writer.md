@@ -62,3 +62,20 @@ Review this how-to guide for accuracy and clarity: [paste article or file path]
 
 Point it at an existing site and it will check that site's own content folder and schema
 before writing, instead of assuming a generic frontmatter.
+
+## Installation
+
+You need Claude Code and Git.
+
+1. Clone the skills monorepo:
+   ```bash
+   git clone https://github.com/lorenzomeolav32-png/ai-assets-directory-skills
+   ```
+2. Copy the skill folder into your global skills directory:
+   ```bash
+   cp -r ai-assets-directory-skills/skills/tutorial-guide-writer ~/.claude/skills/tutorial-guide-writer
+   ```
+3. Restart Claude Code, or reload the project, so it picks up the new
+   skill.
+4. Ask it to write a short tutorial to confirm it asks kind-specific
+   interview questions before drafting.

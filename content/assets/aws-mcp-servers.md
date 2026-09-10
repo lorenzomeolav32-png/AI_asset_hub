@@ -62,3 +62,18 @@ for a fast-moving cloud platform.
 "Use the Terraform MCP server and the AWS Pricing MCP server to estimate
 the monthly cost of this CDK stack before I deploy it."
 ```
+
+## Installation
+
+You need `uv` (for `uvx`) or Docker, valid AWS credentials configured
+locally, and an MCP client such as VS Code, Claude Code/Desktop or Cursor.
+
+1. Install `uv` if you don't have it, or use AWS Labs' Docker images from
+   its public ECR registry instead.
+2. Configure AWS credentials locally (`aws configure`, or environment
+   variables) so the server can call real AWS APIs on your behalf.
+3. Pick the server you need, for example the AWS Documentation server, and
+   add its config block (see the sidebar) to your MCP client.
+4. Restart your client and confirm the new tools appear.
+5. Repeat step 3 for any other AWS service server you want; each one
+   installs and runs independently.

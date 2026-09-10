@@ -39,3 +39,18 @@ Agrici Daniel / the FLOW project if you redistribute the prompts themselves.
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; the skill wrapper
 that invokes these prompts is MIT, same as the rest of the plugin.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo flow <stage>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list. Remember the licensing note above if you plan to
+   reuse the FLOW prompts themselves outside the plugin.

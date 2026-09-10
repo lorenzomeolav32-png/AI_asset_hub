@@ -34,3 +34,18 @@ Dan Colta.
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin. All snapshots stay
 local; nothing is uploaded to a third party.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo drift baseline <url>` first to store a snapshot, then
+   `/seo drift compare <url>` later to see what changed.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

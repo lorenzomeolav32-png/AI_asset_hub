@@ -61,3 +61,25 @@ curl -s https://raw.githubusercontent.com/ivangrynenko/cursor-rules/main/install
 Best suited for teams that want OWASP Top 10 coverage baked into Cursor's
 suggestions for PHP/Drupal, JS/React/Vue or Python projects, not just generic
 style rules.
+
+## Installation
+
+You need the Cursor editor, and PHP just to run the installer script (not
+for the rules content itself).
+
+1. Download and run the interactive installer:
+   ```bash
+   curl -s https://raw.githubusercontent.com/ivangrynenko/cursor-rules/main/install.php -o install.php
+   php install.php
+   ```
+   Pick Core, Web Stack, Python or All when prompted.
+2. Or skip the prompts and install by tag, for example only the PHP OWASP
+   rules:
+   ```bash
+   curl -s https://raw.githubusercontent.com/ivangrynenko/cursor-rules/main/install.php \
+     | php -- --tags "language:php standard:owasp-top10"
+   ```
+3. Or install manually: clone the repo and copy `.cursor/rules/*` into
+   your project.
+4. Reopen the project in Cursor to confirm the rules auto-attach to
+   matching files.

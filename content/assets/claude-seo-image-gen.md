@@ -43,3 +43,22 @@ Opt-in only; Claude SEO's core 25 skills work without it.
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; one of 8 optional
 MCP/data extensions, and the same generation pipeline used across Claude
 SEO's sibling skills (Claude Blog).
+
+## Installation
+
+You need the base Claude SEO plugin, its own Banana extension, and a Gemini
+API key or plan for image generation.
+
+1. Install the base plugin from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Install the extension:
+   ```bash
+   ./extensions/banana/install.sh
+   ```
+3. Add your Gemini API key when prompted.
+4. Run `/seo image-gen <use-case>` to generate your first asset.
+
+This is opt-in; Claude SEO's core 25 skills work without it.

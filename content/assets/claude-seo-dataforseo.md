@@ -41,3 +41,23 @@ skills work without it.
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; one of 8 optional
 MCP/data extensions.
+
+## Installation
+
+You need the base Claude SEO plugin, its own DataForSEO extension, and a
+paid DataForSEO account.
+
+1. Install the base plugin from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Install the extension:
+   ```bash
+   ./extensions/dataforseo/install.sh
+   ```
+3. Add your DataForSEO API credentials when prompted.
+4. Run `/seo dataforseo <command>` to confirm it returns live data.
+
+Skip this one if you don't have a DataForSEO account. Claude SEO's core 25
+skills work without it.

@@ -64,3 +64,29 @@ license.
   escalates to a human when confidence is low.
 - Prototyping a prompt in the Prompt IDE, then promoting the same app to
   production via the auto-generated API.
+
+## Installation
+
+You need Docker (with the Compose plugin) and Git. Dify is self-hosted, so
+there's no managed cloud account needed to try it.
+
+1. Clone the repo and move into the Docker setup:
+   ```bash
+   git clone https://github.com/langgenius/dify.git --depth 1
+   cd dify/docker
+   ```
+2. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+3. Start the stack:
+   ```bash
+   docker compose up -d
+   ```
+4. Open `http://localhost/install` in your browser and finish the setup
+   wizard to create the admin account.
+5. In Settings, add a model provider (OpenAI, Anthropic, a local Ollama
+   instance, or another supported provider) before you build your first app.
+
+Keep the licensing note above in mind if you're planning to run Dify as a
+multi-tenant SaaS.

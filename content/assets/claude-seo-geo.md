@@ -35,3 +35,17 @@ rebranded labels for SEO rather than a separate discipline.
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin. It explicitly
 rejects three influencer myths: llms.txt as a citation lever, content chunking
 for AI, and AI-specific keyword rewriting.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo geo <url>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

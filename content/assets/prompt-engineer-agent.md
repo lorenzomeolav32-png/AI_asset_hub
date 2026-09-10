@@ -51,3 +51,19 @@ prompt-engineering guidance.
 ```
 The agent turns a vague line like this into a full system prompt with defined
 scope, output format and edge cases, not a summary itself.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/prompt-engineer.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/prompt-engineer.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and paste a rough
+   instruction to confirm it returns a rewritten prompt instead of
+   completing the task.

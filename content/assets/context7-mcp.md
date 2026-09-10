@@ -59,3 +59,22 @@ API and docs.
 If you already know the exact library, adding its Context7 ID (`/org/repo` syntax)
 skips the matching step and goes straight to fetching docs, which helps when several
 libraries share a similar name.
+
+## Installation
+
+You need Node.js 18+.
+
+1. Run the one-command setup:
+   ```bash
+   npx ctx7 setup
+   ```
+   This handles OAuth login, generates an API key, and installs the right
+   integration for the client it detects (Claude Code, Cursor, VS Code...).
+2. Or configure any MCP client manually by pointing it at
+   `https://mcp.context7.com/mcp` with an `Authorization: Bearer YOUR_API_KEY`
+   header (see the sidebar).
+3. Restart your client and add a rule to its system prompt or `CLAUDE.md`
+   telling it to use Context7 for library and API documentation, so it
+   reaches for it proactively.
+4. Ask it a docs question about a library you use to confirm it's fetching
+   current results.

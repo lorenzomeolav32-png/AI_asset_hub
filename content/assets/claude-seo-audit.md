@@ -35,3 +35,18 @@ prioritized action plan.
 This is the top-level audit skill of the
 [Claude SEO](/claude-skills/claude-seo) plugin; it dispatches the individual
 subagents that do the actual analysis.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo audit <url>` directly to trigger it, or let it run as part of
+   a broader `/seo` workflow.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

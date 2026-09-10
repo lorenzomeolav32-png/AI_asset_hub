@@ -35,3 +35,17 @@ ClaimReview and others) with replacement guidance.
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; covers
 organization, article, product, local, event, job, course and e-commerce
 schema (`hasMerchantReturnPolicy`, `MemberProgram`, EU `energyEfficiencyClass`).
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo schema <url>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

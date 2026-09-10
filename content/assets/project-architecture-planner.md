@@ -54,3 +54,18 @@ plans, diagrams and cost models.
 "Plan the architecture for a B2B SaaS expecting 500 users at launch
 and 50k within two years."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/project-architecture-planner.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/project-architecture-planner.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe a
+   project to confirm it interviews you before proposing a stack.

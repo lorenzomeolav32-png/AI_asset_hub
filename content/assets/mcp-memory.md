@@ -52,3 +52,15 @@ of starting from zero every time.
   }
 }
 ```
+
+## Installation
+
+You need Node.js 18+.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar.
+2. Restart your client.
+3. Optional: set `MEMORY_FILE_PATH` to control where the knowledge graph
+   is stored (it defaults to a local `memory.jsonl` file).
+4. Ask the agent to remember a fact, then start a new conversation and ask
+   it to recall it, to confirm persistence works.

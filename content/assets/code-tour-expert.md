@@ -54,3 +54,19 @@ goes stale the moment the code moves.
 "Create an onboarding tour that walks a new engineer through how a
 request flows from the API route to the database."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension. Install the CodeTour
+extension too if you want to actually play back the generated tours.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/code-tour.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/code-tour.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and ask it to
+   build an onboarding tour to confirm it generates a `.tour` file.
