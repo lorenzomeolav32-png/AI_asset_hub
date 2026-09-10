@@ -40,3 +40,18 @@ deliverables from that bundle.
 ## Part of Claude Ads
 This is the top-level audit skill of the [Claude Ads](/claude-skills/claude-ads) plugin;
 it dispatches the individual per-platform audit skills listed elsewhere in this directory.
+
+## Installation
+
+This worker skill installs automatically as part of the **Claude Ads** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-ads
+   /plugin install claude-ads@ai-marketing-hub-claude-ads
+   ```
+2. This skill runs on its own whenever you call `/ads audit`; you don't
+   call it directly.
+3. See the [Claude Ads](/claude-skills/claude-ads) entry for the full setup
+   and platform list.

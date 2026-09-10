@@ -50,3 +50,16 @@ without arbitrary access to the whole disk.
   }
 }
 ```
+
+## Installation
+
+You need Node.js 18+.
+
+1. Add the server to your MCP client's config, listing the exact
+   directories it's allowed to touch as arguments (see the sidebar
+   example).
+2. Restart your client.
+3. If your client supports MCP Roots, you can update the allowed
+   directories at runtime instead of restarting.
+4. Ask the agent to list or read a file in an allowed directory to confirm
+   it's working.

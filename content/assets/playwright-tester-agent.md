@@ -59,5 +59,24 @@ happy path and the empty-cart case."
 "These login tests are flaky, go re-check the page and fix the locators."
 ```
 
+## Installation
+
+You need VS Code with the GitHub Copilot extension, plus the
+[Playwright MCP](/mcp-servers/playwright-mcp) server configured in your MCP
+client.
+
+1. Set up the Playwright MCP server first if you haven't already (see its
+   own entry for install steps).
+2. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/playwright-tester.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/playwright-tester.agent.md
+   ```
+3. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+4. Pick this agent from the mode picker in Copilot Chat and point it at a
+   page or flow to confirm it explores the site before writing tests.
+
 Works best paired with the Playwright MCP server, which lets the agent see the real
 DOM rather than infer selectors from the source code alone.

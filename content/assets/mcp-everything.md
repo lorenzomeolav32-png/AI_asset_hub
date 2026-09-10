@@ -47,3 +47,17 @@ npx @modelcontextprotocol/server-everything
 # Run the Streamable HTTP server
 npx @modelcontextprotocol/server-everything streamableHttp
 ```
+
+## Installation
+
+You need Node.js 18+. This server has no real-world use on its own, it's
+built for testing MCP clients.
+
+1. Run it directly with `npx`, no separate install step needed:
+   ```bash
+   npx @modelcontextprotocol/server-everything
+   ```
+2. Point your MCP client at that command (stdio), or run the
+   `streamableHttp` variant if your client needs an HTTP transport.
+3. Use it to confirm your own client correctly handles prompts, resources
+   and sampling, not to give an agent real capabilities.

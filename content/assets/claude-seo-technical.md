@@ -35,3 +35,17 @@ crawlability/indexation signals.
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin. Enriched Core Web
 Vitals data requires optional, free Google API credentials (`/seo google
 setup`); without them, results are lab estimates only.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo technical <url>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

@@ -52,3 +52,18 @@ matching.
 chose event sourcing for the orders service because of the audit
 requirement."
 ```
+
+## Installation
+
+You need `uv` (recommended) or Python with `pip`, and a running Qdrant
+instance (local via Docker, or Qdrant Cloud).
+
+1. Make sure you have a Qdrant instance reachable, for example:
+   ```bash
+   docker run -p 6333:6333 qdrant/qdrant
+   ```
+2. Add the server to your MCP client's config, setting `QDRANT_URL` and
+   `COLLECTION_NAME` as shown in the sidebar.
+3. Restart your client.
+4. Ask the agent to store a note, then ask it to find that note again by
+   meaning, to confirm search works.

@@ -57,3 +57,18 @@ behavior over cosmetic contrast fixes alone.
 The agent checks focus trapping and restoration, keyboard operability,
 ARIA role/name/state on the dialog, and whether closing it returns focus
 to the element that opened it, then returns a PR-ready review comment.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/accessibility.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/accessibility.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and ask it to
+   review a component to confirm it responds in character.

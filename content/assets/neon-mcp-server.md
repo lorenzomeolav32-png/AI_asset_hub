@@ -61,3 +61,18 @@ Test it on a branch first before touching the main branch."
 Neon's own docs say this server is meant for local development and IDE
 integrations, not for production environments, since an agent connected to
 it can run real schema changes and SQL against your databases.
+
+## Installation
+
+You need Node.js for the `npx` setup command, or nothing locally if you
+connect straight to the remote hosted server. Either way, you need a Neon
+account.
+
+1. Quickest path: run `npx neon@latest init`. It detects Cursor, VS Code or
+   Claude Code and configures the connection for you, including OAuth
+   login.
+2. Or add the remote server manually using the block in the sidebar, then
+   sign in with OAuth when your client prompts you.
+3. Restart your client and confirm it can list your Neon projects.
+4. Treat this as a development and IDE tool. Per Neon's own guidance, don't
+   connect it to a production workflow without review.

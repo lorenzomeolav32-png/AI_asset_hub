@@ -53,3 +53,14 @@ rather than forcing a single-shot response to a complex problem.
   }
 }
 ```
+
+## Installation
+
+You need Node.js 18+.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar.
+2. Restart your client.
+3. There's nothing else to configure: the client calls the
+   `sequential_thinking` tool automatically when it's working through a
+   complex problem.

@@ -57,3 +57,18 @@ year."
 The agent finds functions with zero call sites, removes them along with
 their now-unused imports, runs the test suite after each deletion, and
 reports what it removed.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/janitor.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/janitor.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and point it at a
+   folder to confirm it measures usage before deleting anything.

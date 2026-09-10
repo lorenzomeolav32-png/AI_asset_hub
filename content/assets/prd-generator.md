@@ -54,3 +54,18 @@ jumping straight into code from a one-line feature request.
 ```txt
 "Write a PRD for adding a saved-search feature to the dashboard."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/prd.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/prd.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe a
+   feature to confirm it asks clarifying questions before drafting.

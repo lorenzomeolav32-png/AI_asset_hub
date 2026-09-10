@@ -33,3 +33,17 @@ checklist.
 
 Part of the [Claude SEO](/claude-skills/claude-seo) plugin; its industry
 detection is shared with the full-site audit orchestrator.
+
+## Installation
+
+This sub-skill installs automatically as part of the **Claude SEO** plugin,
+there's no separate step for it.
+
+1. Install the plugin once, from inside Claude Code:
+   ```
+   /plugin marketplace add AgriciDaniel/claude-seo
+   /plugin install claude-seo@agricidaniel-claude-seo
+   ```
+2. Run `/seo plan <type>` directly to trigger it.
+3. See the [Claude SEO](/claude-skills/claude-seo) entry for the complete
+   setup and skill list.

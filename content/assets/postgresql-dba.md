@@ -55,3 +55,23 @@ database, not the code.
 "Connect to the staging database and check whether the orders table has
 an index on customer_id."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension, plus the
+`ms-ossdata.vscode-pgsql` PostgreSQL extension, since the agent relies on
+it for the actual database connection and query tools.
+
+1. Install the `ms-ossdata.vscode-pgsql` extension from the VS Code
+   marketplace if you don't have it.
+2. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/postgresql-dba.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/postgresql-dba.agent.md
+   ```
+3. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+4. Pick this agent from the mode picker in Copilot Chat and ask it to
+   connect to a database to confirm it uses the extension's tools instead
+   of guessing from code.

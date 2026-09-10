@@ -48,3 +48,19 @@ client can call.
   MCP tool for Claude Desktop, Cursor or Windsurf.
 - Running Langflow Desktop locally to experiment without any Python setup.
 - Wrapping a flow as a REST API to call from an existing application.
+
+## Installation
+
+You need Python 3.10+ and uv, or nothing at all if you use Langflow Desktop.
+
+1. Quick start with uv:
+   ```bash
+   uv pip install langflow -U
+   uv run langflow run
+   ```
+   This opens Langflow at `http://127.0.0.1:7860`.
+2. No Python setup: download Langflow Desktop for Windows or macOS from the
+   project's GitHub releases and run the installer instead.
+3. Inside Langflow, add your LLM provider's API key under Settings.
+4. Build a flow on the canvas, or start from a template, then test it in the
+   Playground before exporting it as an API or an MCP server.

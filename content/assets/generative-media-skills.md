@@ -64,3 +64,22 @@ infographic and detail closeups."
 
 Best for teams already using (or willing to pay for) MuAPI who want proven,
 expert-level prompts/pipelines instead of building their own from scratch.
+
+## Installation
+
+You need Node.js and a paid MuAPI account and API key.
+
+1. Install the MuAPI CLI and add your key:
+   ```bash
+   npm install -g muapi-cli
+   muapi auth configure --api-key "YOUR_MUAPI_KEY"
+   ```
+2. Install the skill (or the whole library) into your agent:
+   ```bash
+   npx skills add SamurAIGPT/Generative-Media-Skills --skill muapi-media-generation
+   ```
+3. Restart your agent (Claude Code, Cursor, Gemini CLI or OpenCode).
+4. Optional: run `muapi mcp serve` to expose the same tools as an MCP
+   server instead of shell commands.
+5. Try a small generation request first to confirm your API key and
+   credits work before a bigger job.

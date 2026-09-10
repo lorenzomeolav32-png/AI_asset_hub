@@ -61,3 +61,19 @@ The instructions are written in a deliberately flamboyant style
 persistent framing device for a genuinely useful behavior: long, unattended
 runs with real verification steps, not a claim about actual quantum
 computing or consciousness.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/Thinking-Beast-Mode.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/Thinking-Beast-Mode.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and give it an
+   open-ended task to confirm it keeps working through its own todo list
+   instead of stopping early.

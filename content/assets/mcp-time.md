@@ -50,3 +50,13 @@ reference servers.
   }
 }
 ```
+
+## Installation
+
+You need `uv` (recommended) or Python with `pip`.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar.
+2. Restart your client.
+3. Optional: pass `--local-timezone` to override the system's default
+   timezone.

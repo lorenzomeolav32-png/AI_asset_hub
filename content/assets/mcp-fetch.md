@@ -54,3 +54,15 @@ official Model Context Protocol reference servers.
   }
 }
 ```
+
+## Installation
+
+You need `uv` (recommended) or Python with `pip`.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar (`uvx mcp-server-fetch`).
+2. Restart your client so it picks up the new server.
+3. Optional: pass `--user-agent` or `--ignore-robots-txt` if you need to
+   change its default fetching behavior.
+4. This server can reach local/internal IP addresses, only give it to
+   agents and prompts you trust.

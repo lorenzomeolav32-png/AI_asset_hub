@@ -53,3 +53,16 @@ writing raw Redis commands.
 "Cache the result of this API call in Redis with a 10 minute expiration,
 keyed by the request parameters."
 ```
+
+## Installation
+
+You need `uv` (recommended) or Python with `pip`, and a running Redis
+instance.
+
+1. Make sure you have a Redis instance reachable (local, Docker, or a
+   managed Redis).
+2. Add the server to your MCP client's config, pointing `--url` at your
+   Redis connection string (see the sidebar).
+3. Restart your client.
+4. Ask the agent to set and then read back a key to confirm the connection
+   works.

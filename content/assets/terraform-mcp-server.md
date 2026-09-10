@@ -69,3 +69,17 @@ The license is Mozilla Public License 2.0 (MPL-2.0), a weak-copyleft
 license: you can use and modify it freely, including commercially, but
 changes to the licensed files themselves must stay MPL-2.0 if redistributed.
 It doesn't affect your own Terraform configurations or unrelated code.
+
+## Installation
+
+You need Docker for the example config, or a Go binary if you prefer
+running it natively. An HCP Terraform or Terraform Enterprise token is only
+needed for workspace management, not for registry lookups.
+
+1. Add the server to your MCP client's config using the Docker-based block
+   in the sidebar.
+2. Restart your client. Registry lookups (providers, modules, docs) work
+   immediately with no extra setup.
+3. Optional: set an HCP Terraform/Terraform Enterprise token and
+   `ENABLE_TF_OPERATIONS=true` if you also want the agent to manage
+   workspaces and runs.

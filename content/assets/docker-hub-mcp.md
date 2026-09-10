@@ -56,3 +56,26 @@ management for your own namespace.
 "Search for a production-ready Postgres image and tell me if there's a
 Docker Hardened Images version I could use instead."
 ```
+
+## Installation
+
+You need Node.js 18+ and Git. A Docker Hub Personal Access Token is only
+needed if you want repository management, not for search-only use.
+
+1. Clone and build the server:
+   ```bash
+   git clone https://github.com/docker/hub-mcp.git
+   cd hub-mcp
+   npm install && npm run build
+   ```
+2. Start it:
+   ```bash
+   npm start
+   ```
+   This runs in stdio mode by default; add `--transport=http` to run it as
+   a local HTTP server instead.
+3. Add the server to your MCP client's config, pointing at the stdio
+   process or the local HTTP URL.
+4. Optional: set a Docker Hub Personal Access Token as an environment
+   variable to enable repository management tools.
+5. Restart your client and confirm the Docker Hub tools appear.

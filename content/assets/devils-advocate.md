@@ -56,3 +56,18 @@ we're behind a VPN anyway."
 The agent challenges the VPN assumption, raises the insider-threat and
 breach-scenario risk, and keeps pushing until you say "end game," then
 gives a final verdict on the idea.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/devils-advocate.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/devils-advocate.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and pitch it an
+   idea to confirm it argues back instead of agreeing.

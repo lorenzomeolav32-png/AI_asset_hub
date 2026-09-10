@@ -57,3 +57,18 @@ inference parameters) alongside the classic OWASP categories.
 "Run a full SAST+SCA scan on the authentication module and check it
 against PCI-DSS."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/sast-sca-security-analyzer.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/sast-sca-security-analyzer.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and point it at a
+   module to confirm it returns findings mapped to CWE and OWASP IDs.

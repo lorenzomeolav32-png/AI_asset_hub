@@ -70,3 +70,20 @@ app.use(cors({ origin: ['https://app.example.com'], credentials: true }));
 
 Drop it in `.github/instructions/` and Copilot will reference it automatically when
 writing or reviewing security-sensitive code across the whole repo.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension. Unlike the custom agents
+in this directory, this is an instructions file, so it applies automatically
+rather than needing to be selected as a mode.
+
+1. Create the instructions folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/instructions
+   curl -o .github/instructions/security-and-owasp.instructions.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/security-and-owasp.instructions.md
+   ```
+2. Reload VS Code. Because its `applyTo` is set to `**`, Copilot applies
+   it to every file with no extra step.
+3. Ask Copilot to review or write code with a known issue, like a
+   string-concatenated SQL query, to confirm it flags it.

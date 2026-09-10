@@ -56,3 +56,16 @@ The list itself (README, structure) is **MIT**, maintained by punkpeye and
 2,900+ contributors. Each linked server is a separate repo under its own
 license; verify it independently before use rather than assuming MIT applies
 to every entry.
+
+## Installation
+
+There's nothing to install here: this is a curated list, not a server. Use it
+to find the right MCP server, then follow that server's own install steps.
+
+1. Browse the README by category, or use the synced web version at
+   [glama.ai/mcp/servers](https://glama.ai/mcp/servers), to find a server
+   that matches what you need.
+2. Open that server's own repository and follow its README for the install
+   command and MCP client configuration.
+3. Check the server's own license and last commit date before relying on
+   it, since quality varies a lot across thousands of community entries.

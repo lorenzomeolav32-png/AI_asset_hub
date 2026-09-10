@@ -68,3 +68,17 @@ dashboard's empty state looks like."
 
 Useful for exploratory automation, self-healing test generation and long-running
 agentic browsing where the agent needs to reason over page structure, not pixels.
+
+## Installation
+
+You need Node.js 18+.
+
+1. Add the server to your MCP client's config using the block in the
+   sidebar.
+2. Restart your client. It downloads the Playwright browser binaries on
+   first run if they aren't already installed.
+3. Optional: add `--caps=vision,pdf,devtools,network,storage,testing` for
+   extra capabilities, or run `npx @playwright/mcp@latest --port 8931` for
+   standalone HTTP mode.
+4. Ask the agent to open a page and take a snapshot to confirm the browser
+   launches correctly.

@@ -53,3 +53,20 @@ The skill ships as a `SKILL.md` plus three reference files — `personas.md`,
 `photo-protocol.md`, and `build-spec.md` — so the long build spec stays organized.
 Ideal for client demos, landing pages, and quick prospect sites that must not look
 generic.
+
+## Installation
+
+You need Claude Code and Git.
+
+1. Clone the skills monorepo:
+   ```bash
+   git clone https://github.com/lorenzomeolav32-png/ai-assets-directory-skills
+   ```
+2. Copy the skill folder into your global skills directory:
+   ```bash
+   cp -r ai-assets-directory-skills/skills/complete-website-builder ~/.claude/skills/complete-website-builder
+   ```
+3. Restart Claude Code, or reload the project, so it picks up the new
+   skill.
+4. Ask it to build a site from a real business URL, for example a Google
+   Maps link, to confirm the skill is loaded.

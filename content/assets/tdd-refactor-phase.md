@@ -51,3 +51,21 @@ while keeping the test suite green throughout.
 "Refactor the email-validation code now that the test is green, and
 check it against the OWASP checklist."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension. Consider installing
+[TDD Red](/copilot-agents/tdd-red-phase) and
+[TDD Green](/copilot-agents/tdd-green-phase) alongside it, they're meant to
+be used together.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/tdd-refactor.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/tdd-refactor.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat once your tests
+   are green, and confirm it keeps them passing after each cleanup step.

@@ -57,3 +57,18 @@ one-time run."
 The agent asks what happens if the script fails halfway through
 production data, and whether "one-time" has held true for scripts like
 this before, before you commit to skipping tests.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/mentor.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/mentor.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe your
+   approach to confirm it questions you instead of editing files.

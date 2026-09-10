@@ -54,3 +54,18 @@ login page."
 Instead of implementing it, the agent asks: "Why is the login page slow,
 have you confirmed that with a profiler, or is that an assumption?" and
 continues from there.
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/critical-thinking.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/critical-thinking.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and describe a
+   plan to confirm it starts questioning instead of coding.

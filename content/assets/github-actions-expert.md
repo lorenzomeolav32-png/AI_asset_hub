@@ -54,3 +54,18 @@ option even when it takes an extra step to set up.
 "Review this deploy workflow for security issues before we enable it on
 the main branch."
 ```
+
+## Installation
+
+You need VS Code with the GitHub Copilot extension.
+
+1. Create the agents folder and download the file into your repo:
+   ```bash
+   mkdir -p .github/agents
+   curl -o .github/agents/github-actions-expert.agent.md \
+     https://raw.githubusercontent.com/github/awesome-copilot/main/agents/github-actions-expert.agent.md
+   ```
+2. Reload VS Code, or open a new Copilot Chat; custom agents under
+   `.github/agents/` are picked up automatically.
+3. Pick this agent from the mode picker in Copilot Chat and point it at a
+   workflow file to confirm it flags mutable-tag and permission issues.
