@@ -9,7 +9,7 @@ export const SITE_TAGLINE =
   "The verified directory & guides to build with Claude Skills, MCP servers and AI agents.";
 
 export const SITE_DESCRIPTION =
-  "The curated, tested and well-explained directory for developer AI assets: Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules. Copy, install, ship.";
+  "Open-source directory of curated, tested Claude Skills, MCP servers, Copilot agents, AI workflows and Cursor rules — copy, install, ship.";
 
 /** Contact + ownership. Single source of truth for legal/company pages. */
 export const SITE_OPERATOR = "AI Assets Directory";

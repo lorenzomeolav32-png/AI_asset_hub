@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { Asset, LearnDoc, BlogPost } from "@/lib/content";
-import { SITE_NAME, SITE_URL, SITE_TAGLINE, abs } from "@/lib/site";
+import { SITE_NAME, SITE_URL, SITE_TAGLINE, SITE_GITHUB, abs } from "@/lib/site";
 
 // ── OG image ────────────────────────────────────────────────────────────────
 export function ogImagePath(opts: {
@@ -62,6 +62,7 @@ export function organizationSchema(): Json {
     url: SITE_URL,
     description: SITE_TAGLINE,
     logo: abs(ogImagePath({ title: SITE_NAME, eyebrow: "verified AI assets" })),
+    sameAs: [SITE_GITHUB],
   };
 }
 
