@@ -11,11 +11,11 @@ import { pageMeta } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_GITHUB, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "AI Assets Directory: verified AI assets & guides for developers",
+  title: "AI Assets Directory | Open-Source Claude Skills, MCP Servers & Agents",
   description: SITE_DESCRIPTION,
   path: "/",
   absoluteTitle: true,
-  eyebrow: "verified AI assets for developers",
+  eyebrow: "open-source AI assets for developers",
 });
 
 const totalAssets = allAssets.length;
