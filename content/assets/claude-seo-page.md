@@ -4,7 +4,7 @@ type: claude-skill
 title: SEO Page Analysis
 fileName: seo-page.skill
 summary: >-
-  Runs a deep, single-page analysis of on-page elements, content quality
+  Runs a deep, single page analysis of elements, content quality
   and schema markup for one URL at a time.
 category: marketing
 tags: [claude-seo, on-page, content]

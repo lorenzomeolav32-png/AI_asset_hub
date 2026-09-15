@@ -4,7 +4,7 @@ type: claude-skill
 title: Create Skill
 fileName: create-skill.skill
 summary: >-
-  Scaffolds high-quality Claude Code skills and slash commands with correct
+  Scaffolds high quality Claude Code skills and slash commands with correct
   frontmatter, conventions and worked examples.
 category: dev-tools
 tags: [meta, claude-code, devx]

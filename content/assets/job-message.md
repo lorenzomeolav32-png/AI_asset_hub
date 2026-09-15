@@ -4,7 +4,7 @@ type: claude-skill
 title: Job Application Message
 fileName: job-message.skill
 summary: >-
-  Writes short, punchy job-application messages for portals and forms,
+  Writes short, punchy job application messages for portals and forms,
   grounded only in your real CV and never invented.
 category: career
 tags: [career, writing, jobs]

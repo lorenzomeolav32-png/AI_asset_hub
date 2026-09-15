@@ -4,7 +4,7 @@ type: mcp-server
 title: Context7
 fileName: context7.mcp
 summary: >-
-  Pulls up-to-date, version-specific documentation and code examples straight
+  Pulls updated, version-specific documentation and code examples straight
   from the source into your prompt, so agents stop citing outdated APIs or
   hallucinating ones that don't exist.
 category: dev-tools
@@ -16,7 +16,7 @@ source: https://github.com/upstash/context7
 stars: 61700
 verified: true
 install: |
-  # One-command setup: OAuth login, generates an API key, installs the right
+  # One command setup: OAuth login, generates an API key, installs the right
   # integration (Node.js 18+ required)
   npx ctx7 setup
 

@@ -4,7 +4,7 @@ type: claude-skill
 title: Competitor Comparison Page Generator
 fileName: seo-competitor-pages.skill
 summary: >-
-  Generates competitor-comparison landing pages from a target site's
+  Generates competitor comparison landing pages from a target site's
   positioning.
 category: marketing
 tags: [claude-seo, competitor-analysis, landing-pages]

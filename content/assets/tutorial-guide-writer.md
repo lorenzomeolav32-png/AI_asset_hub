@@ -4,7 +4,7 @@ type: claude-skill
 title: Tutorial & Guide Writer
 fileName: tutorial-guide-writer.skill
 summary: >-
-  Writes and reviews top-quality tutorials, explainers, comparisons and
+  Writes and reviews top quality tutorials, explainers, comparisons and
   best-of roundups for any blog or docs site, using dynamic interview
   questions tailored to each content type.
 category: writing
