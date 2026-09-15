@@ -25,6 +25,23 @@ esperar al cron, lánzalo manualmente desde la pestaña *Actions* → *SEO maint
 reminders* → *Run workflow*. El chequeo de `reviewBy` también se puede correr en
 local con `npm run check:review`.
 
+**Sync automático con el repo awesome-list:** `.github/workflows/sync-awesome-list.yml`
+regenera y pushea `README.md` de `awesome-claude-skills-mcp-servers` cada vez que
+cambia `content/assets/**` en `main`. Necesita un secret una sola vez:
+
+1. GitHub → tu avatar → *Settings* → *Developer settings* → *Personal access tokens*
+   → *Fine-grained tokens* → *Generate new token*.
+2. *Repository access* → *Only select repositories* → elige
+   `awesome-claude-skills-mcp-servers` (no `AI_asset_hub`).
+3. *Permissions* → *Repository permissions* → *Contents* → **Read and write**. Nada más.
+4. Genera el token y cópialo (solo se muestra una vez).
+5. En el repo `AI_asset_hub` → *Settings* → *Secrets and variables* → *Actions* →
+   *New repository secret* → nombre `AWESOME_REPO_TOKEN`, pega el valor, guarda.
+
+El token nunca debe pegarse en el chat ni guardarse en el repo — solo como secret
+de GitHub Actions. Ponle una expiración (90-180 días) y recuerda regenerarlo cuando
+caduque, o el workflow empezará a fallar en el paso de checkout del repo awesome.
+
 ---
 
 ## 1. Checklist semanal (~15-20 min)

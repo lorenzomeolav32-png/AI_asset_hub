@@ -1,0 +1,58 @@
+name: Sync awesome-list
+
+# Regenerates the companion awesome-claude-skills-mcp-servers README whenever
+# the asset catalog changes here, and pushes it there directly. Requires a
+# fine-grained PAT with Contents: read/write on that repo, stored as the
+# AWESOME_REPO_TOKEN secret (see SEO_MAINTENANCE.md for setup steps).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/assets/**"
+      - "scripts/generate-awesome-readme.mjs"
+      - "velite.config.ts"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout AI Assets Directory
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build content layer
+        run: npx velite
+
+      - name: Checkout awesome-list repo
+        uses: actions/checkout@v4
+        with:
+          repository: lorenzomeolav32-png/awesome-claude-skills-mcp-servers
+          token: ${{ secrets.AWESOME_REPO_TOKEN }}
+          path: awesome-list-repo
+
+      - name: Generate README
+        run: node scripts/generate-awesome-readme.mjs --out awesome-list-repo/README.md
+
+      - name: Commit and push if changed
+        working-directory: awesome-list-repo
+        run: |
+          git config user.name "ai-assets-directory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No changes to sync."
+            exit 0
+          fi
+          git add README.md
+          git commit -m "chore: sync README from aiassetsdirectory.com"
+          git push
