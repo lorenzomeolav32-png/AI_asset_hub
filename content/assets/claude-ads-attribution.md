@@ -4,9 +4,9 @@ type: claude-skill
 title: Attribution Audit
 fileName: ads-attribution.skill
 summary: >-
-  Audits cross-platform attribution — conversion definitions, reporting
-  windows, GA4, AdServices/AdAttributionKit, MMPs, browser/server events and
-  offline conversions — and refuses to add up incompatible reports.
+  Reconciles conversion data across GA4, MMPs, AdAttributionKit and every ad
+  platform, and refuses to add incompatible reporting windows together just
+  to produce one clean number.
 category: marketing
 tags: [claude-ads, attribution, measurement, ga4, mmp, cross-platform]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -40,7 +40,7 @@ of trusting any single platform as ground truth.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor whenever attribution
-or cross-platform conversion questions come up — see the full
+or cross-platform conversion questions come up. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation

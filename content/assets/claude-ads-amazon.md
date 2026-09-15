@@ -4,9 +4,9 @@ type: claude-skill
 title: Amazon Ads Audit
 fileName: ads-amazon.skill
 summary: >-
-  Audits Amazon Ads profiles and regions across Sponsored Products, Sponsored
-  Brands, Sponsored Display and DSP — portfolios, targeting, search terms,
-  retail readiness, creative, budgets, ACOS/TACOS and policy.
+  Audits your Amazon Ads account across Sponsored Products, Brands, Display
+  and DSP, and flags what's actually hurting your ACOS before you touch a
+  budget.
 category: marketing
 tags: [claude-ads, amazon-ads, retail-media, acos, tacos, ppc]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -32,14 +32,14 @@ targeting, search terms, retail readiness, creative, budgets, and ACOS/TACOS eco
 
 ## What it covers
 - Normalizes exports, screenshots, API results or manual values while preserving source lineage.
-- Evaluates applicable controls only — optional, beta, premium or ineligible features stay unscored.
+- Evaluates applicable controls only; optional, beta, premium or ineligible features stay unscored.
 - Separates observations, diagnoses, recommendations, opportunities and proposed mutations.
 - Returns schema-valid findings to the conductor rather than calculating scores itself.
 - Keeps every account change a draft until Claude Ads' main mutation gate passes.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Amazon coverage — see the full [Claude Ads](/claude-skills/claude-ads)
+audit run needs Amazon coverage. See the full [Claude Ads](/claude-skills/claude-ads)
 entry for installation and the complete platform list.
 
 ## Installation

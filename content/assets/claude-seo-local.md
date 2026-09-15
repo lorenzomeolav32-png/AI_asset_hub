@@ -4,8 +4,8 @@ type: claude-skill
 title: Local SEO Analysis
 fileName: seo-local.skill
 summary: >-
-  Local SEO analysis across Google Business Profile signals, citation (NAP)
-  consistency and review intelligence.
+  Analyzes your local SEO across Google Business Profile signals, NAP
+  citation consistency and review intelligence.
 category: marketing
 tags: [claude-seo, local-seo, gbp, citations]
 tools: [claude, claude-code]

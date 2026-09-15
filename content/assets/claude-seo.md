@@ -4,9 +4,9 @@ type: claude-skill
 title: Claude SEO
 fileName: claude-seo.skill
 summary: >-
-  Open-source SEO plugin for Claude Code: 25 sub-skills + 18 specialist
-  subagents running technical SEO, E-E-A-T, Schema.org, GEO/AEO, local and
-  international SEO audits in parallel, producing a falsifiable action plan.
+  Runs 25 SEO sub-skills and 18 specialist subagents in parallel, covering
+  technical SEO, E-E-A-T, Schema.org and GEO/AEO, and turns the findings
+  into one falsifiable action plan.
 category: marketing
 tags: [claude-seo, seo, ai-search, geo, schema-org, technical-seo]
 tools: [claude, claude-code]

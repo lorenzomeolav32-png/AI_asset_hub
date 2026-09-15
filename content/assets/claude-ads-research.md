@@ -4,9 +4,9 @@ type: claude-skill
 title: Paid Media Research Refresh
 fileName: ads-research.skill
 summary: >-
-  Refreshes Claude Ads' platform, API, policy and benchmark evidence —
-  reverifying or demoting every claim whose `refresh_due` date has expired
-  instead of trusting stale data.
+  Keeps Claude Ads' platform and policy knowledge current, and demotes any
+  claim to "unsupported" the moment its refresh date expires instead of
+  quietly trusting stale data.
 category: marketing
 tags: [claude-ads, research, evidence-refresh, source-verification]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -33,12 +33,12 @@ platform and policy claims from silently going stale.
 - Selects the overdue or requested evidence slice and dispatches bounded research workers by platform or topic.
 - Prefers official and primary sources, recording URL, publisher, dates, confidence, license and refresh date for every claim.
 - Dispatches a separate source verifier for load-bearing claims and records contradictions.
-- Treats an expired `refresh_due` as "not current" — demotes the claim to provisional/unsupported and blocks dependent release-current assertions if it can't be reverified.
+- Treats an expired `refresh_due` as "not current": demotes the claim to provisional/unsupported and blocks dependent release-current assertions if it can't be reverified.
 - Never copies restricted prompts, large source passages or unlicensed code into the repository.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads research
-refresh` requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+refresh` requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

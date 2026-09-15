@@ -4,9 +4,9 @@ type: copilot
 title: Security & OWASP Top 10 Instructions
 fileName: security-and-owasp.instructions.md
 summary: >-
-  Comprehensive secure-coding standard for Copilot: 55+ anti-patterns mapped to
-  OWASP Top 10 2025, with detection regex and framework-specific fixes for
-  Next.js, Angular, Express and Go, plus AI/LLM security guidance.
+  Maps 55+ secure-coding anti-patterns to OWASP Top 10 2025 for Copilot,
+  with detection regex and framework-specific fixes for Next.js, Angular,
+  Express and Go, plus AI/LLM security guidance.
 category: security
 tags: [security, owasp, code-review, best-practices]
 tools: [copilot, vscode]

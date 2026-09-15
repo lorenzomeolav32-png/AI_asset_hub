@@ -4,8 +4,9 @@ type: claude-skill
 title: TikTok Ads Audit
 fileName: ads-tiktok.skill
 summary: >-
-  Audits TikTok Ads — Pixel and Events API, mobile-first creative, Smart+,
-  TikTok Shop and commerce campaigns, bidding, pacing and attribution.
+  Audits TikTok Ads, including Smart+ automation and TikTok Shop,
+  benchmarked against your actual account maturity, not a generic industry
+  number.
 category: marketing
 tags: [claude-ads, tiktok-ads, smart-plus, tiktok-shop]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -16,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -37,7 +38,7 @@ Shop commerce campaigns alongside standard measurement.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs TikTok Ads coverage — see the full
+audit run needs TikTok Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

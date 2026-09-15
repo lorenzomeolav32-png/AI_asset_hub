@@ -4,8 +4,9 @@ type: mcp-server
 title: Memory MCP Server
 fileName: memory.mcp
 summary: >-
-  Official reference MCP server for persistent memory: a local knowledge graph
-  of entities, relations and observations so an agent remembers facts across chats.
+  The official reference MCP server for persistent memory, storing a
+  local knowledge graph of entities, relations and observations so an agent
+  remembers facts across chats.
 category: dev-tools
 tags: [memory, knowledge-graph, official, reference-server]
 tools: [claude, claude-code, cursor, vscode]

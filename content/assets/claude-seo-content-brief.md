@@ -4,8 +4,8 @@ type: claude-skill
 title: SEO Content Brief Generator
 fileName: seo-content-brief.skill
 summary: >-
-  Detailed content brief for a target topic: target keywords, outline and
-  an internal-linking plan.
+  Writes a detailed content brief for a target topic, with keywords, an
+  outline and an internal-linking plan ready to hand to a writer.
 category: marketing
 tags: [claude-seo, content-brief, keyword-research]
 tools: [claude, claude-code]

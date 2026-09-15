@@ -4,8 +4,9 @@ type: mcp-server
 title: Filesystem MCP Server
 fileName: filesystem.mcp
 summary: >-
-  The official reference MCP server for filesystem access: read, write, edit,
-  move and search files with configurable directory allowlists via MCP Roots.
+  The official reference MCP server for filesystem access, letting an
+  agent read, write, edit, move and search files inside directories you
+  explicitly allow through MCP Roots.
 category: dev-tools
 tags: [filesystem, files, official, reference-server]
 tools: [claude, claude-code, cursor, vscode]

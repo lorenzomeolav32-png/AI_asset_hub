@@ -4,9 +4,9 @@ type: claude-skill
 title: Campaign Concepts and Copy
 fileName: ads-create.skill
 summary: >-
-  Creates source-grounded paid-ad campaign concepts, messaging, copy and
-  creative briefs from a validated brand profile and objective — never
-  inventing testimonials, certifications or prices.
+  Writes paid-ad campaign concepts and copy from your validated brand
+  profile, and never invents a testimonial, certification or price to make
+  the pitch land.
 category: marketing
 tags: [claude-ads, ad-copy, creative-brief, campaign-concepts]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -35,11 +35,11 @@ cosmetic rewrites of the same idea.
 - Defines insight, promise, proof, hook, narrative, CTA, objections and platform adaptations per concept.
 - Validates copy limits and policy against current platform creative-spec references (Google, Meta, YouTube, LinkedIn, TikTok, Microsoft).
 - Returns a versioned creative brief and copy deck inside the run directory.
-- Never invents testimonials, certifications, scarcity, prices or regulated claims — human review is required before production.
+- Never invents testimonials, certifications, scarcity, prices or regulated claims; human review is required before production.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads create`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

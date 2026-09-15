@@ -4,9 +4,9 @@ type: claude-skill
 title: Paid Advertising Audit
 fileName: ads-audit.skill
 summary: >-
-  Runs a full or scoped source-grounded paid-advertising audit across any of
-  the 12 supported platforms, dispatching platform workers in parallel and
-  producing one versioned JSON bundle before rendering reports.
+  Runs a full paid-media audit across all 12 platforms in parallel, and
+  labels the result "partial" instead of quietly hiding the gaps when a
+  platform can't be checked.
 category: marketing
 tags: [claude-ads, audit, ppc, paid-media, scoring, evidence]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -27,14 +27,14 @@ installLang: bash
 
 **Paid Advertising Audit** is the orchestrating audit skill behind `/ads audit` in the
 [Claude Ads](/claude-skills/claude-ads) suite. It never aggregates prose-only worker
-reports — it produces a versioned JSON audit bundle first, then renders human
+reports. It produces a versioned JSON audit bundle first, then renders human
 deliverables from that bundle.
 
 ## What it covers
 - Creates a run manifest (business context, date window, currency, timezone, requested platforms, privacy classification) before analysis.
-- Discovers active platforms and confirms — rather than silently skips — requested inactive or data-less ones.
+- Discovers active platforms and explicitly confirms requested platforms that are inactive or have no data, instead of silently skipping them.
 - Dispatches independent platform workers (Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, X) plus cross-platform workers for tracking, budget, creative and policy.
-- Runs deterministic scoring outside the prompt, and labels a bundle `partial` whenever a required worker fails — never silently presenting an incomplete audit as complete.
+- Runs deterministic scoring outside the prompt, and labels a bundle `partial` whenever a required worker fails, so it never silently presents an incomplete audit as complete.
 - Outputs `manifest.json`, `account-snapshot.json`, `audit.json`, `action-plan.json`, and rendered `report.md`/`.html`/`.pdf`.
 
 ## Part of Claude Ads

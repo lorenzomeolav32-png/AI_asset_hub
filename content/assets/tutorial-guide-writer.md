@@ -4,9 +4,9 @@ type: claude-skill
 title: Tutorial & Guide Writer
 fileName: tutorial-guide-writer.skill
 summary: >-
-  Write and review top-quality tutorials, explainers, comparisons and best-of
-  roundups for any blog or docs site, with dynamic interview questions per
-  content type.
+  Writes and reviews top-quality tutorials, explainers, comparisons and
+  best-of roundups for any blog or docs site, using dynamic interview
+  questions tailored to each content type.
 category: writing
 tags: [writing, tutorials, documentation, editorial]
 tools: [claude, claude-code, cursor, codex]
@@ -33,17 +33,17 @@ answer, and it adapts to whatever content schema the target site already uses.
 Instead of one generic template for every article, it classifies the content type first
 and pulls a different set of interview questions and a different structure for each one.
 
-1. **Classify the kind** — tutorial, explainer, comparison, or best-of roundup, from how
+1. **Classify the kind**: tutorial, explainer, comparison, or best-of roundup, from how
    the request is phrased.
-2. **Ask the kind-specific questions** — a tutorial needs real prerequisites and
+2. **Ask the kind-specific questions**: a tutorial needs real prerequisites and
    verifiable steps; a comparison needs the actual distinction and whether the two things
    compete or compose; a roundup needs real selection criteria.
-3. **Verify facts, never invent them** — checks the workspace and primary sources for
+3. **Verify facts, never invent them**: checks the workspace and primary sources for
    versions, flags and steps instead of guessing.
-4. **Draft to the right structure** — a tutorial gets checkpoints and troubleshooting, a
+4. **Draft to the right structure**: a tutorial gets checkpoints and troubleshooting, a
    comparison gets a short-version summary before any detail, a roundup gets a caveat per
    entry.
-5. **Strip AI-sounding writing** — a built-in checklist removes filler, inflated claims,
+5. **Strip AI-sounding writing**: a built-in checklist removes filler, inflated claims,
    forced-triad lists and chatbot leftovers before the piece is called done.
 
 ## Examples

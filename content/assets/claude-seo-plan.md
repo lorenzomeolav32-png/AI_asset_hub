@@ -4,7 +4,7 @@ type: claude-skill
 title: Strategic SEO Plan Builder
 fileName: seo-plan.skill
 summary: >-
-  Strategic SEO planning tailored to business type: SaaS, local,
+  Plans your SEO strategy around your actual business type: SaaS, local,
   e-commerce, publisher or agency.
 category: marketing
 tags: [claude-seo, strategy, planning]

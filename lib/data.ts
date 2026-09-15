@@ -184,7 +184,7 @@ export const featuredAssets: Asset[] = [
     title: "PDF Toolkit",
     fileName: "pdf-toolkit.skill",
     summary:
-      "Extract, split, merge and fill PDF forms without ever leaving the chat — Claude handles the file work.",
+      "Extract, split, merge and fill PDF forms without ever leaving the chat. Claude handles the file work.",
     tags: ["pdf", "documents", "office"],
     tools: ["claude", "claude-code"],
     license: "Apache-2.0",
@@ -210,7 +210,7 @@ export const featuredAssets: Asset[] = [
     title: "Next.js Pro Rules",
     fileName: "nextjs.mdc",
     summary:
-      "Idiomatic Cursor rules for Next.js 15 App Router, TypeScript and Tailwind — fewer hallucinated APIs.",
+      "Idiomatic Cursor rules for Next.js 15 App Router, TypeScript and Tailwind, with fewer hallucinated APIs.",
     tags: ["nextjs", "typescript", "react"],
     tools: ["cursor"],
     license: "MIT",

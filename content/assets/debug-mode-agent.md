@@ -4,9 +4,9 @@ type: copilot
 title: Debug Mode Agent
 fileName: debug.agent.md
 summary: >-
-  A four-phase Copilot agent for systematic debugging: reproduce the bug
-  first, trace the root cause, apply a minimal fix, then verify with tests
-  instead of guessing at a patch.
+  Runs a four-phase debugging workflow: reproduces the bug first, traces
+  the root cause, applies a minimal fix, then verifies with tests instead
+  of guessing at a patch.
 category: dev-tools
 tags: [debugging, workflow, testing]
 tools: [copilot, vscode]

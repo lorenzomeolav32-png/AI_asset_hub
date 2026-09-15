@@ -4,9 +4,9 @@ type: mcp-server
 title: Docker Hub MCP Server
 fileName: docker-hub-mcp.mcp
 summary: >-
-  Docker's official MCP server for Docker Hub: search images, inspect
-  tags and manage your own repositories through natural language, with
-  built-in support for Docker Hardened Images.
+  Docker's official MCP server for Docker Hub, letting an agent search
+  images, inspect tags and manage your own repositories in natural
+  language, with built-in support for Docker Hardened Images.
 category: devops
 tags: [docker, containers, docker-hub, official]
 tools: [claude, claude-code, cursor, vscode, copilot]

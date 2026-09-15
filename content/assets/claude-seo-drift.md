@@ -4,8 +4,8 @@ type: claude-skill
 title: SEO Drift Monitor
 fileName: seo-drift.skill
 summary: >-
-  Tracks SEO drift over time with local SQLite snapshots: baseline,
-  compare and history modes.
+  Tracks how your SEO drifts over time using local SQLite snapshots, with
+  baseline, compare and history modes.
 category: marketing
 tags: [claude-seo, monitoring, drift, regression]
 tools: [claude, claude-code]

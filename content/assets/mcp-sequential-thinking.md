@@ -4,9 +4,9 @@ type: mcp-server
 title: Sequential Thinking MCP Server
 fileName: sequential-thinking.mcp
 summary: >-
-  Official reference MCP server for structured, step-by-step reasoning: lets
-  an agent break a problem into revisable, branching thoughts instead of a
-  one-shot answer.
+  The official reference MCP server for structured, step-by-step
+  reasoning, letting an agent break a problem into revisable, branching
+  thoughts instead of a one-shot answer.
 category: dev-tools
 tags: [reasoning, planning, official, reference-server]
 tools: [claude, claude-code, cursor, vscode, codex]

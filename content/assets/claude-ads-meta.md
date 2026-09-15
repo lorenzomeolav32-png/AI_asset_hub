@@ -4,9 +4,9 @@ type: claude-skill
 title: Meta Ads Audit
 fileName: ads-meta.skill
 summary: >-
-  Audits Meta Ads — Pixel and Conversions API, attribution, Facebook/Instagram
-  creative, audiences, placements, Advantage+ automation, budgets and
-  account structure.
+  Audits Meta Ads' Pixel, Conversions API and Advantage+ setup, and won't
+  apply an industry benchmark without checking your objective and account
+  maturity first.
 category: marketing
 tags: [claude-ads, meta-ads, facebook-ads, instagram-ads, pixel, capi]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -38,7 +38,7 @@ including Pixel/CAPI measurement and Advantage+ automation.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Meta Ads coverage — see the full
+audit run needs Meta Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

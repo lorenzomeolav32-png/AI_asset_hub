@@ -4,8 +4,8 @@ type: claude-skill
 title: FLOW Evidence-Led SEO Framework
 fileName: seo-flow.skill
 summary: >-
-  41 evidence-led FLOW framework prompts for SEO strategy, licensed
-  separately from the rest of Claude SEO.
+  Guides SEO strategy through 41 evidence-led FLOW framework prompts,
+  licensed separately from the rest of Claude SEO.
 category: marketing
 tags: [claude-seo, flow, framework, cc-by]
 tools: [claude, claude-code]

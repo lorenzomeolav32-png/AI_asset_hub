@@ -4,9 +4,9 @@ type: claude-skill
 title: Paid Media Setup
 fileName: ads-setup.skill
 summary: >-
-  Sets up the client, brand, account, data-source, privacy and
-  mutation-guardrail profile Claude Ads needs — and refuses to ever store
-  secret values in that profile.
+  Sets up the client, brand and guardrail profile every other Claude Ads
+  skill reads from, and refuses to ever store your API keys or secrets in
+  it.
 category: marketing
 tags: [claude-ads, onboarding, client-setup, guardrails]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -34,11 +34,11 @@ in the plugin reads from.
 - Records data-source type and whether credentials are present, but never stores credential values, cookies, tokens or raw exports.
 - Creates and validates a `data-lifecycle.json` (classification, retention, access roles, deletion method) before persisting anything.
 - Declares mutation authority, approvers, budget/policy ceilings and rollback owner up front.
-- Refuses `curl | bash`-style remote installs and refuses to store API keys/tokens in the profile — only presence + an environment/keychain reference.
+- Refuses `curl | bash`-style remote installs and refuses to store API keys/tokens in the profile, only presence plus an environment/keychain reference.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads setup`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

@@ -4,10 +4,10 @@ type: copilot
 title: GitHub Actions Expert
 fileName: github-actions-expert.agent.md
 summary: >-
-  Designs and reviews GitHub Actions workflows against a security-first
-  checklist: commit-SHA pinning instead of mutable tags, least-privilege
-  permissions, OIDC over long-lived credentials, and built-in
-  dependency/container/secret scanning.
+  Reviews your GitHub Actions workflows against a security-first checklist,
+  pinning commit SHAs instead of mutable tags, enforcing least-privilege
+  permissions and OIDC over long-lived credentials, with built-in
+  dependency, container and secret scanning.
 category: devops
 tags: [ci-cd, github-actions, devops, security]
 tools: [copilot, vscode]

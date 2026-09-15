@@ -4,8 +4,8 @@ type: claude-skill
 title: YouTube Ads Audit
 fileName: ads-youtube.skill
 summary: >-
-  Audits YouTube Ads — video and Demand Gen inventory, Shorts, in-stream, CTV,
-  creative, audiences, brand safety and bidding.
+  Audits YouTube Ads across Shorts, in-stream and CTV inventory, kept as
+  its own review even when Google Ads supplies the underlying data.
 category: marketing
 tags: [claude-ads, youtube-ads, video-ads, ctv]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -16,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -37,7 +37,7 @@ Demand Gen inventory in one review, kept separate even when Google Ads supplies 
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs YouTube Ads coverage — see the full
+audit run needs YouTube Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

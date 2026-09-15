@@ -4,9 +4,9 @@ type: claude-skill
 title: Google Ads Audit
 fileName: ads-google.skill
 summary: >-
-  Audits Google Ads across Search, Shopping, Performance Max, Demand Gen and
-  YouTube-linked inventory — keywords, search terms, negative-keyword review,
-  creative, bidding, budgets and policy.
+  Audits your Google Ads account across Search, Shopping, Performance Max
+  and Demand Gen, and won't suggest a negative keyword without a real
+  search terms report behind it.
 category: marketing
 tags: [claude-ads, google-ads, search-ads, performance-max, shopping-ads]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -38,7 +38,7 @@ Max, Demand Gen and YouTube-linked inventory in one account review.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Google Ads coverage — see the full
+audit run needs Google Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

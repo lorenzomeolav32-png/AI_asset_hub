@@ -4,7 +4,7 @@ type: claude-skill
 title: Create Skill
 fileName: create-skill.skill
 summary: >-
-  Scaffold high-quality Claude Code skills and slash commands with correct
+  Scaffolds high-quality Claude Code skills and slash commands with correct
   frontmatter, conventions and worked examples.
 category: dev-tools
 tags: [meta, claude-code, devx]
@@ -23,7 +23,7 @@ installLang: bash
 ## Overview
 
 **Create Skill** is a meta-skill: it helps you build other Claude Code skills and
-slash commands that follow established conventions — the right frontmatter, clear
+slash commands that follow established conventions: the right frontmatter, clear
 invocation, and reference/examples files.
 
 ## How it works
@@ -31,10 +31,10 @@ invocation, and reference/examples files.
 It first classifies what kind of skill you want, then generates a well-structured
 `SKILL.md` plus supporting files.
 
-1. **Clarify type** — Task, Research, Knowledge or Dynamic (live shell context).
-2. **Write frontmatter** — name, description, argument-hint, permissions.
-3. **Structure the body** — steps, rules, and worked examples.
-4. **Add references** — `reference.md` and `examples.md` for depth.
+1. **Clarify type**: Task, Research, Knowledge or Dynamic (live shell context).
+2. **Write frontmatter**: name, description, argument-hint, permissions.
+3. **Structure the body**: steps, rules, and worked examples.
+4. **Add references**: `reference.md` and `examples.md` for depth.
 
 ## Examples
 

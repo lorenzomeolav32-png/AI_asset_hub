@@ -4,9 +4,8 @@ type: claude-skill
 title: Campaign Launch
 fileName: ads-launch.skill
 summary: >-
-  Drafts — or, once fully approved, applies — a paid-ad campaign launch
-  through Claude Ads' capability-gated adapters, defaulting to `--draft` and
-  never supporting permanent deletion.
+  Drafts a campaign launch and only applies it once every safety gate
+  passes, defaulting to `--draft` and never supporting permanent deletion.
 category: marketing
 tags: [claude-ads, campaign-launch, account-mutation, guardrails]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -38,7 +37,7 @@ installLang: bash
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads launch`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

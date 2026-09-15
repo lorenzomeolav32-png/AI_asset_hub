@@ -4,8 +4,9 @@ type: claude-skill
 title: DataForSEO Live Data Extension
 fileName: seo-dataforseo.skill
 summary: >-
-  Live SERP data, keyword research, backlinks and AI-visibility checks via
-  the optional DataForSEO extension (23 commands, 9 API modules).
+  Pulls live SERP data, keyword research, backlinks and AI-visibility
+  checks through the optional DataForSEO extension, spanning 23 commands
+  across 9 API modules.
 category: marketing
 tags: [claude-seo, dataforseo, requires-paid-api, serp]
 tools: [claude, claude-code]

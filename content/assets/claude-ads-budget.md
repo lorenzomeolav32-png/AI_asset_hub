@@ -4,9 +4,8 @@ type: claude-skill
 title: Budget and Bidding
 fileName: ads-budget.skill
 summary: >-
-  Plans and reviews paid-media budgets, bidding and pacing — break-even
-  boundaries, marginal-return comparisons and a decision-complete allocation
-  plan instead of fixed-ratio rules of thumb.
+  Plans your paid-media budget and bids using break-even math and
+  marginal-return comparisons, not a fixed 70/20/10 rule of thumb.
 category: marketing
 tags: [claude-ads, budget, bidding, roas, cpa, forecasting]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -38,7 +37,7 @@ concrete budget/bid plan rather than applying a fixed formula blindly.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads budget`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

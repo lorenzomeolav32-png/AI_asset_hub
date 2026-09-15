@@ -4,8 +4,8 @@ type: claude-skill
 title: E-commerce SEO & Marketplace Intelligence
 fileName: seo-ecommerce.skill
 summary: >-
-  E-commerce SEO and marketplace intelligence, including schema validation
-  for product and return-policy data.
+  Audits e-commerce and marketplace SEO, including schema validation for
+  your product and return-policy data.
 category: marketing
 tags: [claude-seo, ecommerce, product-schema]
 tools: [claude, claude-code]

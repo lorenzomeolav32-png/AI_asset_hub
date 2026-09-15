@@ -4,8 +4,8 @@ type: claude-skill
 title: SEO Technical Audit
 fileName: seo-technical.skill
 summary: >-
-  Technical SEO audit across 9 categories: crawlability, indexation, Core
-  Web Vitals, structured data and more.
+  Audits your technical SEO across 9 categories, from crawlability and
+  indexation to Core Web Vitals and structured data.
 category: marketing
 tags: [claude-seo, technical-seo, core-web-vitals]
 tools: [claude, claude-code]

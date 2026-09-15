@@ -4,9 +4,10 @@ type: mcp-server
 title: Neon MCP Server
 fileName: neon-mcp-server.mcp
 summary: >-
-  Neon's official, remote MCP server for its serverless Postgres platform:
-  create and branch databases, run migrations on a temporary branch first,
-  and tune slow queries, all through natural language.
+  Neon's official, remote MCP server for its serverless Postgres platform,
+  letting an agent create and branch databases, test migrations on a
+  temporary branch first, and tune slow queries, all through natural
+  language.
 category: data-ai
 tags: [postgres, database, serverless, branching, official]
 tools: [claude, claude-code, cursor, vscode, copilot]

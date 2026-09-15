@@ -4,8 +4,8 @@ type: claude-skill
 title: X Ads Audit
 fileName: ads-x.skill
 summary: >-
-  Audits X Ads — X Pixel and Conversions API, campaign objectives,
-  keyword/conversation targeting, creative, budgets and brand safety.
+  Audits X Ads, from conversation targeting to brand safety, and marks
+  missing inputs explicitly instead of guessing at them.
 category: marketing
 tags: [claude-ads, x-ads, twitter-ads]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -16,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -32,12 +32,12 @@ standard campaign measurement.
 - Evaluates measurement, campaign structure, audience/conversation targeting, creative, budgets, reporting and brand safety.
 - Reads only the relevant shared measurement, benchmark and policy references for X before scoring.
 - Marks missing inputs, unavailable features and stale sources explicitly rather than guessing.
-- Keeps optional or ineligible features unscored — never converts a vendor recommendation into a universal threshold.
+- Keeps optional or ineligible features unscored; never converts a vendor recommendation into a universal threshold.
 - Keeps all account changes as drafts until Claude Ads' main mutation gate passes.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs X Ads coverage — see the full
+audit run needs X Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

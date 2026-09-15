@@ -4,8 +4,9 @@ type: claude-skill
 title: Semantic Keyword Clustering
 fileName: seo-cluster.skill
 summary: >-
-  SERP-based semantic keyword clustering, contributed by the community
-  through the AI Marketing Hub Pro Hub Challenge.
+  Clusters your keywords by SERP-based semantic similarity, a skill
+  contributed by the community through the AI Marketing Hub Pro Hub
+  Challenge.
 category: marketing
 tags: [claude-seo, keyword-clustering, semantic-seo]
 tools: [claude, claude-code]

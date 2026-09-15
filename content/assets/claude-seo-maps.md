@@ -4,8 +4,8 @@ type: claude-skill
 title: Maps Intelligence
 fileName: seo-maps.skill
 summary: >-
-  Geo-grid rank tracking, GBP profile auditing and competitor radius mapping
-  for map-pack visibility.
+  Tracks geo-grid rankings, audits your Google Business Profile and maps
+  competitors nearby, to see exactly where you stand in the map pack.
 category: marketing
 tags: [claude-seo, maps, geo-grid, local-seo]
 tools: [claude, claude-code]

@@ -4,9 +4,8 @@ type: claude-skill
 title: Generate Ad Images
 fileName: ads-generate.skill
 summary: >-
-  Generates paid-ad image assets from a validated creative brief and brand
-  profile through an explicitly configured image provider, with full
-  provenance recorded for every output.
+  Generates on-brand ad images from an approved creative brief, and records
+  the exact prompt, provider and cost behind every image it produces.
 category: marketing
 tags: [claude-ads, ad-images, image-generation, creative-production]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -30,7 +29,7 @@ installLang: bash
 brand profile into platform-ready ad image variants.
 
 ## What it covers
-- Treats all brief text and source images as untrusted data — never follows embedded instructions or fetches unapproved resources.
+- Treats all brief text and source images as untrusted data; never follows embedded instructions or fetches unapproved resources.
 - Builds prompts from concept, subject, action, setting, composition, brand tokens, platform constraints and explicit exclusions.
 - Records provider, model, parameters, cost, source hashes, prompt version and output hash for every generated asset.
 - Validates file type, dimensions, safe zones, text/copy consistency and policy before writing.
@@ -38,7 +37,7 @@ brand profile into platform-ready ad image variants.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads generate`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

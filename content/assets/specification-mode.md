@@ -5,7 +5,7 @@ title: Specification Mode
 fileName: specification.agent.md
 summary: >-
   Turns a piece of functionality into a formal, AI-readable specification
-  file: coded requirements (REQ/SEC/CON), Given-When-Then acceptance
+  file, with coded requirements (REQ/SEC/CON), Given-When-Then acceptance
   criteria and explicit dependencies, saved under /spec/ with a fixed
   naming convention.
 category: dev-tools

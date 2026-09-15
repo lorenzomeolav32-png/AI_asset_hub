@@ -4,9 +4,8 @@ type: claude-skill
 title: Paid Media Financial Model
 fileName: ads-math.skill
 summary: >-
-  Calculates and models paid-media CPA, CPC, CPM, ROAS, MER, break-even
-  targets, contribution margin and LTV:CAC — always showing the formula and
-  every input's source.
+  Calculates CPA, ROAS, MER and LTV:CAC from your real numbers, and always
+  shows the formula and the source behind every input.
 category: marketing
 tags: [claude-ads, roas, cpa, financial-model, unit-economics]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -31,14 +30,14 @@ break-even, contribution margin, LTV:CAC and budget-forecast questions.
 
 ## What it covers
 - Identifies the decision and collects units, currency, period, margin, attribution basis and uncertainty before calculating.
-- Shows the formula and maps every input to an operator value or cited artifact — never a black-box number.
+- Shows the formula and maps every input to an operator value or cited artifact; never a black-box number.
 - Validates denominators, sign, missing values, incompatible windows and unit conversions before computing.
 - Calculates base, downside and upside cases wherever uncertainty affects the decision.
-- Keeps platform-attributed revenue, blended business revenue and contribution margin as distinct figures — never fabricates a missing input.
+- Keeps platform-attributed revenue, blended business revenue and contribution margin as distinct figures; never fabricates a missing input.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads math`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

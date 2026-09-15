@@ -4,9 +4,8 @@ type: claude-skill
 title: Landing-Page Audit
 fileName: ads-landing.skill
 summary: >-
-  Audits paid-ad landing pages for message match, mobile experience,
-  performance, accessibility, trust and conversion friction, through a guarded
-  fetcher that blocks private/metadata redirect targets.
+  Audits the landing pages your ads send traffic to, checking message
+  match, mobile speed and trust signals, not just the ad creative itself.
 category: marketing
 tags: [claude-ads, landing-page, cro, ux-audit]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -33,12 +32,12 @@ ad sends traffic to, not just the ad itself.
 - Validates the initial URL and every redirect hop before sending the next request, blocking private, loopback, link-local and cloud-metadata destinations.
 - Captures declared ad promise, audience, objective, conversion, device and geography as the baseline to check message continuity against.
 - Evaluates message/offer continuity, mobile layout, accessibility, performance, trust, form friction, error states, consent and tracking.
-- Records a blocked hop with reason and timestamp instead of ever fetching a disallowed destination — user insistence never overrides this boundary.
+- Records a blocked hop with reason and timestamp instead of ever fetching a disallowed destination; user insistence never overrides this boundary.
 - Returns experiment-ready recommendations through the common findings schema.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for landing-page
-audits — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+audits. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

@@ -4,8 +4,8 @@ type: claude-skill
 title: Search Experience Optimization (SXO)
 fileName: seo-sxo.skill
 summary: >-
-  Search Experience Optimization audit covering page-type detection, user stories
-  and persona alignment.
+  Audits Search Experience Optimization, from page-type detection to user
+  stories and persona alignment.
 category: marketing
 tags: [claude-seo, sxo, ux]
 tools: [claude, claude-code]

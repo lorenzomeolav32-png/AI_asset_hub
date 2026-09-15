@@ -4,8 +4,8 @@ type: claude-skill
 title: SEO Content & E-E-A-T Analysis
 fileName: seo-content.skill
 summary: >-
-  E-E-A-T and content quality analysis scored against Google's Search
-  Quality Rater Guidelines.
+  Scores your content's E-E-A-T and overall quality against Google's own
+  Search Quality Rater Guidelines.
 category: marketing
 tags: [claude-seo, eeat, content-quality]
 tools: [claude, claude-code]

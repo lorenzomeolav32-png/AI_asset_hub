@@ -4,8 +4,8 @@ type: claude-skill
 title: SEO Image Optimization
 fileName: seo-images.skill
 summary: >-
-  Image optimization analysis covering alt text, compression, lazy-loading and
-  format recommendations.
+  Analyzes your images for alt text, compression, lazy-loading and format
+  issues, with concrete fixes for each.
 category: marketing
 tags: [claude-seo, images, performance]
 tools: [claude, claude-code]

@@ -4,9 +4,9 @@ type: claude-skill
 title: Apple Ads Audit
 fileName: ads-apple.skill
 summary: >-
-  Audits Apple Search Ads — AdServices/AdAttributionKit, campaign and keyword
-  structure, Search Match, App Store placements, custom product pages, bidding,
-  budgets and MMP reconciliation.
+  Audits your Apple Search Ads account and reconciles AdAttributionKit data
+  against your MMP, so you know which App Store campaigns are actually
+  driving installs.
 category: marketing
 tags: [claude-ads, apple-search-ads, app-store, attribution, mmp]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -26,7 +26,7 @@ installLang: bash
 ## Overview
 
 **Apple Ads Audit** is one of the platform-specific worker skills in the
-[Claude Ads](/claude-skills/claude-ads) suite, focused on Apple Search Ads accounts —
+[Claude Ads](/claude-skills/claude-ads) suite, focused on Apple Search Ads accounts:
 App Store campaigns, Search Match, custom product pages and attribution reconciliation
 against MMP data.
 
@@ -39,7 +39,7 @@ against MMP data.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Apple Ads coverage — see the full
+audit run needs Apple Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

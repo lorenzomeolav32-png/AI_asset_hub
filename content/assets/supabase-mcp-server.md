@@ -4,7 +4,7 @@ type: mcp-server
 title: Supabase MCP Server
 fileName: supabase-mcp-server.mcp
 summary: >-
-  Supabase's official, remote MCP server for managing Supabase projects:
+  Supabase's official, remote MCP server for managing your projects,
   tables, database branches, config and queries, connected through OAuth
   with no local install required.
 category: data-ai

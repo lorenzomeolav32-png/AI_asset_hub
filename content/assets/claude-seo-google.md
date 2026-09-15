@@ -4,8 +4,9 @@ type: claude-skill
 title: Google SEO APIs Integration
 fileName: seo-google.skill
 summary: >-
-  Tiered integration with Search Console, PageSpeed Insights, CrUX, the
-  Indexing API and GA4, plus PDF report generation.
+  Connects directly to Search Console, PageSpeed Insights, CrUX, the
+  Indexing API and GA4, and turns the results into a ready-to-send PDF
+  report.
 category: marketing
 tags: [claude-seo, google-search-console, pagespeed, ga4, requires-api-key]
 tools: [claude, claude-code]

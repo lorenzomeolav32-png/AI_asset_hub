@@ -4,9 +4,8 @@ type: claude-skill
 title: Brand and Offer Profile
 fileName: ads-dna.skill
 summary: >-
-  Extracts a public-safe brand and offer profile — voice, visual tokens,
-  claims and disclaimers — from an authorized website for use across every
-  other Claude Ads creative and planning skill.
+  Extracts your brand voice, visual tokens and claims from an authorized
+  website once, so every other Claude Ads skill can reuse the same profile.
 category: marketing
 tags: [claude-ads, brand-profile, brand-voice, style-guide]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -38,7 +37,7 @@ operator input to produce the brand context every other creative and planning sk
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor for `/ads dna`
-requests — see the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
+requests. See the full [Claude Ads](/claude-skills/claude-ads) entry for installation.
 
 ## Installation
 

@@ -4,8 +4,9 @@ type: claude-skill
 title: Humanizer
 fileName: humanizer.skill
 summary: >-
-  Rewrite AI-sounding text so it reads like a person wrote it — strips filler,
-  inflated claims, em-dashes and chatbot artifacts without changing the meaning.
+  Rewrites AI-sounding text so it reads like a person wrote it, stripping
+  filler, inflated claims, em-dashes and chatbot artifacts without
+  changing what it says.
 category: writing
 tags: [writing, editing, content, ai-writing]
 tools: [claude, claude-code, cursor, codex]
@@ -26,7 +27,7 @@ installLang: bash
 
 ## Overview
 
-**Humanizer** rewrites AI-sounding prose so it reads like the writer, not a chatbot —
+**Humanizer** rewrites AI-sounding prose so it reads like the writer, not a chatbot,
 without changing what the text says or inventing details. It is just Markdown, so it
 works with any agent that supports skills (Claude Code, Cursor, Codex and others). The
 rules are based on Wikipedia's
@@ -38,12 +39,12 @@ maintained by WikiProject AI Cleanup.
 Humanizer applies 35 patterns from the Wikipedia list. It makes a first pass without
 treating the original structure as fixed, then checks the draft against those patterns
 and the original claims before rewriting whatever still sounds artificial. It shows its
-work — the first rewrite plus a short critique — before the final version.
+work (the first rewrite plus a short critique) before the final version.
 
-1. **Find AI patterns** — inflated claims, stock words, passive voice, em-dashes, filler.
-2. **Keep every claim** — shorten, expand, merge or split, but keep the information.
-3. **Never invent facts** — a name, number, date, quote or citation must come from the source.
-4. **Match the voice** — give it a writing sample and it follows your rhythm and word choice.
+1. **Find AI patterns**: inflated claims, stock words, passive voice, em-dashes, filler.
+2. **Keep every claim**: shorten, expand, merge or split, but keep the information.
+3. **Never invent facts**: a name, number, date, quote or citation must come from the source.
+4. **Match the voice**: give it a writing sample and it follows your rhythm and word choice.
 
 Point it at a file and it changes only the prose, leaving code, data, frontmatter and
 link targets alone.

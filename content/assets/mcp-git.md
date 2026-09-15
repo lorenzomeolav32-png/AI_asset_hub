@@ -4,8 +4,9 @@ type: mcp-server
 title: Git MCP Server
 fileName: git.mcp
 summary: >-
-  Official reference MCP server for Git: status, diff, commit, branch, log and
-  checkout operations on a local repository, exposed as MCP tools.
+  The official reference MCP server for Git, exposing status, diff,
+  commit, branch, log and checkout as MCP tools an agent can call directly
+  on your local repository.
 category: dev-tools
 tags: [git, version-control, official, reference-server]
 tools: [claude, claude-code, cursor, vscode]

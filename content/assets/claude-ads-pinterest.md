@@ -4,9 +4,9 @@ type: claude-skill
 title: Pinterest Ads Audit
 fileName: ads-pinterest.skill
 summary: >-
-  Audits Pinterest Ads — Pinterest Tag and Conversions API, catalog/shopping
-  readiness, visual creative, audiences, Performance+ intent, budgets and
-  brand safety.
+  Audits Pinterest Ads, including catalog and shopping readiness, and
+  leaves optional or ineligible features unscored instead of penalizing
+  your account for them.
 category: marketing
 tags: [claude-ads, pinterest-ads, catalog-ads, shopping-ads]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -33,12 +33,12 @@ alongside standard campaign measurement.
 - Evaluates measurement, catalog commerce, campaign structure, visual creative, audiences, automation, budget and experimentation.
 - Reads only the relevant shared measurement, benchmark and policy references for Pinterest before scoring.
 - Marks missing inputs, unavailable features and stale sources explicitly rather than guessing.
-- Keeps optional or ineligible features unscored — never converts a vendor recommendation into a universal threshold.
+- Keeps optional or ineligible features unscored; never converts a vendor recommendation into a universal threshold.
 - Keeps all account changes as drafts until Claude Ads' main mutation gate passes.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Pinterest Ads coverage — see the full
+audit run needs Pinterest Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

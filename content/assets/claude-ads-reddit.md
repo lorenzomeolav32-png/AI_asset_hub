@@ -4,8 +4,8 @@ type: claude-skill
 title: Reddit Ads Audit
 fileName: ads-reddit.skill
 summary: >-
-  Audits Reddit Ads — campaign structure, community/interest targeting,
-  creative-native fit, catalog advertising, budgets and brand safety.
+  Audits Reddit Ads, from community targeting to catalog formats, and
+  marks missing data explicitly instead of guessing.
 category: marketing
 tags: [claude-ads, reddit-ads, community-targeting]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -16,7 +16,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -32,12 +32,12 @@ alongside standard campaign measurement.
 - Evaluates measurement, campaign structure, audiences, community relevance, creative, catalog readiness, budget and experimentation.
 - Reads only the relevant shared measurement, benchmark and policy references for Reddit before scoring.
 - Marks missing inputs, unavailable features and stale sources explicitly rather than guessing.
-- Keeps optional or ineligible features unscored — never converts a vendor recommendation into a universal threshold.
+- Keeps optional or ineligible features unscored; never converts a vendor recommendation into a universal threshold.
 - Keeps all account changes as drafts until Claude Ads' main mutation gate passes.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs Reddit Ads coverage — see the full
+audit run needs Reddit Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

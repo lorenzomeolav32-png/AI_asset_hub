@@ -4,9 +4,9 @@ type: mcp-server
 title: Redis MCP Server
 fileName: redis-mcp-server.mcp
 summary: >-
-  Redis's official MCP server for natural-language data operations:
-  strings, hashes, lists, sets, sorted sets, streams, pub/sub and JSON,
-  plus vector index management for search.
+  Redis's official MCP server, letting an agent run natural-language data
+  operations across strings, hashes, lists, sets, sorted sets, streams,
+  pub/sub and JSON, plus manage vector indexes for search.
 category: data-ai
 tags: [redis, database, caching, vector-search, official]
 tools: [claude, claude-code, cursor, vscode, copilot]

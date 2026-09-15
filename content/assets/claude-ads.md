@@ -4,10 +4,9 @@ type: claude-skill
 title: Claude Ads
 fileName: claude-ads.skill
 summary: >-
-  Turns account exports or reads into source-grounded paid-media audits, plans,
-  creative briefs, monitoring and gated campaign changes across 12 ad platforms
-  (Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit,
-  Pinterest, Snapchat, X).
+  Turns your ad account data into evidence-backed audits, plans and creative
+  briefs across all 12 major ad platforms, and only touches a live campaign
+  once you've explicitly approved the change.
 category: marketing
 tags: [claude-ads, marketing, advertising, ppc, paid-social, google-ads, meta-ads, automation]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -42,15 +41,15 @@ One conductor dispatches bounded per-platform worker agents that return schema-v
 findings; a required worker failing marks the whole run `partial` instead of quietly
 presenting an incomplete audit as complete.
 
-1. **Audit** — dated evidence, explicit confidence, and deterministic scoring per platform.
-2. **Plan & create** — channels, budgets, measurement, experiments, and copy/image/video/
+1. **Audit**: dated evidence, explicit confidence, and deterministic scoring per platform.
+2. **Plan & create**: channels, budgets, measurement, experiments, and copy/image/video/
    product-photo briefs.
-3. **Monitor** — pacing, delivery, tracking, fatigue, policy and performance.
-4. **Report** — a canonical versioned JSON bundle, rendered to Markdown, HTML and
+3. **Monitor**: pacing, delivery, tracking, fatigue, policy and performance.
+4. **Report**: a canonical versioned JSON bundle, rendered to Markdown, HTML and
    optional PDF.
-5. **Change safely** — any account mutation requires a tested capability, explicit
+5. **Change safely**: any account mutation requires a tested capability, explicit
    object IDs, a before/after diff, owner approval, an idempotency key, rollback and
-   verification — otherwise it stays a draft.
+   verification; otherwise it stays a draft.
 
 ## Examples
 
@@ -68,7 +67,7 @@ or "draft a budget reallocation for underperforming campaigns."
 ## Individual skills
 
 Claude Ads ships as one plugin, but internally it is composed of 33 focused skill
-files under `skills/` — one per ad platform (Google, Meta, YouTube, LinkedIn, TikTok,
+files under `skills/`, one per ad platform (Google, Meta, YouTube, LinkedIn, TikTok,
 Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, X) plus lifecycle skills for
 setup, planning, creative, budgeting, launching, monitoring, optimizing, testing,
 reporting and validation. Each is listed as its own entry in this directory under the

@@ -4,9 +4,9 @@ type: claude-skill
 title: LinkedIn Ads Audit
 fileName: ads-linkedin.skill
 summary: >-
-  Audits LinkedIn Ads — Insight Tag and conversions, professional audiences,
-  lead generation, ABM, creative, bidding, pacing and policy — for B2B paid
-  media accounts.
+  Audits LinkedIn Ads for B2B accounts, from lead-gen forms to ABM, and
+  won't issue a blanket bid or budget rule without checking conversion lag
+  and account maturity first.
 category: marketing
 tags: [claude-ads, linkedin-ads, b2b, lead-gen, abm]
 tools: [claude, claude-code, codex, gemini, cursor, windsurf, goose]
@@ -17,7 +17,7 @@ stars: 8900
 starsNote: whole AgriciDaniel/claude-ads repo
 verified: false
 install: |
-  # Ships inside the Claude Ads plugin — installs together
+  # Ships inside the Claude Ads plugin, installs together
   /plugin marketplace add AgriciDaniel/claude-ads
   /plugin install claude-ads@ai-marketing-hub-claude-ads
 installLang: bash
@@ -33,12 +33,12 @@ Manager, Lead Gen Forms, Thought Leader Ads and ABM campaigns.
 - Evaluates measurement, professional-audience targeting, lead generation, ABM, creative, bidding, pacing and automation.
 - Reads only the relevant shared measurement, benchmark and policy references for LinkedIn before scoring.
 - Keeps optional, beta, premium or ineligible features unscored rather than counting against account health.
-- Never issues universal pause, bid, budget or attribution rules — considers conversion lag, sample size and account maturity.
+- Never issues universal pause, bid, budget or attribution rules; considers conversion lag, sample size and account maturity.
 - Returns platform health, evidence coverage, regulatory exposure and recommendations through Claude Ads' common JSON contract.
 
 ## Part of Claude Ads
 This skill is dispatched automatically by the main `ads` conductor when a Claude Ads
-audit run needs LinkedIn Ads coverage — see the full
+audit run needs LinkedIn Ads coverage. See the full
 [Claude Ads](/claude-skills/claude-ads) entry for installation and the complete platform list.
 
 ## Installation

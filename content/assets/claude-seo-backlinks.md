@@ -4,8 +4,8 @@ type: claude-skill
 title: Backlink Profile Analysis
 fileName: seo-backlinks.skill
 summary: >-
-  Backlink profile analysis using Moz, Bing Webmaster and Common Crawl data
-  sources.
+  Analyzes your backlink profile using Moz, Bing Webmaster and Common
+  Crawl data.
 category: marketing
 tags: [claude-seo, backlinks, off-page]
 tools: [claude, claude-code]
