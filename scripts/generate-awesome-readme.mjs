@@ -29,10 +29,16 @@ function sortAssets(list) {
 }
 
 function renderAsset(a) {
-  const flags = [`\`${a.license}\``];
-  if (a.verified) flags.push("✅ verified");
-  const source = a.source ? ` ([source](${a.source}))` : "";
-  return `- [${a.title}](${SITE_URL}${a.url}) — ${a.summary}${source} — ${flags.join(" · ")}`;
+  const meta = [`\`${a.license}\``];
+  if (a.verified) meta.push("verified");
+  const source = a.source ? `[source](${a.source})` : null;
+  // awesome-lint requires the description to end in text/link (not inline code) with closing punctuation.
+  const tail = [meta.join(", "), source].filter(Boolean).join(", ");
+  return `- [${a.title}](${SITE_URL}${a.url}) - ${a.summary} (${tail})`;
+}
+
+function anchor(title, count) {
+  return `${title.toLowerCase().replace(/\s+/g, "-")}-${count}`;
 }
 
 function renderSegment({ key, title }) {
@@ -49,13 +55,13 @@ function renderSegment({ key, title }) {
 const toc = SEGMENTS
   .map(({ key, title }) => {
     const count = assets.filter((a) => a.segment === key).length;
-    return `- [${title}](#${title.toLowerCase().replace(/\s+/g, "-")}) (${count})`;
+    // Link text must match the heading text exactly (awesome-lint: awesome-toc).
+    return `- [${title} (${count})](#${anchor(title, count)})`;
   })
   .join("\n");
 
-const readme = `# Awesome Claude Skills & MCP Servers
+const readme = `# Awesome Claude Skills & MCP Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > A curated, open-source list of Claude Skills, MCP servers, Copilot agents, AI
@@ -66,6 +72,7 @@ const readme = `# Awesome Claude Skills & MCP Servers
 ## Contents
 
 ${toc}
+- [Why this list exists](#why-this-list-exists)
 
 ---
 
@@ -79,7 +86,7 @@ permissively-licensed source and a one-line description of what they do.
 
 Bigger crawlers already index six figures of assets. This list stays curated on
 purpose: every entry is open-source, permissively licensed, and either verified
-by hand on [aiassetsdirectory.com](${SITE_URL}) or clearly marked as unverified so
+by hand on [the directory](${SITE_URL}/browse) or clearly marked as unverified so
 you know what you're getting.
 `;
 
