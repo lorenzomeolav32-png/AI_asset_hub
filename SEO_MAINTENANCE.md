@@ -67,6 +67,7 @@ local con `npm run check:review`.
 | Fecha | Tipo | Qué se hizo | Próxima acción |
 |---|---|---|---|
 | 2026-09-15 | Setup | Auditoría SEO inicial (Lighthouse: SEO 100, Best Practices 100, Accessibility 98, Performance 92, LCP 3.1s). Fixes aplicados: animación del hero (LCP), jerarquía de headings del footer, aria-label del buscador. Añadido campo `reviewBy` al esquema de contenido. | Primera pasada mensual: re-lanzar Lighthouse y confirmar que el LCP bajó de 3.1s. |
+| 2026-09-15 | Backlinks | Repo `awesome-claude-skills-mcp-servers` publicado y verificado con `awesome-lint`. Cross-link añadido: footer del sitio + post de blog anunciando la lista. | Añadir topics `awesome`/`awesome-list` en GitHub (manual), luego promoción (Show HN / Product Hunt / Reddit). |
 
 ---
 
@@ -89,6 +90,7 @@ manifiesto) cada ~6 meses.
 | [blog] seo-skills-for-ai-agents-2026 | evergreen | 2026-09-14 | 2027-03-14 | ⬜ |
 | [blog] why-a-curated-directory | evergreen | 2026-08-24 | 2027-02-24 | ⬜ |
 | [blog] why-skills-and-agents-matter-in-agentic-ai | evergreen | 2026-09-07 | 2027-03-07 | ⬜ |
+| [blog] we-open-sourced-the-list-as-an-awesome-list | evergreen | 2026-09-15 | 2027-03-15 | ⬜ |
 | [learn] claude-skills-vs-mcp-servers | evergreen | 2026-08-20 | 2027-02-20 | ⬜ |
 | [learn] how-to-install-a-claude-skill | evergreen | 2026-08-22 | 2027-02-22 | ⬜ |
 | [learn] what-are-claude-skills | evergreen | 2026-08-18 | 2027-02-18 | ⬜ |

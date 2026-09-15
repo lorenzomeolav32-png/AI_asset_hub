@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Terminal } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 import { SubscribeForm } from "@/components/subscribe-form";
-import { SITE_GITHUB } from "@/lib/site";
+import { AWESOME_LIST_URL, SITE_GITHUB } from "@/lib/site";
 
 const cols: { title: string; links: [string, string][] }[] = [
   {
@@ -14,6 +14,7 @@ const cols: { title: string; links: [string, string][] }[] = [
       ["AI Workflows", "/ai-workflows"],
       ["Cursor Rules", "/cursor-rules"],
       ["Browse all", "/browse"],
+      ["Awesome list ↗", AWESOME_LIST_URL],
     ],
   },
   {
@@ -77,16 +78,21 @@ export function SiteFooter() {
                   {c.title}
                 </h3>
                 <ul className="space-y-2.5">
-                  {c.links.map(([label, href]) => (
-                    <li key={label}>
-                      <Link
-                        href={href}
-                        className="text-sm text-muted transition-colors hover:text-fg"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
+                  {c.links.map(([label, href]) => {
+                    const external = href.startsWith("http");
+                    return (
+                      <li key={label}>
+                        <Link
+                          href={href}
+                          target={external ? "_blank" : undefined}
+                          rel={external ? "noreferrer" : undefined}
+                          className="text-sm text-muted transition-colors hover:text-fg"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
