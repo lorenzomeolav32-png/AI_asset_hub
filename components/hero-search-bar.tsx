@@ -54,7 +54,7 @@ export function HeroSearchBar() {
     <button
       type="button"
       onClick={() => setOpen(true)}
-      aria-label="Open search (⌘K)"
+      aria-label="$ search — open command menu (Ctrl K)"
       className="flex w-full items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 text-left shadow-[0_0_40px_-12px_var(--accent-glow)] transition-colors hover:border-line-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
     >
       <Terminal className="h-4 w-4 shrink-0 text-accent" />

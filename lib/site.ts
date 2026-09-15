@@ -16,6 +16,11 @@ export const SITE_OPERATOR = "AI Assets Directory";
 export const SITE_EMAIL = "contact@aiassetsdirectory.com";
 export const SITE_GITHUB = "https://github.com/lorenzomeolav32-png/AI_asset_hub";
 
+/** Byline shown on blog/learn articles (E-E-A-T: a real, identifiable author). */
+export const AUTHOR_NAME = "Lorenzo Meola";
+export const AUTHOR_BIO =
+  "I use agentic AI daily in my day job to build tools, and I've spent months learning how these systems actually work under the hood. I'm not an AI expert by title, just someone building this directory so other developers can find AI assets that are genuinely useful and verified to work, not just indexed.";
+
 /** Human-readable date the legal pages were last reviewed. */
 export const LEGAL_LAST_UPDATED = "September 1, 2026";
 

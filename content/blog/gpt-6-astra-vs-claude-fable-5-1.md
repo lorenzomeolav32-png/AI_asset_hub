@@ -7,6 +7,7 @@ summary: >-
   stay on task.
 tags: [openai, anthropic, gpt-6-astra, claude-fable-5-1, comparison]
 date: 2026-09-13
+reviewBy: 2026-11-13
 ---
 
 Both labs shipped a flagship within weeks of each other, and both launch pages

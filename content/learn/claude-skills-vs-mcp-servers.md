@@ -8,6 +8,7 @@ kind: comparison
 tags: [claude-skills, mcp, comparison]
 date: 2026-08-20
 updated: 2026-09-09
+reviewBy: 2027-02-20
 ---
 
 Skills and MCP servers get mixed up because both make an AI assistant more

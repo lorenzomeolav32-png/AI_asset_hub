@@ -9,6 +9,7 @@ summary: >-
   skills and agents in this directory.
 tags: [prompt-engineering, basics, ai-agents]
 date: 2026-09-14
+reviewBy: 2027-03-14
 ---
 
 A prompt is the instruction you give a model to get something specific back.

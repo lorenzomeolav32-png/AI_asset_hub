@@ -7,6 +7,7 @@ summary: >-
   examples show exactly where the gap opens up.
 tags: [prompt-engineering, ai-agents, context-engineering, guide]
 date: 2026-09-14
+reviewBy: 2027-03-14
 ---
 
 A vague prompt to a chatbot in 2023 got you a mediocre paragraph you'd

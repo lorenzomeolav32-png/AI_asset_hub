@@ -1,0 +1,86 @@
+name: SEO maintenance reminders
+
+# Opens a GitHub issue (assigned to the repo owner) as a reminder to run the
+# weekly/monthly/quarterly checklist in SEO_MAINTENANCE.md. GitHub notifies
+# assignees by email/app, which is what actually pings you.
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # weekly — every Monday 08:00 UTC
+    - cron: "0 8 1 * *" # monthly — 1st of every month 08:00 UTC
+    - cron: "0 8 1 1,4,7,10 *" # quarterly — 1st of Jan/Apr/Jul/Oct 08:00 UTC
+  workflow_dispatch: {} # allows a manual test run from the Actions tab
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Determine cadence
+        id: cadence
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 8 1 1,4,7,10 *") echo "kind=quarterly" >> "$GITHUB_OUTPUT" ;;
+            "0 8 1 * *") echo "kind=monthly" >> "$GITHUB_OUTPUT" ;;
+            "0 8 * * 1") echo "kind=weekly" >> "$GITHUB_OUTPUT" ;;
+            *) echo "kind=weekly" >> "$GITHUB_OUTPUT" ;; # manual dispatch default
+          esac
+
+      - name: Check content review dates
+        id: review
+        run: |
+          {
+            echo 'report<<EOF'
+            node scripts/check-review-due.mjs || true
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open reminder issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const kind = "${{ steps.cadence.outputs.kind }}";
+            const report = `${{ steps.review.outputs.report }}`;
+
+            const sections = {
+              weekly: "## 1. Checklist semanal (~15-20 min)",
+              monthly: "## 2. Checklist mensual (~1-2 h)",
+              quarterly: "## 3. Checklist trimestral (~medio día)",
+            };
+            const labels = {
+              weekly: "seo-weekly",
+              monthly: "seo-monthly",
+              quarterly: "seo-quarterly",
+            };
+            const titles = {
+              weekly: "SEO: checklist semanal",
+              monthly: "SEO: checklist mensual",
+              quarterly: "SEO: checklist trimestral",
+            };
+
+            const body = [
+              `Toca la **${kind}** de \`SEO_MAINTENANCE.md\` → ${sections[kind]}.`,
+              "",
+              "Abre el archivo y marca las casillas correspondientes, luego añade una",
+              "fila en `§4 Log de pasadas`.",
+              "",
+              "### Estado de `reviewBy` en el contenido",
+              report.trim() ? report : "Nada vencido ni próximo a vencer.",
+            ].join("\n");
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `${titles[kind]} — ${new Date().toISOString().slice(0, 10)}`,
+              body,
+              assignees: [context.repo.owner],
+              labels: [labels[kind]],
+            });

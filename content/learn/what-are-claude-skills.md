@@ -9,6 +9,7 @@ kind: explainer
 tags: [claude-skills, basics, agents]
 date: 2026-08-18
 updated: 2026-09-09
+reviewBy: 2027-02-18
 ---
 
 A Claude Skill is a folder of instructions you give to Claude so it acts like it

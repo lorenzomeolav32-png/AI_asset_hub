@@ -6,6 +6,7 @@ summary: >-
   still isn't the question that decides whether Grok is useful to you.
 tags: [grok, xai, opinion]
 date: 2026-09-07
+reviewBy: 2026-11-07
 ---
 
 Every time xAI ships a new Grok model, the same claim shows up: most powerful

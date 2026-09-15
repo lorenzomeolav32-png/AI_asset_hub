@@ -7,7 +7,9 @@
     "build": "velite && next build",
     "start": "next start",
     "lint": "eslint",
-    "velite": "velite"
+    "velite": "velite",
+    "check:review": "node scripts/check-review-due.mjs",
+    "awesome:generate": "node scripts/generate-awesome-readme.mjs --out ../awesome-claude-skills-mcp-servers/README.md"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

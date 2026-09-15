@@ -7,6 +7,7 @@ summary: >-
   everything else.
 tags: [anthropic, claude, claude-fable-5-1, guide]
 date: 2026-09-12
+reviewBy: 2026-11-12
 ---
 
 Anthropic named the flagship of this generation Claude Opus 5.1, but the name

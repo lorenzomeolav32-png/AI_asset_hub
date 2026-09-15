@@ -7,6 +7,7 @@ summary: >-
   right tool.
 tags: [agents, skills, mcp, opinion]
 date: 2026-09-07
+reviewBy: 2027-03-07
 ---
 
 When an agent goes off the rails, mixes up a file, hallucinates an API that

@@ -7,6 +7,7 @@ summary: >-
   longer context, and it says no to itself more often.
 tags: [openai, gpt-6-astra, opinion]
 date: 2026-09-07
+reviewBy: 2026-11-07
 ---
 
 OpenAI shipped GPT-6 Astra this week, calling it "the world's most intelligent

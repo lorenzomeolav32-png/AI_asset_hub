@@ -7,6 +7,7 @@ summary: >-
   means a shorter list.
 tags: [manifesto, curation, trust]
 date: 2026-08-24
+reviewBy: 2027-02-24
 ---
 
 Agentskill.sh lists more than 178,000 skills. ClaudSkills has over 69,000.

@@ -7,6 +7,7 @@ summary: >-
   lab that isn't first.
 tags: [china, open-source-ai, opinion]
 date: 2026-09-07
+reviewBy: 2026-11-07
 ---
 
 DeepSeek got the headlines, but it wasn't alone. Alibaba's Qwen, Zhipu's GLM,

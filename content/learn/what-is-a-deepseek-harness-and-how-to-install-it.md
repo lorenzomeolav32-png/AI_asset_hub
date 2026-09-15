@@ -8,6 +8,7 @@ summary: >-
 kind: tutorial
 tags: [deepseek, ai-agents, tutorial, setup]
 date: 2026-09-07
+reviewBy: 2026-11-07
 ---
 
 "DeepSeek harness" isn't one official product you download from a single

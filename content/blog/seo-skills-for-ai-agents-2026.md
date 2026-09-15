@@ -7,6 +7,7 @@ summary: >-
   you install, not a checklist someone reads once a month.
 tags: [seo, ai-agents, claude-skills, geo]
 date: 2026-09-14
+reviewBy: 2027-03-14
 ---
 
 "SEO for AI agents" gets used two ways, and they're not the same claim. One is

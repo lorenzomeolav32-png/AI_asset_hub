@@ -7,6 +7,7 @@ summary: >-
   the model itself.
 tags: [deepseek, ai-agents, opinion]
 date: 2026-09-07
+reviewBy: 2026-11-07
 ---
 
 Every few months a new model shows up promising to change how we code. This

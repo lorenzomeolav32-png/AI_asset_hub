@@ -1,6 +1,8 @@
 import { Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { TableOfContents } from "@/components/table-of-contents";
+import { GithubIcon } from "@/components/icons";
+import { AUTHOR_NAME, AUTHOR_BIO, SITE_GITHUB } from "@/lib/site";
 import type { Toc } from "@/lib/content";
 
 function formatDate(iso: string) {
@@ -80,6 +82,33 @@ export function ArticleLayout({
                   #{t}
                 </span>
               ))}
+            </div>
+          )}
+
+          {author === AUTHOR_NAME && (
+            <div className="mt-10 flex items-start gap-4 rounded-xl card-surface p-6">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line bg-surface font-display text-sm font-semibold text-accent">
+                {AUTHOR_NAME.split(" ")
+                  .map((n) => n[0])
+                  .join("")}
+              </span>
+              <div className="min-w-0">
+                <p className="font-display text-sm font-semibold text-fg">
+                  {AUTHOR_NAME}
+                </p>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {AUTHOR_BIO}
+                </p>
+                <a
+                  href={SITE_GITHUB}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 font-mono text-xs text-muted transition-colors hover:text-fg"
+                >
+                  <GithubIcon className="h-3.5 w-3.5" />
+                  Project on GitHub
+                </a>
+              </div>
             </div>
           )}
         </div>

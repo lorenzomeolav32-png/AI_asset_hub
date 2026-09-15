@@ -9,6 +9,7 @@ kind: tutorial
 tags: [claude-skills, tutorial, setup]
 date: 2026-08-22
 updated: 2026-09-09
+reviewBy: 2027-02-22
 ---
 
 Where you install a skill depends on which surface you are using: Claude Code,

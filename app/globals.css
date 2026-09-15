@@ -153,8 +153,18 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Transform-only (no opacity dip) so this doesn't delay the LCP paint of hero content. */
+@keyframes rise-in {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .animate-rise {
-  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation: rise-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
