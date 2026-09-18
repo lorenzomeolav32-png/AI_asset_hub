@@ -13,6 +13,7 @@ license: MIT
 author: Anthropic / Model Context Protocol
 source: https://github.com/modelcontextprotocol/servers/tree/main/src/time
 verified: true
+official: true
 install: |
   # Using uv/uvx (recommended):
   uvx mcp-server-time

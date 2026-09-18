@@ -15,6 +15,7 @@ author: Redis
 source: https://github.com/redis/mcp-redis
 stars: 618
 verified: true
+official: true
 install: |
   # From PyPI, via uvx (recommended):
   uvx --from redis-mcp-server@latest redis-mcp-server --url redis://localhost:6379/0

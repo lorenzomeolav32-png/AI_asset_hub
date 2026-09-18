@@ -14,6 +14,7 @@ license: MIT
 author: Anthropic / Model Context Protocol
 source: https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
 verified: true
+official: true
 install: |
   # npx (recommended), pass allowed directories as args:
   npx -y @modelcontextprotocol/server-filesystem /path/to/dir1 /path/to/dir2

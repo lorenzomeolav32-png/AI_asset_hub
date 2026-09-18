@@ -15,6 +15,7 @@ author: Microsoft
 source: https://github.com/microsoft/playwright-mcp
 stars: 36900
 verified: true
+official: true
 install: |
   {
     "mcpServers": {

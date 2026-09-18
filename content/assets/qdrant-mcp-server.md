@@ -15,6 +15,7 @@ author: Qdrant
 source: https://github.com/qdrant/mcp-server-qdrant
 stars: 1500
 verified: true
+official: true
 install: |
   # Via uvx, pointing at a Qdrant instance:
   QDRANT_URL="http://localhost:6333" COLLECTION_NAME="my-collection" \

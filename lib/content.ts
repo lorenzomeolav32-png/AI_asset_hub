@@ -35,6 +35,7 @@ export type CardAsset = {
   stars?: number;
   starsNote?: string;
   verified: boolean;
+  official: boolean;
 };
 
 function toCard(a: Asset): CardAsset {
@@ -53,6 +54,7 @@ function toCard(a: Asset): CardAsset {
     stars: a.stars,
     starsNote: a.starsNote,
     verified: a.verified,
+    official: a.official,
   };
 }
 

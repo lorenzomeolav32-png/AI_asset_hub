@@ -15,6 +15,7 @@ author: HashiCorp
 source: https://github.com/hashicorp/terraform-mcp-server
 stars: 1500
 verified: true
+official: true
 install: |
   # VS Code (docker), add to your MCP config:
   {

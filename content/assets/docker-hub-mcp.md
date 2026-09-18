@@ -15,6 +15,7 @@ author: Docker
 source: https://github.com/docker/hub-mcp
 stars: 163
 verified: true
+official: true
 install: |
   git clone https://github.com/docker/hub-mcp.git
   cd hub-mcp

@@ -15,6 +15,7 @@ author: AWS Labs (Amazon)
 source: https://github.com/awslabs/mcp
 stars: 9700
 verified: true
+official: true
 install: |
   # Each server installs independently, e.g. the AWS Documentation server:
   {

@@ -15,6 +15,7 @@ author: Supabase
 source: https://github.com/supabase/mcp
 stars: 2900
 verified: true
+official: true
 install: |
   # Add the remote hosted server directly (OAuth):
   {

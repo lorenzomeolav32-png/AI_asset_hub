@@ -14,6 +14,7 @@ license: MIT
 author: Anthropic / Model Context Protocol
 source: https://github.com/modelcontextprotocol/servers/tree/main/src/git
 verified: true
+official: true
 install: |
   # Using uv/uvx (recommended), no install step needed:
   uvx mcp-server-git --repository path/to/git/repo

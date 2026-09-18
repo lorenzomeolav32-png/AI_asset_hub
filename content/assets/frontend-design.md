@@ -16,6 +16,7 @@ source: https://github.com/anthropics/skills/tree/main/skills/frontend-design
 stars: 172900
 starsNote: whole anthropics/skills repo
 verified: true
+official: true
 install: |
   # Install via the Claude Code plugin marketplace
   /plugin marketplace add anthropics/skills

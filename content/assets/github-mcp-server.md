@@ -14,6 +14,7 @@ author: GitHub
 source: https://github.com/github/github-mcp-server
 stars: 32800
 verified: true
+official: true
 install: |
   # Remote server (hosted by GitHub): add to your MCP host config, e.g. .vscode/mcp.json:
   # { "servers": { "github": { "type": "http", "url": "https://api.githubcopilot.com/mcp/" } } }

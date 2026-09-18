@@ -16,6 +16,7 @@ author: Neon (Databricks)
 source: https://github.com/neondatabase/mcp-server-neon
 stars: 629
 verified: true
+official: true
 install: |
   # One-command setup for Cursor, VS Code and Claude Code:
   npx neon@latest init

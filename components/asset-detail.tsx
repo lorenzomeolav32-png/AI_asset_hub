@@ -1,5 +1,6 @@
 import {
   Bot,
+  BadgeCheck,
   ExternalLink,
   Quote,
   Scale,
@@ -71,6 +72,11 @@ export function AssetDetail({ asset }: { asset: Asset }) {
           {asset.verified && (
             <span className="inline-flex items-center gap-1 font-mono text-[11px] text-accent">
               <ShieldCheck className="h-4 w-4" /> verified · tested by us
+            </span>
+          )}
+          {asset.official && (
+            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-muted">
+              <BadgeCheck className="h-4 w-4" /> published by the official vendor
             </span>
           )}
           {typeof asset.stars === "number" && (

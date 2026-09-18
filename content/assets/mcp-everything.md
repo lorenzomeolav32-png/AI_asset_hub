@@ -14,6 +14,7 @@ license: MIT
 author: Anthropic / Model Context Protocol
 source: https://github.com/modelcontextprotocol/servers/tree/main/src/everything
 verified: true
+official: true
 install: |
   npx -y @modelcontextprotocol/server-everything
 installLang: bash

@@ -15,6 +15,7 @@ author: Cloudflare
 source: https://github.com/cloudflare/mcp-server-cloudflare
 stars: 4200
 verified: true
+official: true
 install: |
   # Add any of Cloudflare's hosted servers as a remote MCP connection, e.g.
   # the Workers Bindings server, in .vscode/mcp.json or your client's config:

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArrowUpRight,
+  BadgeCheck,
   Bot,
   ScrollText,
   Server,
@@ -42,6 +43,15 @@ export function AssetCard({ asset }: { asset: CardAsset }) {
           {typeLabels[asset.type]}
         </span>
         <div className="flex items-center gap-3">
+          {asset.official && (
+            <span
+              className="inline-flex items-center gap-1 font-mono text-[10px] text-muted"
+              title="Published by the official vendor"
+            >
+              <BadgeCheck className="h-3.5 w-3.5" />
+              official
+            </span>
+          )}
           {typeof asset.stars === "number" && (
             <span
               className="inline-flex items-center gap-1 font-mono text-[11px] text-muted"
