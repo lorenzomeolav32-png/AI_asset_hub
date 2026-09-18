@@ -4,6 +4,7 @@ import { AssetCard } from "@/components/asset-card";
 import { CategoryTile } from "@/components/category-tile";
 import { HeroSearchBar } from "@/components/hero-search-bar";
 import { GithubIcon } from "@/components/icons";
+import { LeaderboardTable } from "@/components/leaderboard-table";
 import type { Metadata } from "next";
 import { categories, toolLabel, worksWith } from "@/lib/data";
 import { allAssets, featuredCards } from "@/lib/content";
@@ -158,6 +159,22 @@ export default function Home() {
             <AssetCard key={a.slug} asset={a} />
           ))}
         </div>
+      </section>
+
+      {/* ── Most voted ───────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-4 pt-20 sm:px-6">
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
+              // community voted
+            </p>
+            <h2 className="font-display text-2xl font-semibold text-fg sm:text-3xl">
+              Most voted assets
+            </h2>
+          </div>
+        </div>
+
+        <LeaderboardTable />
       </section>
 
       {/* ── Value props ──────────────────────────────────────────────────── */}

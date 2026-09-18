@@ -1,35 +1,16 @@
 import { NextResponse } from "next/server";
+import { redisCommand } from "@/lib/kv";
 
 export const runtime = "nodejs";
 
 // Basic, pragmatic email validation (RFC-ish, good enough for a signup box).
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/** Store the email in Redis (Upstash, via the Vercel Marketplace) using its REST
- *  API, so we don't need an SDK dependency. Depending on how the integration is
- *  added, Vercel injects either KV_REST_API_* or UPSTASH_REDIS_REST_* env vars —
- *  we accept both. Returns false if unconfigured. */
+/** Store the email in Redis. Dedupes automatically (SADD). Returns false if
+ *  KV is unconfigured (e.g. local/preview). */
 async function storeInKv(email: string): Promise<boolean> {
-  const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
-  const token =
-    process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return false;
-
-  // Single command: SADD subscribers <email> (dedupes automatically).
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(["SADD", "subscribers", email]),
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error(`KV responded ${res.status}`);
-  }
-  return true;
+  const r = await redisCommand(["SADD", "subscribers", email]);
+  return r.configured;
 }
 
 export async function POST(request: Request) {

@@ -16,6 +16,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CopyBlock } from "@/components/copy-block";
 import { GithubIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
+import { VoteButton } from "@/components/vote-button";
 import type { Asset } from "@/lib/content";
 import { related } from "@/lib/content";
 import { categoryBySlug, toolLabel, typeLabels } from "@/lib/data";
@@ -140,6 +141,8 @@ export function AssetDetail({ asset }: { asset: Asset }) {
 
         {/* sidebar */}
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+          <VoteButton slug={asset.slug} />
+
           {asset.install && (
             <div>
               <h3 className="mb-3 font-mono text-[11px] uppercase tracking-widest text-muted">

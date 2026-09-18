@@ -12,6 +12,7 @@ import {
 import type { CardAsset } from "@/lib/content";
 import { toolLabel, typeLabels } from "@/lib/data";
 import type { AssetType } from "@/lib/data";
+import { VoteButton } from "@/components/vote-button";
 
 const typeIcon: Record<AssetType, React.ComponentType<{ className?: string }>> = {
   "claude-skill": Sparkles,
@@ -98,8 +99,12 @@ export function AssetCard({ asset }: { asset: CardAsset }) {
             </span>
           ))}
         </div>
-        <span className="font-mono text-[11px] text-muted">{asset.license}</span>
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-[11px] text-muted">{asset.license}</span>
+          <VoteButton slug={asset.slug} compact />
+        </div>
       </div>
+
     </Link>
   );
 }
