@@ -14,8 +14,8 @@ tools: [claude, claude-code]
 license: MIT
 author: Jeff Smolinski (jeffallan)
 source: https://github.com/Jeffallan/claude-skills
-starsNote: ~11.5k stars, 1.1k forks (GitHub, Sep 2026)
-verified: false
+stars: 11524
+verified: true
 install: |
   /plugin marketplace add jeffallan/claude-skills
   /plugin install fullstack-dev-skills@jeffallan
