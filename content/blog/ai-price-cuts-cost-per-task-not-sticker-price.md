@@ -1,95 +1,81 @@
 ---
 slug: ai-price-cuts-cost-per-task-not-sticker-price
-title: "Astra and Fable 5.1 just got cheaper. Your bill might not have"
+title: "Opus 5.5, GPT-6 Sol, and GPT-6 Luna just got cheaper. The effort setting decides if you notice"
 summary: >-
-  Both labs cut prices the same week and the headlines wrote themselves. The
-  number that decides whether you saved anything isn't on either price
-  sheet.
-tags: [openai, anthropic, gpt-6-astra, claude-fable-5-1, pricing, opinion]
+  Anthropic and OpenAI both cut prices this week. Both companies also
+  published a chart, right next to the discount, that shows effort setting
+  moves your cost far more than either price cut does.
+tags: [openai, anthropic, gpt-6-astra, claude-opus-5-5, pricing, opinion]
 date: 2026-09-24
 reviewBy: 2026-11-24
 ---
 
-OpenAI cut Astra's list price this week, from $10/$50 per million input/output
-tokens down to roughly $7/$35. Anthropic didn't touch Fable 5.1's headline
-rate, it discounted the extended-thinking multiplier instead, which is the
-line item that was already doing most of the damage on anything harder than
-a single-turn prompt. Either way, the story got written the same day: frontier
-intelligence is getting cheaper, developers win. [Astra vs Fable
-5.1](/blog/gpt-6-astra-vs-claude-fable-5-1) already covered which model wins
-on a fixed task. This is about a different question: whether either cut
-shows up on your invoice at all.
+Anthropic shipped Claude Opus 5.5 yesterday: the first release in its new
+Opus 5.5 line, priced 40% below Opus 5 at default settings, and matching
+Claude Fable 5.1 on most work by Anthropic's own account. OpenAI answered
+within a day with GPT-6 Sol and GPT-6 Luna, both priced 50% below their
+GPT-5.6 predecessors. GPT-6 Astra, still OpenAI's flagship, kept its price
+where [this site already reported it](/blog/gpt-6-astra-what-actually-changed):
+$10 input and $50 output per million tokens. Two labs, two real price cuts,
+the same week.
 
-## A per-token discount isn't a per-task discount
+The more useful read isn't the price sheet. It's a chart both companies
+published on the same announcement page as the discount, and it undercuts
+the headline before anyone else gets the chance to.
 
-Both labs price by the token, but neither ships a model that uses a fixed
-number of tokens per task. Astra and Fable 5.1 both scale how much they
-"think" with an effort or thinking setting, and a harder prompt at a higher
-effort tier can burn two or three times the tokens of the same prompt at the
-default setting. Cut the per-token price by 30% and raise average token
-usage by 30% at the same time, through a higher effort tier, longer
-reasoning traces, or a bigger context window carried into every turn, and
-the invoice ends up exactly where it started. Nobody lied about the price.
-The price just wasn't the whole bill.
+## The chart that comes with the discount
 
-This is why "how much does it cost per million tokens" is the wrong question
-to ask when a lab announces a cut, and "how much did my actual workload cost
-last month, and how much will it cost next month at the same volume" is the
-right one. One is on the pricing page. The other is in your usage dashboard,
-and almost nobody checks it before switching.
+Opus 5.5's list price is a genuine cut: input tokens went from $5 to $4 per
+million, output from $25 to $20, and cache reads, which Anthropic says make
+up most agentic and coding costs, from $0.50 to $0.20. A few scrolls down
+the same page, Anthropic's own Terminal-Bench 4.0 result plots cost per
+attempt on a log scale running from roughly $2 to $20, labeled low, medium,
+high, xhigh, and max: the same model, at different effort settings,
+spanning close to a 10x range in what one task costs to run. A 20% cut on
+the input rate barely registers next to that.
 
-## Run the number on your invoice, not the price page
+## Read past the benchmark row you're being sold
 
-Take a task you already run in production, not a demo prompt. Price it at
-last month's average token count and last month's rate, then price it again
-at the new rate using this month's average token count, not last month's.
-If your team moved a workflow to a higher effort tier at some point, because
-it got a slightly better answer and nobody tracked the token cost of that
-decision, the new discount can be fully absorbed before it reaches your
-bill. A 30% list-price cut against a 40% jump in average tokens per task is
-a net increase, and the pricing announcement will never tell you that,
-because the lab doesn't know your effort setting or your prompt length.
+OpenAI's launch page makes a related point from the competitive angle. On
+AutomationBench, GPT-6 Sol at its highest effort setting completes a task
+for $0.27. GPT-6 Astra at its lowest effort setting costs 3.9 times that on
+the same benchmark. Claude Opus 5 at max effort costs 11.1 times that. None
+of those three numbers involve this week's discounts at all, they're what
+effort setting alone does to a bill, across three different models.
 
-The gap between the two numbers is usually biggest on exactly the tasks that
-look most impressive in a demo: long agent runs, deep research, anything
-that benefits from extended thinking. Those are also the tasks most likely
-to have drifted to a higher effort tier over the past few months, because
-someone noticed it produced better output and never priced what that
-upgrade cost per run.
+The footnote on that table is worth reading too: Claude Fable 5.1's listed
+cost "understates its actual cost, as it omits the cost of the Opus 5
+fallbacks, which occurred on ~40% of tasks." That's a competitor describing
+a competitor's number, so read it as marketing, not neutral. But the
+mechanism cuts both ways: any agent that quietly falls back to a pricier
+model once a task gets hard enough doesn't show that cost on the headline
+benchmark row either. If your own workflow has a fallback path, its real
+cost lives in your logs, not on anyone's launch page.
 
-## Narrow tools keep the whole discount. Broad agents don't
+## The number a price cut can't fix for you
 
-Not every workload is exposed the same way, and the split runs along a line
-this directory already tracks: how much reasoning effort a task needs. A [Time MCP Server](/mcp-servers/mcp-time) call or a [Fetch MCP
-Server](/mcp-servers/mcp-fetch) request barely touches reasoning tokens at
-all, the task is narrow and deterministic, so a price cut on the base rate
-lands close to full value. A broad, long-running agent like
-[Modernization Agent](/copilot-agents/modernization-agent), reading an
-entire codebase before proposing anything, lives at a high effort tier by
-design, and that's exactly the shape of task where token growth eats a
-discount fastest. Neither is the wrong tool. The [tier ranking for Claude
-Fable 5.1](/blog/claude-fable-5-1-model-ranking) makes the same point from
-the model side: match the tier and the effort setting to what the task
-needs, don't default to the strongest setting because a demo looked good
-with it on.
+Both labs are showing you the same thing without quite meaning to: cost per
+task moves with effort setting more than it moves with list price, by a
+wide margin. That's exactly why [checking cost per task instead of cost per
+token](/blog/gpt-6-astra-vs-claude-fable-5-1) matters more this week than
+most. A [Time MCP Server](/mcp-servers/mcp-time) call or a [Fetch MCP
+Server](/mcp-servers/mcp-fetch) request stays narrow and deterministic no
+matter which model sits behind it, so a price cut on the base rate lands
+close to full value. A broad, long-running agent like [Modernization
+Agent](/copilot-agents/modernization-agent), reading an entire codebase
+before proposing anything, lives at a high effort tier by design, and
+that's where the effort curve, not the price cut, decides the bill.
 
-If your product is a thin layer on top of long, high-effort agent runs, a
-price war between labs is good news for your customers and close to
-neutral for your margin, because your token volume moves with the model's
-effort setting, not with the sticker price. If your product is built on
-narrow, bounded calls, the same price war is close to pure savings.
+## Three questions before you switch anything
 
-## Three questions before you migrate anything
+Before moving a workload to Opus 5.5, GPT-6 Sol, or GPT-6 Luna because the
+price dropped, check three things in your own usage, not the announcement:
+what effort setting does this workload run at in production right now?
+What was the average cost per completed task last month, at that setting,
+not the demo? And does the published discount apply to the effort tier you
+actually run, or only to the cheapest one, the one the headline number is
+quoting?
 
-Before switching models, or effort tiers, or labs, chasing a price
-announcement, answer three things with your own numbers, not the vendor's:
-what effort or thinking setting does this workload run at in production
-right now, not in the demo that sold you on it? What was the average token
-count per completed task last month, at that setting, not the best case?
-And does the new discounted rate apply to the tier you're running, or only
-to the base tier the headline is quoting?
-
-A list-price cut is real. It's also the easiest number in the announcement
-to calculate, which is why it's the one every headline leads with. The
-number that pays for anything is the one on your own invoice, at your own
-effort setting, on the workload you run, not the one in the press release.
+Anthropic and OpenAI both published the chart that answers this. It sits a
+few scrolls below the price table, and it matters more than the number
+above it.
